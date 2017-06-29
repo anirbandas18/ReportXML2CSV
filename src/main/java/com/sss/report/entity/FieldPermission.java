@@ -56,7 +56,7 @@ public class FieldPermission {
 	}
 	@Override
 	public String toString() {
-		return "FieldPermissions [readable=" + readable + ", editable=" + editable + ", field=" + field + "]";
+		return "readable=" + readable + "/editable=" + editable;
 	}
 	
 	

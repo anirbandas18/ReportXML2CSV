@@ -48,7 +48,7 @@ public class LayoutAssignment {
 	}
 	@Override
 	public String toString() {
-		return "LayoutAssignment [layout=" + layout + ", recordType=" + recordType + "]";
+		return "layout=" + layout;
 	}
 	
 

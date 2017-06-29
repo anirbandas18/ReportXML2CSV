@@ -88,9 +88,8 @@ public class ObjectPermission {
 	}
 	@Override
 	public String toString() {
-		return "ObjectPermission [allowCreate=" + allowCreate + ", allowRead=" + allowRead + ", allowEdit=" + allowEdit
-				+ ", allowDelete=" + allowDelete + ", modifyAllrecords=" + modifyAllrecords + ", object=" + object
-				+ ", viewAllRecords=" + viewAllRecords + "]";
+		return "allowCreate=" + allowCreate + "/allowRead=" + allowRead + "/allowEdit=" + allowEdit
+				+ "/allowDelete=" + allowDelete + "/modifyAllrecords=" + modifyAllrecords + "/viewAllRecords=" + viewAllRecords;
 	}
 
 	

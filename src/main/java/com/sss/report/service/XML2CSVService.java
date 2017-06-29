@@ -6,15 +6,19 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.xml.bind.JAXBException;
 
 import org.xml.sax.SAXException;
 
 import com.sss.report.dao.XMLDAO;
+import com.sss.report.entity.FieldPermission;
 import com.sss.report.entity.Profile;
 import com.sss.report.exception.ReportException;
+import com.sss.report.model.FieldPermissionModel;
 
 public class XML2CSVService {
 
@@ -38,8 +42,17 @@ public class XML2CSVService {
 	
 	
 	public String persistCSV(List<Profile> profiles) {
-		String csvFilePath = "";
-		
+		String csvFilePath = "profile_analysis.csv";
+		Set<FieldPermissionModel> models = new LinkedHashSet<>();
+		for(Profile profile : profiles) {
+			for(FieldPermission fp : profile.getFieldPermissions()) {
+				FieldPermissionModel fpm = new FieldPermissionModel(); 
+				fpm.setFieldName(fp.getField());
+				fpm.setPermissions(fp.toString());
+				fpm.setFileName(profile.getFileName());
+				models.add(fpm);
+			}
+		}
 		return csvFilePath;
 	}
 	

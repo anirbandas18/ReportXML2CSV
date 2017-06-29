@@ -48,7 +48,7 @@ public class UserPermission {
 	}
 	@Override
 	public String toString() {
-		return "UserPermission [enabled=" + enabled + ", name=" + name + "]";
+		return "name=" + name;
 	}
 	
 	

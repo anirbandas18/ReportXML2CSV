@@ -56,8 +56,7 @@ public class RecordTypeVisibility {
 	}
 	@Override
 	public String toString() {
-		return "RecordTypeVisibility [_default=" + _default + ", visible=" + visible + ", recordType=" + recordType
-				+ "]";
+		return "default=" + _default + "/visible=" + visible;
 	}
 	
 	

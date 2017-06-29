@@ -48,7 +48,7 @@ public class TabVisibility {
 	}
 	@Override
 	public String toString() {
-		return "TabVisibility [tab=" + tab + ", visibility=" + visibility + "]";
+		return "visibility=" + visibility;
 	}
 	
 
