@@ -6,9 +6,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
+import java.util.stream.Collectors;
 
 import javax.xml.bind.JAXBException;
 
@@ -16,9 +17,14 @@ import org.xml.sax.SAXException;
 
 import com.sss.report.dao.XMLDAO;
 import com.sss.report.entity.FieldPermission;
+import com.sss.report.entity.LayoutAssignment;
+import com.sss.report.entity.ObjectPermission;
 import com.sss.report.entity.Profile;
+import com.sss.report.entity.RecordTypeVisibility;
+import com.sss.report.entity.TabVisibility;
+import com.sss.report.entity.UserPermission;
 import com.sss.report.exception.ReportException;
-import com.sss.report.model.FieldPermissionModel;
+import com.sss.report.model.ProfileMetadataModel;
 
 public class XML2CSVService {
 
@@ -30,6 +36,7 @@ public class XML2CSVService {
 			for(Path xmlFile : xmlFiles) {
 				String xmlFilePath = xmlFile.toString();
 				Profile profile = XMLDAO.unmarshall(xmlFilePath);
+				System.out.println(profile.getFileName());
 				profiles.add(profile);
 			}
 		} catch (IOException | JAXBException | SAXException e) {
@@ -40,19 +47,52 @@ public class XML2CSVService {
 	}
 	
 	
-	
 	public String persistCSV(List<Profile> profiles) {
 		String csvFilePath = "profile_analysis.csv";
-		Set<FieldPermissionModel> models = new LinkedHashSet<>();
-		for(Profile profile : profiles) {
-			for(FieldPermission fp : profile.getFieldPermissions()) {
-				FieldPermissionModel fpm = new FieldPermissionModel(); 
-				fpm.setFieldName(fp.getField());
-				fpm.setPermissions(fp.toString());
-				fpm.setFileName(profile.getFileName());
-				models.add(fpm);
-			}
+		ProfileMetadataModel pmd = new ProfileMetadataModel();
+		Set<String> fileNames = new TreeSet<>();
+		Set<String> fields = new TreeSet<>();
+		Set<String> layouts = new TreeSet<>();
+		Set<String> objects = new TreeSet<>();
+		Set<String> recordTypes = new TreeSet<>();
+		Set<String> tabs = new TreeSet<>();
+		Set<String> names = new TreeSet<>();
+		Set<String> set = new TreeSet<>();
+		for(Profile p : profiles) {
+			fileNames.add(p.getFileName());
+			List<FieldPermission> fieldPermissions = p.getFieldPermissions();
+			set.clear();
+			set = fieldPermissions.stream().map(FieldPermission::getField).collect(Collectors.toSet());
+			fields.addAll(set);
+			List<LayoutAssignment> layoutAssignments = p.getLayoutAssignments();
+			set.clear();
+			set = layoutAssignments.stream().map(LayoutAssignment::getLayout).collect(Collectors.toSet());
+			layouts.addAll(set);
+			List<ObjectPermission> objectPermissions = p.getObjectPermissions();
+			set.clear();
+			set = objectPermissions.stream().map(ObjectPermission::getObject).collect(Collectors.toSet());
+			objects.addAll(set);
+			List<RecordTypeVisibility> recordTypeVisibilities = p.getRecordTypeVisibilities();
+			set.clear();
+			set = recordTypeVisibilities.stream().map(RecordTypeVisibility::getRecordType).collect(Collectors.toSet());
+			recordTypes.addAll(set);
+			List<TabVisibility> tabVisibilities = p.getTabVisibilities();
+			set.clear();
+			set = tabVisibilities.stream().map(TabVisibility::getTab).collect(Collectors.toSet());
+			tabs.addAll(set);
+			List<UserPermission> userPermissions = p.getUserPermissions();
+			set.clear();
+			set = userPermissions.stream().map(UserPermission::getName).collect(Collectors.toSet());
+			names.addAll(set);
 		}
+		pmd.setFields(fields);
+		pmd.setFileNames(fileNames);
+		pmd.setLayouts(layouts);
+		pmd.setNames(names);
+		pmd.setObjects(objects);
+		pmd.setRecordTypes(recordTypes);
+		pmd.setTabs(tabs);
+		System.out.println(pmd);
 		return csvFilePath;
 	}
 	

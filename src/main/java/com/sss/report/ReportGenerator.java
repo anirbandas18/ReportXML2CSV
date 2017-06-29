@@ -12,15 +12,15 @@ public class ReportGenerator {
 		// TODO Auto-generated method stub
 		String xmlFileRepositoryPath = args[0];
 		try {
+			//System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("output.txt"))));
 			XML2CSVService service = new XML2CSVService();
 			List<Profile> profiles = service.parseXML(xmlFileRepositoryPath);
-			for(Profile profile : profiles) {
-				System.out.println(profile);
-			}
+			System.out.println(profiles.size());
+			service.persistCSV(profiles);
 		} catch (ReportException e) {
 			// TODO Auto-generated catch block
-			//e.printStackTrace();
-			System.out.println(e.getMessage());
+			// System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 	}
 
