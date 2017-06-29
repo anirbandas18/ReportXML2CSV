@@ -4,6 +4,8 @@ import java.util.Set;
 
 public class ProfileMetadataModel {
 	
+	private static final String DELIMITTER = ",";
+	
 	private Set<String> fileNames;
 	
 	private Set<String> fields;
@@ -76,8 +78,44 @@ public class ProfileMetadataModel {
 
 	@Override
 	public String toString() {
-		return "ProfileMetadata [fileNames=" + fileNames + ", fields=" + fields + ", layouts=" + layouts + ", objects="
-				+ objects + ", recordTypes=" + recordTypes + ", tabs=" + tabs + ", names=" + names + "]";
+		String md = "fields" + DELIMITTER;
+		System.out.println("fields");
+		for(String field : fields) {
+			md = md + field + DELIMITTER;
+			System.out.println(field);
+		}
+		md = md + "layouts" + DELIMITTER;
+		System.out.println("layouts");
+		for(String layout : layouts) {
+			md = md + layout + DELIMITTER;
+			System.out.println(layout);
+		}
+		md = md + "names" + DELIMITTER;
+		System.out.println("names");
+		for(String name : names) {
+			md = md + name + DELIMITTER;
+			System.out.println(name);
+		}
+		md = md + "objects" + DELIMITTER;
+		System.out.println("objects");
+		for(String object : objects) {
+			md = md + object + DELIMITTER;
+			System.out.println(object);
+		}
+		md = md + "recordTypes" + DELIMITTER;
+		System.out.println("recordTypes");
+		for(String rt : recordTypes) {
+			md = md + rt + DELIMITTER;
+			System.out.println(rt);
+		}
+		md = md + "tabs" + DELIMITTER;
+		System.out.println("tabs");
+		for(String tab : tabs) {
+			md = md + tab + DELIMITTER;
+			System.out.println(tab);
+		}
+		md = md.substring(0, md.length() - 1);
+		return md;
 	}
 	
 	

@@ -47,8 +47,7 @@ public class XML2CSVService {
 	}
 	
 	
-	public String persistCSV(List<Profile> profiles) {
-		String csvFilePath = "profile_analysis.csv";
+	public ProfileMetadataModel getProfileMetadata(List<Profile> profiles) {
 		ProfileMetadataModel pmd = new ProfileMetadataModel();
 		Set<String> fileNames = new TreeSet<>();
 		Set<String> fields = new TreeSet<>();
@@ -92,8 +91,11 @@ public class XML2CSVService {
 		pmd.setObjects(objects);
 		pmd.setRecordTypes(recordTypes);
 		pmd.setTabs(tabs);
-		System.out.println(pmd);
-		return csvFilePath;
+		return pmd;
+	}
+	
+	public void persistCSV(List<Profile> profiles, ProfileMetadataModel metadata) {
+		
 	}
 	
 }

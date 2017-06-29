@@ -25,6 +25,7 @@ import com.sss.report.entity.Profile;
 
 public class XMLDAO {
 	
+	
 	private static NamespaceFilter getNameSpaceFilter(String namespace) throws SAXException {
 		XMLReader xmlreader = XMLReaderFactory.createXMLReader();
 		NamespaceFilter inFilter = new NamespaceFilter(namespace, true);
