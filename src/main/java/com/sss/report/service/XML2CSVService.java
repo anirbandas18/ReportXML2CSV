@@ -1,5 +1,7 @@
 package com.sss.report.service;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -27,6 +29,12 @@ import com.sss.report.exception.ReportException;
 import com.sss.report.model.ProfileMetadataModel;
 
 public class XML2CSVService {
+	
+	private ProfileMetadataModel pmd;
+	
+	public XML2CSVService() {
+		this.pmd = new ProfileMetadataModel();
+	}
 
 	public List<Profile>  parseXML(String xmlFileRepositoryPath) throws ReportException {
 		List<Profile> profiles = new ArrayList<>();
@@ -39,6 +47,7 @@ public class XML2CSVService {
 				System.out.println(profile.getFileName());
 				profiles.add(profile);
 			}
+			getProfileMetadata(profiles);
 		} catch (IOException | JAXBException | SAXException e) {
 			// TODO Auto-generated catch block
 			throw new ReportException(e);
@@ -47,8 +56,7 @@ public class XML2CSVService {
 	}
 	
 	
-	public ProfileMetadataModel getProfileMetadata(List<Profile> profiles) {
-		ProfileMetadataModel pmd = new ProfileMetadataModel();
+	private void getProfileMetadata(List<Profile> profiles) {
 		Set<String> fileNames = new TreeSet<>();
 		Set<String> fields = new TreeSet<>();
 		Set<String> layouts = new TreeSet<>();
@@ -57,6 +65,7 @@ public class XML2CSVService {
 		Set<String> tabs = new TreeSet<>();
 		Set<String> names = new TreeSet<>();
 		Set<String> set = new TreeSet<>();
+		fileNames.add("\t");
 		for(Profile p : profiles) {
 			fileNames.add(p.getFileName());
 			List<FieldPermission> fieldPermissions = p.getFieldPermissions();
@@ -91,11 +100,15 @@ public class XML2CSVService {
 		pmd.setObjects(objects);
 		pmd.setRecordTypes(recordTypes);
 		pmd.setTabs(tabs);
-		return pmd;
 	}
 	
-	public void persistCSV(List<Profile> profiles, ProfileMetadataModel metadata) {
-		
+	public void persistCSV(List<Profile> profiles, String csvReportPath) throws IOException {
+		BufferedWriter bw = new BufferedWriter(new FileWriter(csvReportPath));
+		String line = pmd.getFileNames().toString();
+		line = line.substring(1,line.length() - 1);
+		bw.write(line);
+		bw.newLine();
+		bw.close();
 	}
 	
 }
