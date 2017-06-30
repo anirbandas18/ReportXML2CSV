@@ -9,9 +9,9 @@ import java.io.Reader;
 import java.io.UnsupportedEncodingException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.concurrent.Callable;
 
 import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.sax.SAXSource;
 
@@ -23,8 +23,13 @@ import org.xml.sax.helpers.XMLReaderFactory;
 import com.sss.report.core.NamespaceFilter;
 import com.sss.report.entity.Profile;
 
-public class XMLDAO {
+public class XMLDAO implements Callable<Profile>{
 	
+	private String xmlFilePath;
+	
+	public XMLDAO(String xmlFilePath) {
+		this.xmlFilePath = xmlFilePath;
+	}
 	
 	private static NamespaceFilter getNameSpaceFilter(String namespace) throws SAXException {
 		XMLReader xmlreader = XMLReaderFactory.createXMLReader();
@@ -39,8 +44,9 @@ public class XMLDAO {
 		InputSource is = new InputSource(reader);
 		return is;
 	}
-	
-	public static Profile unmarshall(String xmlFilePath) throws JAXBException, SAXException, FileNotFoundException, UnsupportedEncodingException {
+
+	@Override
+	public Profile call() throws Exception {
 		Profile profile = new Profile();
 		Path filePath = Paths.get(xmlFilePath);
 		File xmlFile = filePath.toFile();

@@ -9,11 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.FutureTask;
 import java.util.stream.Collectors;
-
-import javax.xml.bind.JAXBException;
-
-import org.xml.sax.SAXException;
 
 import com.sss.report.dao.XMLDAO;
 import com.sss.report.entity.FieldPermission;
@@ -28,18 +28,25 @@ import com.sss.report.model.ProfileMetadataModel;
 
 public class XML2CSVService {
 
+	
 	public List<Profile>  parseXML(String xmlFileRepositoryPath) throws ReportException {
 		List<Profile> profiles = new ArrayList<>();
 		try {
 			Path xmlFileRepository = Paths.get(xmlFileRepositoryPath);
 			DirectoryStream<Path> xmlFiles = Files.newDirectoryStream(xmlFileRepository);
+			int noOfFiles = xmlFileRepository.getNameCount();
+			ExecutorService executor = Executors.newFixedThreadPool(noOfFiles);
 			for(Path xmlFile : xmlFiles) {
 				String xmlFilePath = xmlFile.toString();
-				Profile profile = XMLDAO.unmarshall(xmlFilePath);
+				XMLDAO xmlDAO = new XMLDAO(xmlFilePath);
+				FutureTask<Profile> unmarshallTask = new FutureTask<>(xmlDAO);
+				executor.execute(unmarshallTask);
+				Profile profile = unmarshallTask.get();
 				System.out.println(profile.getFileName());
 				profiles.add(profile);
 			}
-		} catch (IOException | JAXBException | SAXException e) {
+			executor.shutdown();
+		} catch (IOException | InterruptedException | ExecutionException e) {
 			// TODO Auto-generated catch block
 			throw new ReportException(e);
 		} 
