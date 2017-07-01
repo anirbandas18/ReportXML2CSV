@@ -25,7 +25,10 @@ public class XML2CSVService {
 		this.metadata = new ProfileMetadataModel();
 	}
 
-	
+	public ProfileMetadataModel getMetadata() {
+		return metadata;
+	}
+
 	public List<Profile>  parseXML(String xmlFileRepositoryPath) throws ReportException {
 		List<Profile> profiles = new ArrayList<>();
 		try {
@@ -39,7 +42,7 @@ public class XML2CSVService {
 				FutureTask<Profile> unmarshallTask = new FutureTask<>(xmlDAO);
 				executor.execute(unmarshallTask);
 				Profile profile = unmarshallTask.get();
-				System.out.println(profile.getFileName());
+				//System.out.println(profile.getFileName());
 				profiles.add(profile);
 			}
 			executor.shutdown();
