@@ -10,6 +10,7 @@ import java.io.UnsupportedEncodingException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.concurrent.Callable;
+import java.util.stream.Collectors;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
@@ -21,13 +22,23 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
 import com.sss.report.core.NamespaceFilter;
+import com.sss.report.entity.FieldPermission;
+import com.sss.report.entity.LayoutAssignment;
+import com.sss.report.entity.ObjectPermission;
 import com.sss.report.entity.Profile;
+import com.sss.report.entity.RecordTypeVisibility;
+import com.sss.report.entity.TabVisibility;
+import com.sss.report.entity.UserPermission;
+import com.sss.report.model.ProfileMetadataModel;
 
 public class XMLDAO implements Callable<Profile>{
 	
 	private String xmlFilePath;
 	
-	public XMLDAO(String xmlFilePath) {
+	private ProfileMetadataModel metadata;
+	
+	public XMLDAO(String xmlFilePath, ProfileMetadataModel metadata) {
+		this.metadata = metadata;
 		this.xmlFilePath = xmlFilePath;
 	}
 	
@@ -56,6 +67,12 @@ public class XMLDAO implements Callable<Profile>{
 		JAXBContext context = JAXBContext.newInstance(Profile.class);
 		Unmarshaller unmarshaller = context.createUnmarshaller();
 		profile = (Profile) unmarshaller.unmarshal(xmlSource);
+		metadata.addFields(profile.getFieldPermissions().stream().map(FieldPermission::getField).collect(Collectors.toSet()));
+		metadata.addLayouts(profile.getLayoutAssignments().stream().map(LayoutAssignment::getLayout).collect(Collectors.toSet()));
+		metadata.addObjects(profile.getObjectPermissions().stream().map(ObjectPermission::getObject).collect(Collectors.toSet()));
+		metadata.addRecordTypes(profile.getRecordTypeVisibilities().stream().map(RecordTypeVisibility::getRecordType).collect(Collectors.toSet()));
+		metadata.addTabs(profile.getTabVisibilities().stream().map(TabVisibility::getTab).collect(Collectors.toSet()));
+		metadata.addNames(profile.getUserPermissions().stream().map(UserPermission::getName).collect(Collectors.toSet()));
 		profile.setFileName(xmlFile.getName());
 		return profile;
 	}

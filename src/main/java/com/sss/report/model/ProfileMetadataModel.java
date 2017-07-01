@@ -1,81 +1,108 @@
 package com.sss.report.model;
 
 import java.util.Set;
+import java.util.TreeSet;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class ProfileMetadataModel {
 	
 	private static final String DELIMITTER = ",";
 	
-	private Set<String> fileNames;
+	private final ReentrantReadWriteLock rwl;
 	
-	private Set<String> fields;
+	private final Set<String> fileNames;
 	
-	private Set<String> layouts;
+	private final Set<String> fields;
 	
-	private Set<String> objects;
+	private final Set<String> layouts;
 	
-	private Set<String> recordTypes;
+	private final Set<String> objects;
 	
-	private Set<String> tabs;
+	private final Set<String> recordTypes;
 	
-	private Set<String> names;
+	private final Set<String> tabs;
+	
+	private final Set<String> names;
 
+	public ProfileMetadataModel() {
+		this.rwl = new ReentrantReadWriteLock();
+		this.fields = new TreeSet<>();
+		this.fileNames = new TreeSet<>();
+		this.layouts  = new TreeSet<>();
+		this.objects = new TreeSet<>();
+		this.recordTypes = new TreeSet<>();
+		this.tabs = new TreeSet<>();
+		this.names = new TreeSet<>();
+	}
 	
+	public void addFileNames(Set<String> fileNames) {
+		this.rwl.writeLock().lock();
+		this.fileNames.addAll(fileNames);
+		this.rwl.writeLock().unlock();
+	}
 	
 	public Set<String> getFileNames() {
 		return fileNames;
 	}
 
-	public void setFileNames(Set<String> fileNames) {
-		this.fileNames = fileNames;
+	public void addFields(Set<String> fields) {
+		this.rwl.writeLock().lock();
+		this.fileNames.addAll(fields);
+		this.rwl.writeLock().unlock();
 	}
-
+	
 	public Set<String> getFields() {
 		return fields;
 	}
 
-	public void setFields(Set<String> fields) {
-		this.fields = fields;
+	public void addLayouts(Set<String> layouts) {
+		this.rwl.writeLock().lock();
+		this.layouts.addAll(layouts);
+		this.rwl.writeLock().unlock();
 	}
 
 	public Set<String> getLayouts() {
 		return layouts;
 	}
 
-	public void setLayouts(Set<String> layouts) {
-		this.layouts = layouts;
+	public void addObjects(Set<String> objects) {
+		this.rwl.writeLock().lock();
+		this.objects.addAll(objects);
+		this.rwl.writeLock().unlock();
 	}
 
 	public Set<String> getObjects() {
 		return objects;
 	}
 
-	public void setObjects(Set<String> objects) {
-		this.objects = objects;
+	public void addRecordTypes(Set<String> recordTypes) {
+		this.rwl.writeLock().lock();
+		this.recordTypes.addAll(recordTypes);
+		this.rwl.writeLock().unlock();
 	}
 
 	public Set<String> getRecordTypes() {
 		return recordTypes;
 	}
 
-	public void setRecordTypes(Set<String> recordTypes) {
-		this.recordTypes = recordTypes;
+	public void addTabs(Set<String> tabs) {
+		this.rwl.writeLock().lock();
+		this.tabs.addAll(tabs);
+		this.rwl.writeLock().unlock();
 	}
 
 	public Set<String> getTabs() {
 		return tabs;
 	}
 
-	public void setTabs(Set<String> tabs) {
-		this.tabs = tabs;
+	public void addNames(Set<String> names) {
+		this.rwl.writeLock().lock();
+		this.names.addAll(names);
+		this.rwl.writeLock().unlock();
 	}
-
+ 
 	public Set<String> getNames() {
 		return names;
-	}
-
-	public void setNames(Set<String> names) {
-		this.names = names;
 	}
 
 	@Override

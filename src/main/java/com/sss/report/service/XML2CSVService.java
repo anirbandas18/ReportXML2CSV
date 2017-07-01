@@ -7,26 +7,23 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
-import java.util.stream.Collectors;
 
 import com.sss.report.dao.XMLDAO;
-import com.sss.report.entity.FieldPermission;
-import com.sss.report.entity.LayoutAssignment;
-import com.sss.report.entity.ObjectPermission;
 import com.sss.report.entity.Profile;
-import com.sss.report.entity.RecordTypeVisibility;
-import com.sss.report.entity.TabVisibility;
-import com.sss.report.entity.UserPermission;
 import com.sss.report.exception.ReportException;
 import com.sss.report.model.ProfileMetadataModel;
 
 public class XML2CSVService {
+	
+	private ProfileMetadataModel metadata;
+	
+	public XML2CSVService() {
+		this.metadata = new ProfileMetadataModel();
+	}
 
 	
 	public List<Profile>  parseXML(String xmlFileRepositoryPath) throws ReportException {
@@ -38,7 +35,7 @@ public class XML2CSVService {
 			ExecutorService executor = Executors.newFixedThreadPool(noOfFiles);
 			for(Path xmlFile : xmlFiles) {
 				String xmlFilePath = xmlFile.toString();
-				XMLDAO xmlDAO = new XMLDAO(xmlFilePath);
+				XMLDAO xmlDAO = new XMLDAO(xmlFilePath, metadata);
 				FutureTask<Profile> unmarshallTask = new FutureTask<>(xmlDAO);
 				executor.execute(unmarshallTask);
 				Profile profile = unmarshallTask.get();
@@ -54,7 +51,7 @@ public class XML2CSVService {
 	}
 	
 	
-	public ProfileMetadataModel getProfileMetadata(List<Profile> profiles) {
+	/*public ProfileMetadataModel getProfileMetadata(List<Profile> profiles) {
 		ProfileMetadataModel pmd = new ProfileMetadataModel();
 		Set<String> fileNames = new TreeSet<>();
 		Set<String> fields = new TreeSet<>();
@@ -99,7 +96,7 @@ public class XML2CSVService {
 		pmd.setRecordTypes(recordTypes);
 		pmd.setTabs(tabs);
 		return pmd;
-	}
+	}*/
 	
 	public void persistCSV(List<Profile> profiles, ProfileMetadataModel metadata) {
 		
