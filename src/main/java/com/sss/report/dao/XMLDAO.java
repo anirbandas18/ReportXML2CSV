@@ -43,6 +43,7 @@ public class XMLDAO {
 	public static Profile unmarshall(String xmlFilePath) throws JAXBException, SAXException, FileNotFoundException, UnsupportedEncodingException {
 		Profile profile = new Profile();
 		Path filePath = Paths.get(xmlFilePath);
+		//System.out.println(filePath);
 		File xmlFile = filePath.toFile();
 		NamespaceFilter inFilter = getNameSpaceFilter(null);
 		InputSource is = getInputSource(xmlFile);

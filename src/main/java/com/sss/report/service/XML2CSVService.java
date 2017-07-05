@@ -67,6 +67,7 @@ public class XML2CSVService {
 		Set<String> set = new TreeSet<>();
 		fileNames.add("\t");
 		for (Profile p : profiles) {
+			System.out.println(p.getFileName());
 			fileNames.add(p.getFileName());
 			List<FieldPermission> fieldPermissions = p.getFieldPermissions();
 			set.clear();
@@ -76,6 +77,7 @@ public class XML2CSVService {
 			set.clear();
 			set = layoutAssignments.stream().map(LayoutAssignment::getLayout).collect(Collectors.toSet());
 			layouts.addAll(set);
+			System.out.println(p.getObjectPermissions().size());
 			List<ObjectPermission> objectPermissions = p.getObjectPermissions();
 			set.clear();
 			set = objectPermissions.stream().map(ObjectPermission::getObject).collect(Collectors.toSet());

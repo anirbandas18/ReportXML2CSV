@@ -3,6 +3,7 @@ package com.sss.report.entity;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -33,6 +34,15 @@ public class Profile {
 	private List<TabVisibility> tabVisibilities;
 	@XmlElement
 	private List<UserPermission> userPermissions;
+	
+	public Profile() {
+		this.fieldPermissions = new ArrayList<>();
+		this.layoutAssignments = new ArrayList<>();
+		this.objectPermissions = new ArrayList<>();
+		this.recordTypeVisibilities = new ArrayList<>();
+		this.tabVisibilities = new ArrayList<>();
+		this.userPermissions = new ArrayList<>();
+	}
 	
 	public Boolean getCustom() {
 		return custom;
