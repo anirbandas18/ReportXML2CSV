@@ -5,7 +5,7 @@ import java.util.Set;
 
 import com.sss.report.entity.Profile;
 
-public class ProfileReportModel {
+public class CSVModel {
 	
 	private String mode;
 	

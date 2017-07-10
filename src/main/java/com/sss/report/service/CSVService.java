@@ -13,13 +13,13 @@ import com.sss.report.core.Utility;
 import com.sss.report.dao.DIRDAO;
 import com.sss.report.model.ProfileMetadataModel;
 import com.sss.report.model.Properties;
-import com.sss.report.model.ProfileReportModel;
+import com.sss.report.model.CSVModel;
 
 public class CSVService implements Callable<Long>{
 	
-	private ProfileReportModel reportModel;
+	private CSVModel reportModel;
 	
-	public CSVService(ProfileReportModel reportModel) {
+	public CSVService(CSVModel reportModel) {
 		this.reportModel = reportModel;
 	}
 
@@ -27,6 +27,7 @@ public class CSVService implements Callable<Long>{
 	public Long call() throws Exception {
 		long start = System.currentTimeMillis();
 		Path csvRepositoryPath = Utility.createDir(reportModel.getCsvRepository());
+		reportModel.getMode();
 		ProfileMetadataModel metadata = reportModel.getMetadata();
 		Map<Properties,Set<String>> properties = metadata.getPropertiesWithValues();
 		int nThreads = properties.size();

@@ -9,7 +9,7 @@ import com.sss.report.core.Utility;
 import com.sss.report.entity.Profile;
 import com.sss.report.model.Pair;
 import com.sss.report.model.ProfileMetadataModel;
-import com.sss.report.model.ProfileReportModel;
+import com.sss.report.model.CSVModel;
 import com.sss.report.service.CSVService;
 import com.sss.report.service.XMLService;
 
@@ -30,7 +30,7 @@ public class ReportGenerator {
 			xmlExecutor.shutdown();
 			System.out.println("PERSISTING : ");
 			ExecutorService csvExecutor = Executors.newSingleThreadExecutor();
-			ProfileReportModel reportModel = new ProfileReportModel();
+			CSVModel reportModel = new CSVModel();
 			reportModel.setCsvRepository(csvRepositoryPath);
 			reportModel.setMetadata(pair.getB());
 			reportModel.setProfiles(pair.getA());
