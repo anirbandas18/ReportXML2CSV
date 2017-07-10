@@ -9,14 +9,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 
-import javax.naming.spi.DirectoryManager;
-
 import com.sss.report.core.Utility;
 import com.sss.report.dao.DIRDAO;
-import com.sss.report.model.ProfileMetadataModel;
-import com.sss.report.model.Properties;
 import com.sss.report.model.CSVModel;
 import com.sss.report.model.DirectoryModel;
+import com.sss.report.model.ProfileMetadataModel;
+import com.sss.report.model.Properties;
 
 public class CSVService implements Callable<Long>{
 	

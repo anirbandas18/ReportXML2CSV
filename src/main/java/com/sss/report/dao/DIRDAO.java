@@ -12,6 +12,7 @@ import com.sss.report.core.Utility;
 import com.sss.report.entity.Profile;
 import com.sss.report.model.DirectoryModel;
 import com.sss.report.model.PersistenceReport;
+import com.sss.report.model.ReportModel;
 
 public class DIRDAO implements Callable<Long>{
 	
@@ -32,7 +33,12 @@ public class DIRDAO implements Callable<Long>{
 			String fieldName = Utility.getChildDirName(childDirPath.toString());
 			List<Object> content = Utility.getFieldByName(profile, fieldName);
 			String propertyKey = Utility.getChildDirName(csvFileNameWithoutExt.getParent().toString());
-			CSVDAO csvDAO = new CSVDAO(csvFileNameWithoutExt.toString(), propertyKey, content, directoryModel.getPropertyValues());
+			ReportModel reportModel = new ReportModel();
+			reportModel.setContent(content);
+			reportModel.setCsvFileNameWithoutExt(csvFileNameWithoutExt.toString());
+			reportModel.setProperties(directoryModel.getPropertyValues());
+			reportModel.setPropertyKey(propertyKey);
+			CSVDAO csvDAO = new CSVDAO(reportModel);
 			FutureTask<PersistenceReport> csvTask = new FutureTask<>(csvDAO);
 			executor.submit(csvTask);
 			PersistenceReport pr = csvTask.get();
