@@ -5,6 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 
+import com.sss.report.core.Utility;
 import com.sss.report.entity.Profile;
 import com.sss.report.model.Pair;
 import com.sss.report.model.ProfileMetadataModel;
@@ -20,14 +21,14 @@ public class ReportGenerator {
 		String xmlRepositoryPath = args[1];// input directory
 		String csvRepositoryPath = args[2];// output directory 
 		try {
+			System.out.println("PARSING : ");
 			XMLService xmlService = new XMLService(xmlRepositoryPath);
 			ExecutorService xmlExecutor = Executors.newSingleThreadExecutor();
 			FutureTask<Pair<List<Profile>,ProfileMetadataModel>> xmlTask = new FutureTask<Pair<List<Profile>,ProfileMetadataModel>>(xmlService);
 			xmlExecutor.submit(xmlTask);
 			Pair<List<Profile>,ProfileMetadataModel> pair = xmlTask.get();
 			xmlExecutor.shutdown();
-			System.out.println(pair.getA().size());
-			System.out.println(pair.getB().getPropertiesWithValues().size());
+			System.out.println("PERSISTING : ");
 			ExecutorService csvExecutor = Executors.newSingleThreadExecutor();
 			ProfileReportModel reportModel = new ProfileReportModel();
 			reportModel.setCsvRepository(csvRepositoryPath);
@@ -38,7 +39,7 @@ public class ReportGenerator {
 			FutureTask<Long> csvTask = new FutureTask<>(profileService);
 			csvExecutor.submit(csvTask);
 			Long duration = csvTask.get();
-			System.out.println("CSV Report generation took " + duration + " miliseconds");
+			System.out.println("CSV Report generation took " + Utility.milisecondsToSeconds(duration) + " miliseconds");
 			csvExecutor.shutdown();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

@@ -33,12 +33,12 @@ public class CSVService implements Callable<Long>{
 		ExecutorService executor = Executors.newFixedThreadPool(nThreads);
 		for(Properties key : properties.keySet()) {
 			String childDirPath = csvRepositoryPath.toString() + File.separator + key.toString();
-			System.out.println(childDirPath);
-			DIRDAO dirDAO = new DIRDAO(childDirPath, metadata.getPropertyValues(key), reportModel.getProfiles());
+			Set<String> propertyValues = metadata.getPropertyValues(key);
+			DIRDAO dirDAO = new DIRDAO(childDirPath, propertyValues, reportModel.getProfiles());
 			FutureTask<Long> dirTask = new FutureTask<>(dirDAO);
 			executor.submit(dirTask);
 			Long duration = dirTask.get();
-			System.out.println(childDirPath + " processing took " + duration + " miliseconds");
+			System.out.println(childDirPath + " with " + propertyValues.size() + " files processing took " + Utility.milisecondsToSeconds(duration) + " miliseconds");
 		}
 		executor.shutdown();
 		long end = System.currentTimeMillis();

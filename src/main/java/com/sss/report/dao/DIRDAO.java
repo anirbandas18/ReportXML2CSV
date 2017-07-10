@@ -41,7 +41,7 @@ public class DIRDAO implements Callable<Long>{
 			executor.submit(csvTask);
 			PersistenceReport pr = csvTask.get();
 			String resultantFileName = Utility.getEquivalentCSVFileName(csvFileNameWithoutExt.toString());
-			System.out.println(resultantFileName + " of size " + pr.getSize() + " bytes took " + pr.getDuration() + " miliseconds to process");
+			System.out.println(resultantFileName + " of size " + Utility.humanReadableByteCount(pr.getSize()) + " bytes took " + Utility.milisecondsToSeconds(pr.getDuration()) + " miliseconds to process");
 		}
 		executor.shutdown();
 		long end = System.currentTimeMillis();
