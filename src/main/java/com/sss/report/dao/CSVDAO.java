@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.StringWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.concurrent.Callable;
 
 import com.sss.report.core.Utility;
@@ -23,17 +24,35 @@ public class CSVDAO implements Callable<PersistenceReport>{
 		StringWriter sw = new StringWriter();
 		BufferedWriter bw = new BufferedWriter(sw);
 		long start = System.currentTimeMillis();
-		bw.write(Utility.DELIMITTER + Utility.getChildDirName(reportModel.getCsvFileNameWithoutExt()));
+		String columnName = Utility.getChildDirName(reportModel.getReportNameWithoutExt());
+		bw.write(Utility.DELIMITTER + columnName);
 		bw.newLine();
-		for(String property : reportModel.getProperties()) {
+		for(Object property : reportModel.getProperties()) {
 			Object item = null;
+			int flag = 0;
+			Object token = property;
 			for(Object z : reportModel.getContent()) {
-				if(Utility.isFieldPresent(z, reportModel.getPropertyKey(), property)) {
+				if(Utility.isFieldPresent(z, reportModel.getPropertyKey(), property.toString())) {
 					item = z;
+					flag = 1;// profile
 					break;
+				} else {
+					List<Object> content = Utility.getComplexFieldByName(property, reportModel.getPropertyKey());
+					for(Object y : content) {
+						if(Utility.isFieldPresent(y, reportModel.getPropertyKey(), z.toString())) {
+							item = z;
+							flag = 2;// property
+							break;
+						}
+					}
+					if(flag == 2) {
+						token = Utility.getSimpleFieldByName(property, Utility.FILE_NAME);
+					} else if (flag == 1) {
+						token = z;
+					}
 				}
 			}
-			String line = property + Utility.DELIMITTER;
+			String line = token.toString() + Utility.DELIMITTER;
 			if(item != null) {
 				line = line + item.toString();
 			} 
@@ -43,7 +62,7 @@ public class CSVDAO implements Callable<PersistenceReport>{
 		long end = System.currentTimeMillis();
 		bw.flush();
 		byte[] bytes = sw.toString().getBytes();
-		String csvFilePath = Utility.getEquivalentCSVFileName(reportModel.getCsvFileNameWithoutExt());
+		String csvFilePath = Utility.getEquivalentCSVFileName(reportModel.getReportNameWithoutExt());
 		Files.write(Paths.get(csvFilePath), bytes);
 		long duration = end - start;
 		PersistenceReport pr = new PersistenceReport();

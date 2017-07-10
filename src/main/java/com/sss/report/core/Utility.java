@@ -7,7 +7,6 @@ import java.nio.ByteBuffer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,8 +17,7 @@ public class Utility {
 	public static final String PROPERTIES = "properties";
 	public static final String PROFILE = "profile";
 	public static final String CSV_EXTENSION = ".csv";
-	private static final String[] sizes = { "Bytes", "KB", "MB", "GB", "TB" };
-	private static final String NA = "N/A";
+	public static final String FILE_NAME = "fileName";
 
 	public static Long bytesToLong(byte[] bytes) {
 		ByteBuffer buffer = ByteBuffer.allocate(bytes.length);
@@ -29,7 +27,7 @@ public class Utility {
 	}
 
 	public static String milisecondsToSeconds(Long ms) {
-		Float sec = ms / 1000.0f;
+		Float sec = (ms != null ? ms : 0.0f)/ 1000.0f;
 		return String.format("%.3f", sec);
 	}
 
@@ -65,7 +63,7 @@ public class Utility {
 		return csvRepositoryDir;
 	}
 
-	public static boolean isFieldPresent(Object bean, String fieldName, String fieldValue) {
+	public static boolean isFieldPresent(Object bean, String fieldName, String fieldValue) throws IllegalArgumentException, IllegalAccessException {
 		Class<?> clazz = bean.getClass();
 		boolean flag = true;
 		try {
@@ -74,13 +72,27 @@ public class Utility {
 			Object value = f.get(bean);
 			flag = value.equals(fieldValue);
 			f.setAccessible(false);
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (NoSuchFieldException e) {
+			flag = false;
 		}
 		return flag;
 	}
+	
+	public static Object getSimpleFieldByName(Object bean, String fieldName) throws IllegalArgumentException, IllegalAccessException {
+		Class<?> clazz = bean.getClass();
+		Object value = new Object();
+		try {
+			Field f = clazz.getDeclaredField(fieldName);
+			f.setAccessible(true);
+			value = f.get(bean);
+			f.setAccessible(false);
+		} catch (NoSuchFieldException e) {
+			//value = null;
+		}
+		return value;
+	}
 
-	public static List<Object> getFieldByName(Object bean, String fieldName)
+	public static List<Object> getComplexFieldByName(Object bean, String fieldName)
 			throws IllegalArgumentException, IllegalAccessException {
 		Class<?> clazz = bean.getClass();
 		List<Field> f = new ArrayList<Field>(Arrays.asList(clazz.getDeclaredFields()));
