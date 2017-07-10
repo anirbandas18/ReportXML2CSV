@@ -1,5 +1,6 @@
-package com.sss.report.service;
+/*package com.sss.report.service;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -12,25 +13,27 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 
+import com.sss.report.dao.DIRDAO;
 import com.sss.report.dao.XMLDAO;
 import com.sss.report.entity.Profile;
 import com.sss.report.exception.ReportException;
 import com.sss.report.model.ProfileMetadataModel;
+import com.sss.report.model.Properties;
+import com.sss.report.model.ReportModel;
 
 public class XML2CSVService {
 	
 	private ProfileMetadataModel metadata;
 	
+	private List<Profile> profiles;
+	
 	public XML2CSVService() {
 		this.metadata = new ProfileMetadataModel();
+		this.profiles  = new ArrayList<>();
 	}
 
-	public ProfileMetadataModel getMetadata() {
-		return metadata;
-	}
-
-	public List<Profile>  parseXML(String xmlFileRepositoryPath) throws ReportException {
-		List<Profile> profiles = new ArrayList<>();
+	public void parseXML(String xmlFileRepositoryPath) throws ReportException {
+		//Pair<List<Profile>,ProfileMetadataModel> pair = new Pair<>();
 		try {
 			Path xmlFileRepository = Paths.get(xmlFileRepositoryPath);
 			DirectoryStream<Path> xmlFiles = Files.newDirectoryStream(xmlFileRepository);
@@ -46,63 +49,43 @@ public class XML2CSVService {
 				profiles.add(profile);
 			}
 			executor.shutdown();
+			pair.setA(profiles);
+			pair.setB(metadata);
 		} catch (IOException | InterruptedException | ExecutionException e) {
 			// TODO Auto-generated catch block
 			throw new ReportException(e);
 		} 
-		return profiles;
+		//return pair;
 	}
 	
-	
-	/*public ProfileMetadataModel getProfileMetadata(List<Profile> profiles) {
-		ProfileMetadataModel pmd = new ProfileMetadataModel();
-		Set<String> fileNames = new TreeSet<>();
-		Set<String> fields = new TreeSet<>();
-		Set<String> layouts = new TreeSet<>();
-		Set<String> objects = new TreeSet<>();
-		Set<String> recordTypes = new TreeSet<>();
-		Set<String> tabs = new TreeSet<>();
-		Set<String> names = new TreeSet<>();
-		Set<String> set = new TreeSet<>();
-		for(Profile p : profiles) {
-			fileNames.add(p.getFileName());
-			List<FieldPermission> fieldPermissions = p.getFieldPermissions();
-			set.clear();
-			set = fieldPermissions.stream().map(FieldPermission::getField).collect(Collectors.toSet());
-			fields.addAll(set);
-			List<LayoutAssignment> layoutAssignments = p.getLayoutAssignments();
-			set.clear();
-			set = layoutAssignments.stream().map(LayoutAssignment::getLayout).collect(Collectors.toSet());
-			layouts.addAll(set);
-			List<ObjectPermission> objectPermissions = p.getObjectPermissions();
-			set.clear();
-			set = objectPermissions.stream().map(ObjectPermission::getObject).collect(Collectors.toSet());
-			objects.addAll(set);
-			List<RecordTypeVisibility> recordTypeVisibilities = p.getRecordTypeVisibilities();
-			set.clear();
-			set = recordTypeVisibilities.stream().map(RecordTypeVisibility::getRecordType).collect(Collectors.toSet());
-			recordTypes.addAll(set);
-			List<TabVisibility> tabVisibilities = p.getTabVisibilities();
-			set.clear();
-			set = tabVisibilities.stream().map(TabVisibility::getTab).collect(Collectors.toSet());
-			tabs.addAll(set);
-			List<UserPermission> userPermissions = p.getUserPermissions();
-			set.clear();
-			set = userPermissions.stream().map(UserPermission::getName).collect(Collectors.toSet());
-			names.addAll(set);
+	public void persistCSVByProfile(String csvRepositoryPath) throws ReportException {
+		try {
+			int nThreads = metadata.getPropertiesWithValues().size();
+			ExecutorService executor = Executors.newFixedThreadPool(nThreads);
+			long start = System.currentTimeMillis();
+			for(Properties key : metadata.getPropertiesWithValues().keySet()) {
+				ReportModel rm = new ReportModel();
+				rm.setChildDirPath(csvRepositoryPath + File.separator + key.toString());
+				System.out.println(rm.getChildDirPath());
+				rm.setProperties(metadata.getPropertyValues(key));
+				rm.setProfiles(profiles);
+				FutureTask<Long> dirTask = new FutureTask<>(new DIRDAO(rm));	
+				executor.submit(dirTask);
+				Long duration = dirTask.get();
+				System.out.println(rm.getChildDirPath() + " processing took " + duration + " miliseconds");
+			}
+			executor.shutdown();
+			long end = System.currentTimeMillis();
+			long duration = end - start;
+			System.out.println("Report generation took " + duration + " miliseconds");
+		} catch (InterruptedException | ExecutionException e) {
+			throw new ReportException(e);
 		}
-		pmd.setFields(fields);
-		pmd.setFileNames(fileNames);
-		pmd.setLayouts(layouts);
-		pmd.setNames(names);
-		pmd.setObjects(objects);
-		pmd.setRecordTypes(recordTypes);
-		pmd.setTabs(tabs);
-		return pmd;
-	}*/
-	
+	}
+		
 	public void persistCSV(List<Profile> profiles, ProfileMetadataModel metadata) {
 		
 	}
 	
 }
+*/

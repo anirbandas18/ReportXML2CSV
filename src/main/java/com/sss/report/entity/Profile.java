@@ -3,6 +3,7 @@ package com.sss.report.entity;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -17,34 +18,36 @@ public class Profile {
 	
 	@XmlTransient
 	private String fileName;
+	public Profile() {
+		this.field = new ArrayList<>();
+		this.layout = new ArrayList<>();
+		this.object = new ArrayList<>();
+		this.recordType = new ArrayList<>();
+		this.tab = new ArrayList<>();
+		this.name = new ArrayList<>();
+	}
 	@XmlElement
 	private Boolean custom;
 	@XmlElement
 	private String userLicense;
-	@XmlElement
-	private List<FieldPermission> fieldPermissions;
-	@XmlElement
-	private List<LayoutAssignment> layoutAssignments;
-	@XmlElement
-	private List<ObjectPermission> objectPermissions;
-	@XmlElement
-	private List<RecordTypeVisibility> recordTypeVisibilities;
-	@XmlElement
-	private List<TabVisibility> tabVisibilities;
-	@XmlElement
-	private List<UserPermission> userPermissions;
+	@XmlElement(name = "fieldPermissions")
+	private List<FieldPermission> field;
+	@XmlElement(name = "layoutAssignments")
+	private List<LayoutAssignment> layout;
+	@XmlElement(name = "objectPermissions")
+	private List<ObjectPermission> object;
+	@XmlElement(name = "recordTypeVisibilities")
+	private List<RecordTypeVisibility> recordType;
+	@XmlElement(name = "tabVisibilities")
+	private List<TabVisibility> tab;
+	@XmlElement(name = "userPermissions")
+	private List<UserPermission> name;
 	
 	public Boolean getCustom() {
 		return custom;
 	}
 	public void setCustom(Boolean custom) {
 		this.custom = custom;
-	}
-	public List<FieldPermission> getFieldPermissions() {
-		return fieldPermissions;
-	}
-	public void setFieldPermissions(List<FieldPermission> fieldPermissions) {
-		this.fieldPermissions = fieldPermissions;
 	}
 	@Override
 	public String toString() {
@@ -53,7 +56,7 @@ public class Profile {
 			BufferedWriter bw = new BufferedWriter(sw);
 			bw.write("Profile [custom=" + custom + ", fileName=" + fileName + ", fieldPermissions=");
 			bw.newLine();
-			for(FieldPermission fp : fieldPermissions) {
+			for(FieldPermission fp : field) {
 				bw.write(fp.toString());
 				bw.newLine();
 			}
@@ -69,42 +72,49 @@ public class Profile {
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
-	public List<LayoutAssignment> getLayoutAssignments() {
-		return layoutAssignments;
-	}
-	public void setLayoutAssignments(List<LayoutAssignment> layoutAssignments) {
-		this.layoutAssignments = layoutAssignments;
-	}
-	public List<ObjectPermission> getObjectPermissions() {
-		return objectPermissions;
-	}
-	public void setObjectPermissions(List<ObjectPermission> objectPermissions) {
-		this.objectPermissions = objectPermissions;
-	}
-	public List<RecordTypeVisibility> getRecordTypeVisibilities() {
-		return recordTypeVisibilities;
-	}
-	public void setRecordTypeVisibilities(List<RecordTypeVisibility> recordTypeVisibilities) {
-		this.recordTypeVisibilities = recordTypeVisibilities;
-	}
 	public String getUserLicense() {
 		return userLicense;
 	}
 	public void setUserLicense(String userLicense) {
 		this.userLicense = userLicense;
 	}
-	public List<TabVisibility> getTabVisibilities() {
-		return tabVisibilities;
+	public List<FieldPermission> getField() {
+		return field;
 	}
-	public void setTabVisibilities(List<TabVisibility> tabVisibilities) {
-		this.tabVisibilities = tabVisibilities;
+	public void setField(List<FieldPermission> field) {
+		this.field = field;
 	}
-	public List<UserPermission> getUserPermissions() {
-		return userPermissions;
+	public List<LayoutAssignment> getLayout() {
+		return layout;
 	}
-	public void setUserPermissions(List<UserPermission> userPermissions) {
-		this.userPermissions = userPermissions;
+	public void setLayout(List<LayoutAssignment> layout) {
+		this.layout = layout;
 	}
+	public List<ObjectPermission> getObject() {
+		return object;
+	}
+	public void setObject(List<ObjectPermission> object) {
+		this.object = object;
+	}
+	public List<RecordTypeVisibility> getRecordType() {
+		return recordType;
+	}
+	public void setRecordType(List<RecordTypeVisibility> recordType) {
+		this.recordType = recordType;
+	}
+	public List<TabVisibility> getTab() {
+		return tab;
+	}
+	public void setTab(List<TabVisibility> tab) {
+		this.tab = tab;
+	}
+	public List<UserPermission> getName() {
+		return name;
+	}
+	public void setName(List<UserPermission> name) {
+		this.name = name;
+	}
+	
 	
 
 }
