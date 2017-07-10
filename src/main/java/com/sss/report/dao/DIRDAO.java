@@ -5,11 +5,15 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.FutureTask;
 
 import com.sss.report.core.Utility;
 import com.sss.report.entity.Profile;
 
-public class DIRDAO {
+public class DIRDAO implements Callable<Long>{
 	
 	private String childDir;
 	private Set<String> propertyValues;
@@ -28,9 +32,12 @@ public class DIRDAO {
 		return csvFileName;
 	}
 	
+	@Override
 	public Long call() throws Exception {
-		Path childDirPath = Utility.createDir(childDir);
+		int nThreads = profiles.size();
+		ExecutorService executor = Executors.newFixedThreadPool(nThreads);
 		long start = System.currentTimeMillis();
+		Path childDirPath = Utility.createDir(childDir);
 		for(Profile profile : profiles) {
 			String csvFileName = getEquivalentCSVFileName(profile.getFileName());
 			String csvFile = childDirPath.toString() + File.separator + csvFileName;
@@ -38,9 +45,12 @@ public class DIRDAO {
 			Path csvFilePath = Paths.get(csvFile);
 			String propertyKey = Utility.getChildDirName(csvFilePath.getParent().toString());
 			CSVDAO csvDAO = new CSVDAO(csvFile, propertyKey, content, propertyValues);
-			Long duration = csvDAO.call();
+			FutureTask<Long> csvTask = new FutureTask<>(csvDAO);
+			executor.submit(csvTask);
+			Long duration = csvTask.get();
 			System.out.println(csvFile + " processing took " + duration + " miliseconds");
 		}
+		executor.shutdown();
 		long end = System.currentTimeMillis();
 		long duration = end - start;
 		return duration;

@@ -5,10 +5,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 
+import com.sss.report.core.Utility;
 import com.sss.report.entity.Profile;
 import com.sss.report.model.Pair;
 import com.sss.report.model.ProfileMetadataModel;
 import com.sss.report.service.CSVServiceByProfile;
+import com.sss.report.service.CSVServiceByProperties;
 import com.sss.report.service.XMLService;
 
 public class ReportGenerator {
@@ -27,11 +29,19 @@ public class ReportGenerator {
 			xmlExecutor.shutdown();
 			System.out.println(pair.getA().size());
 			System.out.println(pair.getB().getPropertiesWithValues().size());
-			if(mode.equalsIgnoreCase("profile")) {
-				CSVServiceByProfile csvService = new CSVServiceByProfile(csvRepositoryPath, pair.getA(), pair.getB());
-				Long duration = csvService.call();
-				System.out.println("CSV Report generation took " + duration + " miliseconds");
+			ExecutorService csvExecutor = Executors.newSingleThreadExecutor();
+			FutureTask<Long> csvTask = null;
+			if(mode.equalsIgnoreCase(Utility.PROFILE)) {
+				CSVServiceByProfile profileService = new CSVServiceByProfile(csvRepositoryPath, pair.getA(), pair.getB());
+				csvTask = new FutureTask<>(profileService);
+			} else if(mode.equalsIgnoreCase(Utility.PROPERTIES)) {
+				CSVServiceByProperties propertiesService = new CSVServiceByProperties();
+				csvTask = new FutureTask<>(propertiesService);
 			}
+			csvExecutor.submit(csvTask);
+			Long duration = csvTask.get();
+			System.out.println("CSV Report generation took " + duration + " miliseconds");
+			csvExecutor.shutdown();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

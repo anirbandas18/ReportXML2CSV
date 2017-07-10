@@ -13,6 +13,8 @@ import java.util.List;
 public class Utility {
 	
 	public static final String DELIMITTER = ",";
+	public static final String PROPERTIES = "properties";
+	public static final String PROFILE = "profile";
 
 	public static String getChildDirName(String childDir) {
 		int pos = childDir.lastIndexOf(File.separator);

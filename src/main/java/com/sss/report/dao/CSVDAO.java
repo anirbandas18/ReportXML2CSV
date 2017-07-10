@@ -6,10 +6,11 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.Callable;
 
 import com.sss.report.core.Utility;
 
-public class CSVDAO {
+public class CSVDAO implements Callable<Long>{
 	
 	private String propertyKey;
 	
@@ -26,6 +27,7 @@ public class CSVDAO {
 		this.propertyKey = propertyKey;
 	}
 
+	@Override
 	public Long call() throws Exception {
 		StringWriter sw = new StringWriter();
 		BufferedWriter bw = new BufferedWriter(sw);
