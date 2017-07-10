@@ -18,6 +18,8 @@ public class Utility {
 	public static final String PROPERTIES = "properties";
 	public static final String PROFILE = "profile";
 	public static final String CSV_EXTENSION = ".csv";
+	private static final String[] sizes = { "Bytes", "KB", "MB", "GB", "TB" };
+	private static final String NA = "N/A";
 
 	public static Long bytesToLong(byte[] bytes) {
 		ByteBuffer buffer = ByteBuffer.allocate(bytes.length);
@@ -32,26 +34,13 @@ public class Utility {
 	}
 
 
-	public static String humanReadableByteCount(long size) {
-		String hrSize = null;
-		double b = size;
-		double k = size / 1024.0;
-		double m = ((size / 1024.0) / 1024.0);
-		double g = (((size / 1024.0) / 1024.0) / 1024.0);
-		double t = ((((size / 1024.0) / 1024.0) / 1024.0) / 1024.0);
-		DecimalFormat dec = new DecimalFormat("0.00");
-		if (t > 1) {
-			hrSize = dec.format(t).concat(" TB");
-		} else if (g > 1) {
-			hrSize = dec.format(g).concat(" GB");
-		} else if (m > 1) {
-			hrSize = dec.format(m).concat(" MB");
-		} else if (k > 1) {
-			hrSize = dec.format(k).concat(" KB");
-		} else {
-			hrSize = dec.format(b).concat(" Bytes");
-		}
-		return hrSize;
+	public static String humanReadableByteCount(long bytes) {
+		boolean si = false;
+	    int unit = si ? 1000 : 1024;
+	    if (bytes < unit) return bytes + " B";
+	    int exp = (int) (Math.log(bytes) / Math.log(unit));
+	    String pre = (si ? "kMGTPE" : "KMGTPE").charAt(exp-1) + (si ? "" : "i");
+	    return String.format("%.1f %sB", bytes / Math.pow(unit, exp), pre);
 	}
 
 	public static String getEquivalentCSVFileName(String fileName) {
