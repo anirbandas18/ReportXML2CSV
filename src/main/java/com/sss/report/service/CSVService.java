@@ -9,11 +9,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 
+import javax.naming.spi.DirectoryManager;
+
 import com.sss.report.core.Utility;
 import com.sss.report.dao.DIRDAO;
 import com.sss.report.model.ProfileMetadataModel;
 import com.sss.report.model.Properties;
 import com.sss.report.model.CSVModel;
+import com.sss.report.model.DirectoryModel;
 
 public class CSVService implements Callable<Long>{
 	
@@ -35,7 +38,12 @@ public class CSVService implements Callable<Long>{
 		for(Properties key : properties.keySet()) {
 			String childDirPath = csvRepositoryPath.toString() + File.separator + key.toString();
 			Set<String> propertyValues = metadata.getPropertyValues(key);
-			DIRDAO dirDAO = new DIRDAO(childDirPath, propertyValues, reportModel.getProfiles());
+			DirectoryModel directoryModel = new DirectoryModel();
+			directoryModel.setChildDir(childDirPath);
+			directoryModel.setMode(reportModel.getMode());
+			directoryModel.setProfiles(reportModel.getProfiles());
+			directoryModel.setPropertyValues(propertyValues);
+			DIRDAO dirDAO = new DIRDAO(directoryModel);
 			FutureTask<Long> dirTask = new FutureTask<>(dirDAO);
 			executor.submit(dirTask);
 			Long duration = dirTask.get();
