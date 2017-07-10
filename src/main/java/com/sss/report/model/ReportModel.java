@@ -7,26 +7,36 @@ import com.sss.report.entity.Profile;
 
 public class ReportModel {
 	
-	private String childDirPath;
+private String mode;
 	
-	private Set<String> properties;
+	private String csvRepository;
+	
+	private ProfileMetadataModel metadata;
 	
 	private List<Profile> profiles;
 
-	public String getChildDirPath() {
-		return childDirPath;
+	public String getMode() {
+		return mode;
 	}
 
-	public void setChildDirPath(String childDirPath) {
-		this.childDirPath = childDirPath;
+	public void setMode(String mode) {
+		this.mode = mode;
 	}
 
-	public Set<String> getProperties() {
-		return properties;
+	public String getCsvRepository() {
+		return csvRepository;
 	}
 
-	public void setProperties(Set<String> properties) {
-		this.properties = properties;
+	public void setCsvRepository(String csvRepository) {
+		this.csvRepository = csvRepository;
+	}
+
+	public ProfileMetadataModel getMetadata() {
+		return metadata;
+	}
+
+	public void setMetadata(ProfileMetadataModel metadata) {
+		this.metadata = metadata;
 	}
 
 	public List<Profile> getProfiles() {
@@ -36,7 +46,7 @@ public class ReportModel {
 	public void setProfiles(List<Profile> profiles) {
 		this.profiles = profiles;
 	}
-
+	
 	
 
 }

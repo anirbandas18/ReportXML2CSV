@@ -41,7 +41,8 @@ public class DIRDAO implements Callable<Long>{
 		for(Profile profile : profiles) {
 			String csvFileName = getEquivalentCSVFileName(profile.getFileName());
 			String csvFile = childDirPath.toString() + File.separator + csvFileName;
-			List<Object> content = Utility.getFieldByName(profile, Utility.getChildDirName(childDirPath.toString()));
+			String fieldName = Utility.getChildDirName(childDirPath.toString());
+			List<Object> content = Utility.getFieldByName(profile, fieldName);
 			Path csvFilePath = Paths.get(csvFile);
 			String propertyKey = Utility.getChildDirName(csvFilePath.getParent().toString());
 			CSVDAO csvDAO = new CSVDAO(csvFile, propertyKey, content, propertyValues);
