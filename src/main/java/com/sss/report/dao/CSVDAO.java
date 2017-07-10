@@ -2,6 +2,7 @@ package com.sss.report.dao;
 
 import java.io.BufferedWriter;
 import java.io.StringWriter;
+import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -9,30 +10,31 @@ import java.util.Set;
 import java.util.concurrent.Callable;
 
 import com.sss.report.core.Utility;
+import com.sss.report.model.PersistenceReport;
 
-public class CSVDAO implements Callable<Long>{
+public class CSVDAO implements Callable<PersistenceReport>{
 	
 	private String propertyKey;
 	
-	private String csvFile;
+	private String csvFileNameWithoutExt;
 	
 	private List<Object> content;
 	
 	private Set<String> properties;
 	
-	public CSVDAO(String csvFile, String propertyKey, List<Object> content, Set<String> properties) {
-		this.csvFile = csvFile;
+	public CSVDAO(String csvFileNameWithoutExt, String propertyKey, List<Object> content, Set<String> properties) {
+		this.csvFileNameWithoutExt = csvFileNameWithoutExt;
 		this.content = content;
 		this.properties = properties;
 		this.propertyKey = propertyKey;
-	}
+	}	
 
 	@Override
-	public Long call() throws Exception {
+	public PersistenceReport call() throws Exception {
 		StringWriter sw = new StringWriter();
 		BufferedWriter bw = new BufferedWriter(sw);
 		long start = System.currentTimeMillis();
-		bw.write(Utility.DELIMITTER + Utility.getChildDirName(csvFile));
+		bw.write(Utility.DELIMITTER + Utility.getChildDirName(csvFileNameWithoutExt));
 		bw.newLine();
 		for(String property : properties) {
 			Object item = null;
@@ -52,9 +54,13 @@ public class CSVDAO implements Callable<Long>{
 		long end = System.currentTimeMillis();
 		bw.flush();
 		byte[] bytes = sw.toString().getBytes();
-		Files.write(Paths.get(csvFile), bytes);
+		String csvFilePath = Utility.getEquivalentCSVFileName(csvFileNameWithoutExt);
+		Files.write(Paths.get(csvFilePath), bytes);
 		long duration = end - start;
-		return duration;
+		PersistenceReport pr = new PersistenceReport();
+		pr.setDuration(duration);
+		pr.setSize(Utility.bytesToLong(bytes));
+		return pr;
 	}
 
 }

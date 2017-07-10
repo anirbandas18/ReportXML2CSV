@@ -3,6 +3,7 @@ package com.sss.report.core;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.nio.ByteBuffer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -15,7 +16,22 @@ public class Utility {
 	public static final String DELIMITTER = ",";
 	public static final String PROPERTIES = "properties";
 	public static final String PROFILE = "profile";
+	public static final String CSV_EXTENSION = ".csv";
+	
+	public static Long bytesToLong(byte[] bytes) {
+	    ByteBuffer buffer = ByteBuffer.allocate(Long.BYTES);
+	    buffer.put(bytes);
+	    buffer.flip();
+	    return buffer.getLong();
+	}
 
+	public static String getEquivalentCSVFileName(String fileName) {
+		String tokens[] = fileName.split("\\.");
+		String csvFileName = tokens[0];
+		csvFileName = csvFileName + Utility.CSV_EXTENSION;
+		return csvFileName;
+	}
+	
 	public static String getChildDirName(String childDir) {
 		int pos = childDir.lastIndexOf(File.separator);
 		String childDirName = childDir.substring(pos + 1);

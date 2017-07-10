@@ -1,6 +1,5 @@
 package com.sss.report.dao;
 
-import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -12,6 +11,7 @@ import java.util.concurrent.FutureTask;
 
 import com.sss.report.core.Utility;
 import com.sss.report.entity.Profile;
+import com.sss.report.model.PersistenceReport;
 
 public class DIRDAO implements Callable<Long>{
 	
@@ -25,13 +25,6 @@ public class DIRDAO implements Callable<Long>{
 		this.profiles = profiles;
 	}
 
-	private String getEquivalentCSVFileName(String fileName) {
-		String tokens[] = fileName.split("\\.");
-		String csvFileName = tokens[0];
-		csvFileName = csvFileName + ".csv";
-		return csvFileName;
-	}
-	
 	@Override
 	public Long call() throws Exception {
 		int nThreads = profiles.size();
@@ -39,17 +32,16 @@ public class DIRDAO implements Callable<Long>{
 		long start = System.currentTimeMillis();
 		Path childDirPath = Utility.createDir(childDir);
 		for(Profile profile : profiles) {
-			String csvFileName = getEquivalentCSVFileName(profile.getFileName());
-			String csvFile = childDirPath.toString() + File.separator + csvFileName;
+			Path csvFileNameWithoutExt = Paths.get(childDirPath.toString(), profile.getFileName());
 			String fieldName = Utility.getChildDirName(childDirPath.toString());
 			List<Object> content = Utility.getFieldByName(profile, fieldName);
-			Path csvFilePath = Paths.get(csvFile);
-			String propertyKey = Utility.getChildDirName(csvFilePath.getParent().toString());
-			CSVDAO csvDAO = new CSVDAO(csvFile, propertyKey, content, propertyValues);
-			FutureTask<Long> csvTask = new FutureTask<>(csvDAO);
+			String propertyKey = Utility.getChildDirName(csvFileNameWithoutExt.getParent().toString());
+			CSVDAO csvDAO = new CSVDAO(csvFileNameWithoutExt.toString(), propertyKey, content, propertyValues);
+			FutureTask<PersistenceReport> csvTask = new FutureTask<>(csvDAO);
 			executor.submit(csvTask);
-			Long duration = csvTask.get();
-			System.out.println(csvFile + " processing took " + duration + " miliseconds");
+			PersistenceReport pr = csvTask.get();
+			String resultantFileName = Utility.getEquivalentCSVFileName(csvFileNameWithoutExt.toString());
+			System.out.println(resultantFileName + " of size " + pr.getSize() + " bytes took " + pr.getDuration() + " miliseconds to process");
 		}
 		executor.shutdown();
 		long end = System.currentTimeMillis();
