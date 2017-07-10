@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Specify if Row_Id should be populated from Account Id autonumber.  Used to turn off during data conversion.</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>RowIdNotPopulate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked Row_Id__c will not populate from Account_Number__c.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked Row_Id__c will not populate from Account_Number__c.</inlineHelpText>
+        <label>Row Id Not Populate</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Populate Account Row ID</label>
+    <visibility>Protected</visibility>
+</CustomObject>

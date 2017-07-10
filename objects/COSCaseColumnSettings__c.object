@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Case_Detail_View_Selected_Columns__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Detail View Selected Columns</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Selected_Columns__c</fullName>
+        <externalId>false</externalId>
+        <label>Selected Columns</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>COS Case  Column</label>
+    <visibility>Public</visibility>
+</CustomObject>

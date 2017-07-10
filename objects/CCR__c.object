@@ -1,0 +1,1967 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <content>NewCCRForCCMS_VP</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Cadence Change Request Object.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Action_Release__c</fullName>
+        <externalId>false</externalId>
+        <label>Action Release</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Build_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Build ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCListAll__c</fullName>
+        <externalId>false</externalId>
+        <label>CCListAll</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>AccountName</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Email</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Phone</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Contact_Site__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Site</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Crash__c</fullName>
+        <externalId>false</externalId>
+        <label>Crash</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Create_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Create Date</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_DBID__c</fullName>
+        <externalId>false</externalId>
+        <label>DBID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Family_Name__c</fullName>
+        <description>Text field for CCMS Family Name</description>
+        <externalId>false</externalId>
+        <label>Family</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Family__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Family</label>
+        <lookupFilter>
+            <active>false</active>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <filterItems>
+                <field>CCMS_Family__c.Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>5_1 - Data Steward</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>Integration</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>CCMS_Family__c</referenceTo>
+        <relationshipLabel>CCR</relationshipLabel>
+        <relationshipName>CCR</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCMS_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>CCMS Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Need_Releases_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>CCMS Need Releases</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Need_Releases__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>CCMS Need Releases</label>
+        <lookupFilter>
+            <active>false</active>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <filterItems>
+                <field>$Source.CCMS_Family__c</field>
+                <operation>equals</operation>
+                <valueField>CCMS_Need_Releases__c.CCMS_Family__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>CCMS_Need_Releases__c.Active__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>CCMS_Need_Releases__c</referenceTo>
+        <relationshipLabel>CCR</relationshipLabel>
+        <relationshipName>CCR</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCMS_OS_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>CCMS OS</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_OS_Versions_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>CCMS OS Versions</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_OS_Versions__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>CCMS OS Versions</label>
+        <lookupFilter>
+            <active>false</active>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <filterItems>
+                <field>CCMS_OS_Versions__c.CCMS_OS__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.CCMS_OS__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>CCMS_OS_Versions__c.Name</field>
+                <operation>notContain</operation>
+                <value>Unknown</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>CCMS_OS_Versions__c</referenceTo>
+        <relationshipLabel>CCR</relationshipLabel>
+        <relationshipName>CCR</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCMS_OS__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>CCMS OS</label>
+        <lookupFilter>
+            <active>false</active>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <filterItems>
+                <field>CCMS_OS__c.Name</field>
+                <operation>notContain</operation>
+                <value>Unknown, UNKNOWN</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>5_1 - Data Steward</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>Integration</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>CCMS_OS__c</referenceTo>
+        <relationshipLabel>CCR</relationshipLabel>
+        <relationshipName>CCR</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCMS_ProdLevel2_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>ProdLevel2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_ProdLevel2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>CCMS ProdLevel2</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>CCMS_ProdLevel2__c.CCMS_Product__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.CCMS_Product__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>CCMS_ProdLevel2__c</referenceTo>
+        <relationshipLabel>CCR</relationshipLabel>
+        <relationshipName>CCR</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCMS_Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>CCMS Product</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <filterItems>
+                <field>CCMS_Product__c.CCMS_Family__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.CCMS_Family__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>5_1 - Data Steward</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>Integration</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>CCMS_Product__c</referenceTo>
+        <relationshipLabel>CCR</relationshipLabel>
+        <relationshipName>CCR</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCMS_Requestor_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Requestor</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Version_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Version</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCMS_Version__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>CCMS Version</label>
+        <lookupFilter>
+            <active>false</active>
+            <booleanFilter>1</booleanFilter>
+            <filterItems>
+                <field>CCMS_Version__c.CCMS_Product__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.CCMS_Product__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>CCMS_Version__c</referenceTo>
+        <relationshipLabel>CCR</relationshipLabel>
+        <relationshipName>CCR</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCMS__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+ CCMS_Id__c = NULL,
+&quot;Link not available&quot;,
+ HYPERLINK(&quot;http://ccms.cadence.com/cqweb/#/Production/CCMPR/RECORD/&quot; &amp;  CCMS_Id__c , &quot;Edit&quot; ,&quot;_blank&quot;)
+)</formula>
+        <label>CCMS</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCRPrint__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK($Label.CCMS_CCRPRINT_URL+Trunc_CCR_ID__c, &quot;View&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CCR Print</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCR_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>CCR_Notes (Limited to 32K chars)</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CCR_Number__c</fullName>
+        <displayFormat>CCR-{000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>CCR Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>CDSinfo__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;http://cdsinfo.cadence.com/?&quot; &amp;Name, &quot;Open&quot;)</formula>
+        <label>CDSinfo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>COS_OS_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>COS OS</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRM__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>CRM</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CS_Engineer__c</fullName>
+        <description>This field will be used to hold the Text Value of the Case Owner associated to the CCR. This field was a lookup field previously to the contact object, but needed to take into account owners who may be a queue, so changed to a Text field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will be updated by the system after Save.</inlineHelpText>
+        <label>CS Engineer</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipName>CCR</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact_Name__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact Name</label>
+        <lookupFilter>
+            <active>false</active>
+            <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+            <filterItems>
+                <field>$Source.Parent_Account__c</field>
+                <operation>equals</operation>
+                <valueField>Contact.Parent_Account__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>$User.Is_Data_Steward__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>Integration</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>5_1 - Data Steward</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>CCR</relationshipLabel>
+        <relationshipName>CCR1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact_Name__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Site__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact Site</label>
+        <lookupFilter>
+            <active>false</active>
+            <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+            <filterItems>
+                <field>$Source.Parent_Account__c</field>
+                <operation>equals</operation>
+                <valueField>Account.ParentId</valueField>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>Integration</value>
+            </filterItems>
+            <filterItems>
+                <field>$User.Is_Data_Steward__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>5_1 - Data Steward</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>CCR (Contact Site)</relationshipLabel>
+        <relationshipName>CCR1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Crash__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Crash</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Create_Date_Do_Not_Use__c</fullName>
+        <description>Delete after TESTING</description>
+        <externalId>false</externalId>
+        <label>Create Date - Do Not Use</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Cust_Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Cust Project</label>
+        <length>60</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Reference__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Reference</label>
+        <length>64</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_Opened__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Opened</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Edit_CCR__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK( $Label.CCMS_Base_Url_for_Edit +  LPAD(Trunc_CCR_ID__c, 8, &apos;0&apos;) , &quot;Open&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Edit CCR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Engagement_Type__c</fullName>
+        <description>Indicates the nature of the customer engagement that caused the CCR to be created.  This field cannot be changed to M after initial submission.</description>
+        <externalId>false</externalId>
+        <label>Engagement Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>B - Beta-Test</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>I - Internal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>P - Pre-Sales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M - Maintenance</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Engineering_HotFix_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Engineering HotFix Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>External_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>COS unique reference after CCR is created.  Either it is CCR Name or Row_Id depended on if it is historical data.</description>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>IT_Ticket__c</fullName>
+        <externalId>false</externalId>
+        <label>IT Ticket</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inactive_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Inactive Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Integration__c</fullName>
+        <description>This field will tell the status of the record with CCMS.</description>
+        <externalId>false</externalId>
+        <formula>IF( 
+ISBLANK(Trunc_CCR_ID__c), 
+IMAGE(&quot;/img/permissions_confirm16.gif&quot;, &quot;Unlocked&quot;) &amp; &quot; Unlocked&quot;, 
+IMAGE(&quot;/img/permissions_deny16.gif&quot;, &quot;Locked&quot;) &amp; &quot; Locked: Resubmit and Case can only be edited&quot; 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This field will show the status of integration with CCMS. If the record has been received from CCMS, it will be locked and only Resubmit and Case will be editable.</inlineHelpText>
+        <label>Integration</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Keywords__c</fullName>
+        <externalId>false</externalId>
+        <label>Keywords</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_Date_DO_NOT_USE__c</fullName>
+        <description>TESTING ONLY</description>
+        <externalId>false</externalId>
+        <label>Last Modified Date - DO NOT USE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Last_Update__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Update</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Manager__c</fullName>
+        <externalId>false</externalId>
+        <label>Manager</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Marketing_Manager__c</fullName>
+        <externalId>false</externalId>
+        <label>Marketing Manager</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Master_PCR__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Master CCR</label>
+        <referenceTo>CCR__c</referenceTo>
+        <relationshipLabel>CCR</relationshipLabel>
+        <relationshipName>CCR</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Modification_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Modification Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>More_Info_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>More Info Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Need_By_Release__c</fullName>
+        <externalId>false</externalId>
+        <label>Need By Release</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Default</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Need_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Need By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Open_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Open Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Original_CDS_Severity_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Original CDS Severity Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Original_Family_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Family Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Original_Product_Level2_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Product Level2 Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Original_Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Product Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Original_Submit_Date__c</fullName>
+        <defaultValue>NOW()</defaultValue>
+        <externalId>false</externalId>
+        <label>Original Submit Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>PCR_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>PCR Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>AccountName</label>
+        <lookupFilter>
+            <active>false</active>
+            <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Parent Account</value>
+            </filterItems>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Partner-Parent Account</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>5_1 - Data Steward</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>Integration</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>CCR (Parent Account)</relationshipLabel>
+        <relationshipName>CCR</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Plan_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Plan Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Release__c</fullName>
+        <externalId>false</externalId>
+        <label>Planned Release</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Preview__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;http://cdsinfo.cadence.com/?&quot; &amp;Name, &quot;Open&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Preview</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <description>CCR priority fields.</description>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0 - Must</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 - Should</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 - Could</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_Release__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Release</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>R_D_Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>R&amp;D Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Default</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Regression__c</fullName>
+        <externalId>false</externalId>
+        <label>Regression</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Release_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Release Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>RepSeverity__c</fullName>
+        <externalId>false</externalId>
+        <label>Rep Severity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0 - No Workaround</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 - Workaround</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 - Minor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rep_Request_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Rep Req Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Enhancement</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Request_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Request Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Default</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bug</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Requester__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Requester</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CCR</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Requestor_Urgency__c</fullName>
+        <externalId>false</externalId>
+        <label>Rep Urgency</label>
+        <picklist>
+            <controllingField>RepSeverity__c</controllingField>
+            <picklistValues>
+                <fullName>Default</fullName>
+                <default>false</default>
+                <controllingFieldValues>0 - No Workaround</controllingFieldValues>
+                <controllingFieldValues>1 - Workaround</controllingFieldValues>
+                <controllingFieldValues>2 - Minor</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Urgent</fullName>
+                <default>false</default>
+                <controllingFieldValues>1 - Workaround</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Resubmit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Resubmit</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Row_Id_Transition__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( isMigrated_Record__c , Row_Id__c, Name )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Row Id Transition</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Row_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Row Id</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Secure_Storage_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Secure Storage Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Required</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Secure Chamber</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Secure Directory</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Security_Label__c</fullName>
+        <externalId>false</externalId>
+        <label>Security Label</label>
+        <picklist>
+            <controllingField>Secure_Storage_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Confidential</fullName>
+                <default>true</default>
+                <controllingFieldValues>Not Required</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confidential-delete date required</fullName>
+                <default>false</default>
+                <controllingFieldValues>Secure Directory</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-confidential</fullName>
+                <default>false</default>
+                <controllingFieldValues>Not Required</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confidential-authorized group</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Confidential-authorized user</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Severity__c</fullName>
+        <externalId>false</externalId>
+        <label>Severity</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <description>Picklist of CCR states.</description>
+        <externalId>false</externalId>
+        <label>State</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Unactionable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MoreInfo</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unreproducible</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Void</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Answered</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Done</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Characterized</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Evaluated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Planned</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Checked_In</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Validated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RTM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Title</label>
+        <length>120</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Trunc_CCR_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>CCMS unique reference after CCR is created</description>
+        <externalId>true</externalId>
+        <label>Trunc CCR ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Unlink__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/apex/Unlink_CCR_VP?CaseId=&quot;+Case__c+&quot;&amp;ccrId=&quot;+Id,&quot;Unlink&quot;,&quot;_self&quot; )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Unlink</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Urgency__c</fullName>
+        <externalId>false</externalId>
+        <label>Urgency</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cdsPriority_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>cdsPriority Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>isMigrated_Record__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Migrated Record</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>CCR</label>
+    <listViews>
+        <fullName>All_CCR</fullName>
+        <booleanFilter>1</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Parent_Account__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCMS_Product_Name__c</columns>
+        <columns>Request_Type__c</columns>
+        <columns>Title__c</columns>
+        <columns>State__c</columns>
+        <columns>Planned_Release__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>All CCRs</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_CCRs</fullName>
+        <columns>NAME</columns>
+        <columns>Title__c</columns>
+        <columns>State__c</columns>
+        <columns>Rep_Request_Type__c</columns>
+        <columns>RepSeverity__c</columns>
+        <columns>Requestor_Urgency__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Case__c</columns>
+        <columns>Contact_Name__c</columns>
+        <columns>Planned_Release__c</columns>
+        <columns>CCMS_Family__c</columns>
+        <columns>CCMS_Product__c</columns>
+        <columns>CCMS_ProdLevel2__c</columns>
+        <columns>CCMS_Version__c</columns>
+        <columns>CS_Engineer__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CCMS_Create_Date__c</field>
+            <operation>equals</operation>
+            <value>today</value>
+        </filters>
+        <filters>
+            <field>Case__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>MSKI All Open CCRs</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>CCR ID</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>CCR</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Title__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CCMS_Product__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>State__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Severity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Request_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CS_Engineer__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Case__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Title__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CCMS_Product__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>State__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Severity__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Request_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CS_Engineer__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Case__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATED_DATE</lookupDialogsAdditionalFields>
+        <searchFilterFields>CCMS_Family__c</searchFilterFields>
+        <searchFilterFields>CCMS_Product__c</searchFilterFields>
+        <searchFilterFields>CCMS_ProdLevel2__c</searchFilterFields>
+        <searchResultsAdditionalFields>Preview__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Title__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CCMS_Product__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>State__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Severity__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Request_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Case__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>CCR_Resubmit_and_State_combo_error</fullName>
+        <active>false</active>
+        <description>This validation will prevent a user from checking the Resubmit checkbox if the State of the CCR is not &apos;Review&apos;</description>
+        <errorConditionFormula>AND(
+$User.LastName &lt;&gt; &apos;Migration&apos;,
+$User.LastName &lt;&gt; &apos;Integration&apos;,
+$User.Is_Data_Steward__c = FALSE,
+Resubmit__c = TRUE,
+NOT(ISPICKVAL( State__c , &apos;Review&apos;))
+)</errorConditionFormula>
+        <errorDisplayField>Resubmit__c</errorDisplayField>
+        <errorMessage>Only records in the state of &apos;Review&apos; can be resubmitted to CCMS.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Secure_Storage_equals_Not_Required</fullName>
+        <active>false</active>
+        <description>If Secure Storage = Not required then
+1. Security Label must be one of the following
+Confidential
+Non Confidential</description>
+        <errorConditionFormula>AND( $User.LastName &lt;&gt; &apos;Migration&apos;, 
+$User.LastName &lt;&gt; &apos;Integration&apos;, 
+$User.Is_Data_Steward__c = FALSE,
+ISPICKVAL(Secure_Storage_Type__c, &apos;Not Required&apos;),  NOT(ISPICKVAL(Security_Label__c, &apos;Confidential&apos;)) ,  NOT(ISPICKVAL(Security_Label__c, &apos;Non-confidential&apos;)))</errorConditionFormula>
+        <errorMessage>“When Secure Storage = Not Required, then Security Label must be Confidential or Non Confidential”</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Secure_Storage_equals_Secure_Chanber</fullName>
+        <active>false</active>
+        <description>1.  The Security Label must be one of the following
+Confidential – Authorized group 
+Confidential – Authorized users 
+2.  The IT Ticket field must be filled out</description>
+        <errorConditionFormula>IF( AND($User.LastName &lt;&gt; &apos;Migration&apos;, 
+$User.LastName &lt;&gt; &apos;Integration&apos;, 
+$User.Is_Data_Steward__c = FALSE, 
+ISPICKVAL( Secure_Storage_Type__c , &apos;Secure Chamber&apos;)), OR(AND( NOT(ISPICKVAL(Security_Label__c, &apos;Confidential – authorized group&apos;)), NOT(ISPICKVAL(Security_Label__c, &apos;Confidential – authorized users&apos;))), ISBLANK( IT_Ticket__c ) ), false)</errorConditionFormula>
+        <errorMessage>“When Secure Storage = Secure Chamber, then Security Label must be Confidential – Authorized group or Confidential – Authorized users. Additionally, the IT Ticket must be specified”</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Secure_Storage_equals_Secure_Directory</fullName>
+        <active>false</active>
+        <description>If Secure Storage = Secure Directory then
+1. The  Security Label must be one of the following
+  Confidential – Delete date required 
+  Confidential – Authorized group 
+  Confidential – Authorized users 
+2.  The IT Ticket field must be filled out</description>
+        <errorConditionFormula>IF( AND($User.LastName &lt;&gt; &apos;Migration&apos;, 
+$User.LastName &lt;&gt; &apos;Integration&apos;, 
+$User.Is_Data_Steward__c = FALSE, 
+ISPICKVAL( Secure_Storage_Type__c , &apos;Secure Directory&apos;)), OR(AND( NOT(ISPICKVAL(Security_Label__c, &apos;Confidential – authorized group&apos;)), NOT(ISPICKVAL(Security_Label__c, &apos;Confidential – authorized users&apos;)), NOT(ISPICKVAL(Security_Label__c, &apos;Confidential – Delete date required&apos;))), ISBLANK( IT_Ticket__c ) ), false)</errorConditionFormula>
+        <errorMessage>“When Secure Storage = Secure Directory, then Security Label must be Confidential – Delete date required, Confidential – Authorized group or Confidential – Authorized users. Additionally, the IT Ticket must be specified”</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Severity_Check_for_Request_Type</fullName>
+        <active>false</active>
+        <description>Severity should be either 1-Workaround or 2-Minor for enhancement request</description>
+        <errorConditionFormula>AND( 
+$User.LastName &lt;&gt; &apos;Migration&apos;, 
+$User.LastName &lt;&gt; &apos;Integration&apos;, 
+$User.Is_Data_Steward__c = FALSE, 
+ISPICKVAL(RepSeverity__c,&apos;0 - No Workaround&apos;),
+ISPICKVAL(Request_Type__c, &apos;Enhancement&apos;)
+)</errorConditionFormula>
+        <errorDisplayField>RepSeverity__c</errorDisplayField>
+        <errorMessage>CCR Severity should be either 1-Workaround or 2-Minor for Enhancement Requests</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>CCRPRINT</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>CCR Print</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>//Include the following AJAX toolkit libraries
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/apex.js&quot;)}
+
+
+var CCRID= &apos;{!CCR__c.Trunc_CCR_ID__c}&apos;;
+//alert(&apos;CaseID:&apos;+CaseId);
+if (CCRID) {
+var url = &apos;{!$Label.CCMS_CCRPRINT_URL}&apos;+CCRID;
+
+//alert(&quot;URL: &quot;+url);
+window.open(url,&quot;&quot;,&quot;&quot;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Edit_CCMS_Fields</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Edit CCMS Fields</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>if({!ISNULL(CCR__c.Trunc_CCR_ID__c)}) {
+window.location.href = &apos;apex/CCREditCCMSFields_VP?scontrolCaching=1&amp;id={!CCR__c.Id}&apos;
+
+} else {
+ alert (&apos;Cannot Change CCMS Fields if record is in sync with CCMS.&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Edit_CCR_In_CCMS</fullName>
+        <availability>online</availability>
+        <description>Open CCR CCMS to update CCR</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Edit CCR</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>//Include the following AJAX toolkit libraries
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/apex.js&quot;)}
+
+
+var CCRID= &apos;{!CCR__c.Trunc_CCR_ID__c}&apos;;
+//alert(&apos;CaseID:&apos;+CaseId);
+if (CCRID) {
+
+if (CCRID.length === 6) {
+CCRID = &quot;00&quot;+CCRID;
+} else if(CCRID.length === 7){
+CCRID = &quot;0&quot;+CCRID;
+}
+//var url = &apos;http://dr-//ccmstest.cadence.com/cqweb/#/Testenvironment/CCMPR/RECORD/CCMPR&apos;+CCRID;
+
+var url = &apos;{!$Label.CCMS_Base_Url_for_Edit}&apos;+CCRID;
+
+//alert(&quot;URL: &quot;+url);
+window.open(url,&quot;&quot;,&quot;&quot;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Link_Unlink_CCR</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Link CCR</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>//Include the following AJAX toolkit libraries 
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/apex.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/resource/1359016703000/CaseJQuery&quot;)} 
+
+
+var caseOwnerId = &apos;{!Case.OwnerId }&apos;;
+var Idprefix = caseOwnerId.substring(0,3);
+//alert(&apos;idprefix : &apos;+Idprefix);
+var isValidCase = &apos;true&apos;;
+if( Idprefix == &apos;00G&apos;){
+	var result1 = sforce.connection.query(&quot;Select g.Name from Group g where g.Id = &apos;{!Case.OwnerId }&apos; limit 1&quot;);
+	var queueList = result1.getArray(&apos;records&apos;);
+	var queue = queueList[0];
+	//alert(&apos;queue &apos;+queue);
+	var result2 = sforce.connection.query(&quot;select Name from QueuesAllowedForCCR__c&quot;);
+	var queryRecords = result2.getArray(&apos;records&apos;);
+	//alert(&apos;queryRecords &apos;+queryRecords);
+	var isValidQueueOwner = &apos;false&apos;;
+	for( var i = 0; i &lt; queryRecords.length; i++){
+	   if(queryRecords[i].Name == queue.Name){
+		  isValidQueueOwner = &apos;true&apos;;
+		  break;
+	   }
+	}
+	//alert(&apos;isValidQueueOwner &apos;+isValidQueueOwner);
+	if(isValidQueueOwner == &apos;false&apos;){
+	   isValidCase = &apos;false&apos;;
+	}
+
+}
+if(isValidCase == &apos;false&apos;){
+alert(&apos;CCR cannot be associated to a Case if Case is assigned to a Queue&apos;);
+}
+else{
+window.open(&quot;/apex/CCMS_linkCCR?CaseId={!Case.Id}&quot;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_CCR</fullName>
+        <availability>online</availability>
+        <description>To be shown on List view of CCR just to populate the Name field - DO NOT USE.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New CCR - DO NOT USE</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Keyprefix__c}/e?retURL=%2F{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Keyprefix__c}/o&amp;Name=ID will be populated from Interface</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_CCR_In_CCMS</fullName>
+        <availability>online</availability>
+        <description>Create a new CCR record from CCMS system.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New CCR</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>//Include the following AJAX toolkit libraries 
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/apex.js&quot;)} 
+
+
+var result = sforce.connection.query(&quot;SELECT Id, Trunc_CCR_ID__c FROM ccr__c WHERE Case__c= &apos;{!Case.Id}&apos; LIMIT 1&quot;); 
+
+var records = result.getArray(&apos;records&apos;);
+var record = records[0];
+var caseOwnerId = &apos;{!Case.OwnerId }&apos;;
+var Idprefix = caseOwnerId.substring(0,3);
+//alert(&apos;idprefix : &apos;+Idprefix);
+var isValidCase = &apos;true&apos;;
+if( Idprefix == &apos;00G&apos;){
+	var result1 = sforce.connection.query(&quot;Select g.Name from Group g where g.Id = &apos;{!Case.OwnerId }&apos; limit 1&quot;);
+	var queueList = result1.getArray(&apos;records&apos;);
+	var queue = queueList[0];
+	//alert(&apos;queue &apos;+queue);
+	var result2 = sforce.connection.query(&quot;select Name from QueuesAllowedForCCR__c&quot;);
+	var queryRecords = result2.getArray(&apos;records&apos;);
+	//alert(&apos;queryRecords &apos;+queryRecords);
+	var isValidQueueOwner = &apos;false&apos;;
+	for( var i = 0; i &lt; queryRecords.length; i++){
+	   if(queryRecords[i].Name == queue.Name){
+		  isValidQueueOwner = &apos;true&apos;;
+		  break;
+	   }
+	}
+	//alert(&apos;isValidQueueOwner &apos;+isValidQueueOwner);
+	if(isValidQueueOwner == &apos;false&apos;){
+	   isValidCase = &apos;false&apos;;
+	}
+
+}
+if(isValidCase == &apos;false&apos;){
+alert(&apos;CCR cannot be associated to a Case if Case is assigned to a Queue&apos;);
+}
+
+else{
+if( result.size &gt; 0) 
+{ 
+alert(&apos;Case {!Case.CaseNumber} is already linked to CCR &apos;+record.Trunc_CCR_ID__c+&apos;. New CCR cannot be created.&apos;);
+}
+else{
+
+var CaseId = &apos;{!Case.Id}&apos;; 
+//alert(&apos;CaseID:&apos;+CaseId); 
+if (CaseId) { 
+
+// call apex webservice method; 
+/*
+var result = sforce.apex.execute( 
+&quot;CCRCreateURL&quot;, //class name 
+&quot;getCCRCreateURL&quot;, //method name 
+{CaseId: CaseId }); 
+*/
+var result = sforce.apex.execute( 
+&quot;CCRCreateURL&quot;, //class name 
+&quot;createCCMSCCR&quot;, //method name 
+{CaseId: CaseId });
+
+if(result.toString().indexOf(&quot;http&quot;)&gt; -1)
+window.open(&apos;{!$Label.CCMS_BASE_URL_PREFIX}&apos;+result.toString(),&quot;&quot;,&quot;&quot;);
+else
+alert(result.toString());
+}
+
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Case_CCR</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New CCR - Old</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/10.0/apex.js&quot;)}
+
+var result = sforce.connection.query(&quot;SELECT Id FROM ccr__c WHERE Case__c= &apos;{!Case.Id}&apos;  and (Request_Type__c = &apos;Enhancement&apos; or Request_Type__c = &apos;Bug&apos; ) LIMIT 1&quot;);
+var url;
+
+if( result.size &gt; 0)
+{
+if(confirm(&apos;This case is already associated with a Bug or Enhancement CCR.  Cases are only permitted to have one Bug or Enhancement CCR association. \n You can proceed if you are submitting a Question CCR. Otherwise, a new Case should be created for association with the additional Bug or Enhancement CCR. \n Do you want to proceed to submit a new CCR?&apos;) )
+{
+
+url = &apos;/{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Keyprefix__c}&apos;;
+url += &apos;/e?retURL=%2F{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Keyprefix__c}/o&amp;Name=ID will be populated from Interface&amp;&apos;;
+url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Case_Id__c}={! Case.CaseNumber }&amp;&apos;;
+url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Case_Id__c}_lkid={!Case.Id}&apos;;
+//url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Parent_Account__c}={! Case.Parent_Account__c}&apos;;
+//url += &apos;&amp;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Parent_Account__c}_lkid={!Case.Parent_AccountId__c}&amp;&apos;;
+//url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Contact_Name__c}={! Case.Contact}&amp;&apos;;
+//url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Contact_Name__c}_lkid={!Case.ContactId}&amp;&apos;;
+//url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Contact_Site__c}={!Case.Account}&amp;&apos;;
+//url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Contact_Site__c}_lkid={!Case.AccountId}&apos;;
+//url += &apos;&amp;{!$Setup.Org_Field_IDs__c.CCR_New_Case_CCR_BtnUsr__c}={!$User.FirstName} {!$User.LastName}&apos;;
+//url += &apos;&amp;{!$Setup.Org_Field_IDs__c.CCR_New_Case_CCR_BtnUsr__c}_lkid={!$User.Id}&apos;;
+
+parent.location.href = url;
+}
+else
+{
+
+}
+}
+else
+{
+
+url = &apos;/{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Keyprefix__c}&apos;;
+url += &apos;/e?retURL=%2F{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Keyprefix__c}/o&amp;Name=ID will be populated from Interface&amp;&apos;;
+url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Case_Id__c}={! Case.CaseNumber }&amp;&apos;;
+url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Case_Id__c}_lkid={!Case.Id}&apos;;
+//url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Parent_Account__c}={! Case.Parent_Account__c}&apos;;
+//url += &apos;&amp;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Parent_Account__c}_lkid={!Case.Parent_AccountId__c}&amp;&apos;;
+//url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Contact_Name__c}={! Case.Contact}&amp;&apos;;
+//url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Contact_Name__c}_lkid={!Case.ContactId}&amp;&apos;;
+//url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Contact_Site__c}={!Case.Account}&amp;&apos;;
+//url += &apos;{!$Setup.Field_Id_Hierarchy_CS__c.CCR_Contact_Site__c}_lkid={!Case.AccountId}&apos;;
+//url += &apos;&amp;{!$Setup.Org_Field_IDs__c.CCR_New_Case_CCR_BtnUsr__c}={!$User.FirstName} {!$User.LastName}&apos;;
+//url += &apos;&amp;{!$Setup.Org_Field_IDs__c.CCR_New_Case_CCR_BtnUsr__c}_lkid={!$User.Id}&apos;;
+
+parent.location.href = url;
+}</url>
+    </webLinks>
+</CustomObject>

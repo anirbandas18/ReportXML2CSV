@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>BU_Family__c</fullName>
+        <externalId>false</externalId>
+        <label>BU Family</label>
+        <picklist>
+            <controllingField>Product_Sector__c</controllingField>
+            <picklistValues>
+                <fullName>AMS Designer</fullName>
+                <default>false</default>
+                <controllingFieldValues>Circuit Simulation &amp; Characterization</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Device Modeling</fullName>
+                <default>false</default>
+                <controllingFieldValues>Circuit Simulation &amp; Characterization</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MMSim</fullName>
+                <default>false</default>
+                <controllingFieldValues>Circuit Simulation &amp; Characterization</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Spectre</fullName>
+                <default>false</default>
+                <controllingFieldValues>Circuit Simulation &amp; Characterization</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Spectre RF</fullName>
+                <default>false</default>
+                <controllingFieldValues>Circuit Simulation &amp; Characterization</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UltraSim</fullName>
+                <default>false</default>
+                <controllingFieldValues>Circuit Simulation &amp; Characterization</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Virtuoso Foundation IP Characterization</fullName>
+                <default>false</default>
+                <controllingFieldValues>Circuit Simulation &amp; Characterization</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Space-based Router</fullName>
+                <default>false</default>
+                <controllingFieldValues>Custom Environment &amp; Layout</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PDK Automation System</fullName>
+                <default>false</default>
+                <controllingFieldValues>Custom Environment &amp; Layout</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Virtuoso Advanced Node</fullName>
+                <default>false</default>
+                <controllingFieldValues>Custom Environment &amp; Layout</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Virtuoso AMS Environment</fullName>
+                <default>false</default>
+                <controllingFieldValues>Custom Environment &amp; Layout</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Virtuoso Analog Design Environment</fullName>
+                <default>false</default>
+                <controllingFieldValues>Custom Environment &amp; Layout</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Virtuoso Layout Suite</fullName>
+                <default>false</default>
+                <controllingFieldValues>Custom Environment &amp; Layout</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Virtuoso Legacy - Environment</fullName>
+                <default>false</default>
+                <controllingFieldValues>Custom Environment &amp; Layout</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Virtuoso Legacy - Layout</fullName>
+                <default>false</default>
+                <controllingFieldValues>Custom Environment &amp; Layout</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Virtuoso Schematic Editor</fullName>
+                <default>false</default>
+                <controllingFieldValues>Custom Environment &amp; Layout</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analog ADC IP</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analog AFE IP</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analog Aux IP</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analog DAC IP</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analog Power IP</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analog Timing IP</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ConnX Baseband</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DDR Controller</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DDR PHY</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Design IP-Other</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Digital Component IP</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Display Controller</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Display PHY</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ethernet Controller</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ethernet PHY</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Flash Controller</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Flash PHY</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FlashPoint</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HiFi Audio</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IVP Imaging</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MIPI Controller IP</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MIPI PHY</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mixed-Signal Component IP</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PCI-e Controller</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PCI-e PHY</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Peripheral IP</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SerDes PHY</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USB Controller IP</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USB PHY</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Xtensa</fullName>
+                <default>false</default>
+                <controllingFieldValues>Design IP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Azuro</fullName>
+                <default>false</default>
+                <controllingFieldValues>Digital Implementation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter 3DIC</fullName>
+                <default>false</default>
+                <controllingFieldValues>Digital Implementation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter Advanced Options</fullName>
+                <default>false</default>
+                <controllingFieldValues>Digital Implementation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter Base</fullName>
+                <default>false</default>
+                <controllingFieldValues>Digital Implementation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter CCOpt</fullName>
+                <default>false</default>
+                <controllingFieldValues>Digital Implementation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter Digital Implementation</fullName>
+                <default>false</default>
+                <controllingFieldValues>Digital Implementation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter First Encounter</fullName>
+                <default>false</default>
+                <controllingFieldValues>Digital Implementation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter Hierarchical</fullName>
+                <default>false</default>
+                <controllingFieldValues>Digital Implementation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter Legacy</fullName>
+                <default>false</default>
+                <controllingFieldValues>Digital Implementation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter VDI</fullName>
+                <default>false</default>
+                <controllingFieldValues>Digital Implementation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>First Encounter</fullName>
+                <default>false</default>
+                <controllingFieldValues>Digital Implementation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Innovus</fullName>
+                <default>false</default>
+                <controllingFieldValues>Digital Implementation</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Signoff Extraction</fullName>
+                <default>false</default>
+                <controllingFieldValues>Electrical Signoff</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Signoff Power Analysis</fullName>
+                <default>false</default>
+                <controllingFieldValues>Electrical Signoff</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Signoff Timing Analysis</fullName>
+                <default>false</default>
+                <controllingFieldValues>Electrical Signoff</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Palladium</fullName>
+                <default>false</default>
+                <controllingFieldValues>Emulation &amp; Acceleration</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Palladium ES</fullName>
+                <default>false</default>
+                <controllingFieldValues>Emulation &amp; Acceleration</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Palladium II</fullName>
+                <default>false</default>
+                <controllingFieldValues>Emulation &amp; Acceleration</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Palladium III</fullName>
+                <default>false</default>
+                <controllingFieldValues>Emulation &amp; Acceleration</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Palladium XP</fullName>
+                <default>false</default>
+                <controllingFieldValues>Emulation &amp; Acceleration</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Palladium XP II</fullName>
+                <default>false</default>
+                <controllingFieldValues>Emulation &amp; Acceleration</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rapid Prototyping</fullName>
+                <default>false</default>
+                <controllingFieldValues>Emulation &amp; Acceleration</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Xtreme III</fullName>
+                <default>false</default>
+                <controllingFieldValues>Emulation &amp; Acceleration</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Xtreme Server</fullName>
+                <default>false</default>
+                <controllingFieldValues>Emulation &amp; Acceleration</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conformal Constraint Designer</fullName>
+                <default>false</default>
+                <controllingFieldValues>Formal Verification</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conformal ECO Designer</fullName>
+                <default>false</default>
+                <controllingFieldValues>Formal Verification</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conformal Equivalency Checker</fullName>
+                <default>false</default>
+                <controllingFieldValues>Formal Verification</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conformal Low Power</fullName>
+                <default>false</default>
+                <controllingFieldValues>Formal Verification</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Incisive Formal</fullName>
+                <default>false</default>
+                <controllingFieldValues>Functional Verification</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Incisive Interactive</fullName>
+                <default>false</default>
+                <controllingFieldValues>Functional Verification</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Incisive Simulation</fullName>
+                <default>false</default>
+                <controllingFieldValues>Functional Verification</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jasper Formal</fullName>
+                <default>false</default>
+                <controllingFieldValues>Functional Verification</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jasper IPK</fullName>
+                <default>false</default>
+                <controllingFieldValues>Functional Verification</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System Creator</fullName>
+                <default>false</default>
+                <controllingFieldValues>Functional Verification</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IC Packaging/SiP co-design</fullName>
+                <default>false</default>
+                <controllingFieldValues>IC Package/SiP co-design</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OrCAD</fullName>
+                <default>false</default>
+                <controllingFieldValues>PCB Design</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PCB Design - Front End</fullName>
+                <default>false</default>
+                <controllingFieldValues>PCB Design</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PCB Design - Layout</fullName>
+                <default>false</default>
+                <controllingFieldValues>PCB Design</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Power and Signal Integrity Analysis</fullName>
+                <default>false</default>
+                <controllingFieldValues>PCB Design</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Signoff DFM</fullName>
+                <default>false</default>
+                <controllingFieldValues>Physical Signoff</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Signoff DRC/LVS</fullName>
+                <default>false</default>
+                <controllingFieldValues>Physical Signoff</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Signoff Manufacturing</fullName>
+                <default>false</default>
+                <controllingFieldValues>Physical Signoff</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chip Planning Solutions</fullName>
+                <default>false</default>
+                <controllingFieldValues>Synthesis &amp; Test</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter DFT Architect</fullName>
+                <default>false</default>
+                <controllingFieldValues>Synthesis &amp; Test</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter Diagnostics</fullName>
+                <default>false</default>
+                <controllingFieldValues>Synthesis &amp; Test</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter True-Time ATPG</fullName>
+                <default>false</default>
+                <controllingFieldValues>Synthesis &amp; Test</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Genus</fullName>
+                <default>false</default>
+                <controllingFieldValues>Synthesis &amp; Test</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Genus Physical</fullName>
+                <default>false</default>
+                <controllingFieldValues>Synthesis &amp; Test</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Joules</fullName>
+                <default>false</default>
+                <controllingFieldValues>Synthesis &amp; Test</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RTL Compiler</fullName>
+                <default>false</default>
+                <controllingFieldValues>Synthesis &amp; Test</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RTL Compiler Physical</fullName>
+                <default>false</default>
+                <controllingFieldValues>Synthesis &amp; Test</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>C-to-Silicon Compiler</fullName>
+                <default>false</default>
+                <controllingFieldValues>System-Level Design</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High Level Synthesis</fullName>
+                <default>false</default>
+                <controllingFieldValues>System-Level Design</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Software Integrator</fullName>
+                <default>false</default>
+                <controllingFieldValues>System-Level Design</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legacy</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Memory Model</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MMAV Card</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MMAV DRAM</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MMAV Flash</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MMAV ROM</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MMAV sisram</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MMAV SRAM</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec Advanced Switch</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec AHB</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec APB</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec AXI</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec CE-ATA</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec DFI</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec Ethernet</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec Ethernet 40G/100G</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec I2C</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec OCP</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec PCIe</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec PLB4</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec PLB6</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec RDL</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec SATA</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec SATA 6G (Gen3)</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec SDIO (Host)</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSpec USB</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSuite PCIe</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSuite PLB4</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSuite USB</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PureSuite USB3</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Verification IP</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VIP Catalog</fullName>
+                <default>false</default>
+                <controllingFieldValues>VIP</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product_Sector__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Sector</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Circuit Simulation &amp; Characterization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Custom Environment &amp; Layout</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Design IP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Digital Implementation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Electrical Signoff</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Emulation &amp; Acceleration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Formal Verification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Functional Verification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IC Package/SiP co-design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PCB Design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Physical Signoff</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Synthesis &amp; Test</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System-Level Design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VIP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Technical_Campaign__c</fullName>
+        <externalId>false</externalId>
+        <label>Technical Campaign</label>
+        <referenceTo>Technical_Campaign__c</referenceTo>
+        <relationshipLabel>TC Technologies</relationshipLabel>
+        <relationshipName>TC_Technologies</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>TC Technology</label>
+    <nameField>
+        <displayFormat>TCT-{000000}</displayFormat>
+        <label>TC Technology ID</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>TC Technologies</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

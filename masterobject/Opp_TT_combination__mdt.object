@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Method_Calling__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Method Calling</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>core2Core</fullName>
+                    <default>true</default>
+                    <label>core2Core</label>
+                </value>
+                <value>
+                    <fullName>core2NonCore</fullName>
+                    <default>false</default>
+                    <label>core2NonCore</label>
+                </value>
+                <value>
+                    <fullName>nonCoreToNonCore</fullName>
+                    <default>false</default>
+                    <label>nonCoreToNonCore</label>
+                </value>
+                <value>
+                    <fullName>nonCoreToCore</fullName>
+                    <default>false</default>
+                    <label>nonCoreToCore</label>
+                </value>
+                <value>
+                    <fullName>anyTT2NoCostAmendment</fullName>
+                    <default>false</default>
+                    <label>anyTT2NoCostAmendment</label>
+                </value>
+                <value>
+                    <fullName>NoCostAmendmentToAnyTT</fullName>
+                    <default>false</default>
+                    <label>NoCostAmendmentToAnyTT</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>New_TT_Type__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>New TT Type</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>99-YR/Other</fullName>
+                    <default>true</default>
+                    <label>99-YR/Other</label>
+                </value>
+                <value>
+                    <fullName>eDAgold</fullName>
+                    <default>false</default>
+                    <label>eDAgold</label>
+                </value>
+                <value>
+                    <fullName>eDAplat</fullName>
+                    <default>false</default>
+                    <label>eDAplat</label>
+                </value>
+                <value>
+                    <fullName>FTA-Add-on</fullName>
+                    <default>false</default>
+                    <label>FTA-Add-on</label>
+                </value>
+                <value>
+                    <fullName>FTA-New</fullName>
+                    <default>false</default>
+                    <label>FTA-New</label>
+                </value>
+                <value>
+                    <fullName>Hardware - 99 Year</fullName>
+                    <default>false</default>
+                    <label>Hardware - 99 Year</label>
+                </value>
+                <value>
+                    <fullName>Hardware - Cloud</fullName>
+                    <default>false</default>
+                    <label>Hardware - Cloud</label>
+                </value>
+                <value>
+                    <fullName>Hardware - Lease</fullName>
+                    <default>false</default>
+                    <label>Hardware - Lease</label>
+                </value>
+                <value>
+                    <fullName>Ren Maint</fullName>
+                    <default>false</default>
+                    <label>Ren Maint</label>
+                </value>
+                <value>
+                    <fullName>Ren Maint HW</fullName>
+                    <default>false</default>
+                    <label>Ren Maint HW</label>
+                </value>
+                <value>
+                    <fullName>SAM - Forte</fullName>
+                    <default>false</default>
+                    <label>SAM - Forte</label>
+                </value>
+                <value>
+                    <fullName>SAM - Jasper</fullName>
+                    <default>false</default>
+                    <label>SAM - Jasper</label>
+                </value>
+                <value>
+                    <fullName>SAM - Rocketick</fullName>
+                    <default>false</default>
+                    <label>SAM - Rocketick</label>
+                </value>
+                <value>
+                    <fullName>Serv</fullName>
+                    <default>false</default>
+                    <label>Serv</label>
+                </value>
+                <value>
+                    <fullName>SUB</fullName>
+                    <default>false</default>
+                    <label>SUB</label>
+                </value>
+                <value>
+                    <fullName>SUB Add-on</fullName>
+                    <default>false</default>
+                    <label>SUB Add-on</label>
+                </value>
+                <value>
+                    <fullName>TBL</fullName>
+                    <default>false</default>
+                    <label>TBL</label>
+                </value>
+                <value>
+                    <fullName>VIP</fullName>
+                    <default>false</default>
+                    <label>VIP</label>
+                </value>
+                <value>
+                    <fullName>AnyTT</fullName>
+                    <default>false</default>
+                    <label>AnyTT</label>
+                </value>
+                <value>
+                    <fullName>No Cost Amendment</fullName>
+                    <default>false</default>
+                    <label>No Cost Amendment</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Old_TT_Type__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Old TT Type</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>99-YR/Other</fullName>
+                    <default>true</default>
+                    <label>99-YR/Other</label>
+                </value>
+                <value>
+                    <fullName>AnyTT</fullName>
+                    <default>false</default>
+                    <label>AnyTT</label>
+                </value>
+                <value>
+                    <fullName>eDAgold</fullName>
+                    <default>false</default>
+                    <label>eDAgold</label>
+                </value>
+                <value>
+                    <fullName>eDAplat</fullName>
+                    <default>false</default>
+                    <label>eDAplat</label>
+                </value>
+                <value>
+                    <fullName>FTA-Add-on</fullName>
+                    <default>false</default>
+                    <label>FTA-Add-on</label>
+                </value>
+                <value>
+                    <fullName>FTA-New</fullName>
+                    <default>false</default>
+                    <label>FTA-New</label>
+                </value>
+                <value>
+                    <fullName>Hardware - 99 Year</fullName>
+                    <default>false</default>
+                    <label>Hardware - 99 Year</label>
+                </value>
+                <value>
+                    <fullName>Hardware - Cloud</fullName>
+                    <default>false</default>
+                    <label>Hardware - Cloud</label>
+                </value>
+                <value>
+                    <fullName>Hardware - Lease</fullName>
+                    <default>false</default>
+                    <label>Hardware - Lease</label>
+                </value>
+                <value>
+                    <fullName>No Cost Amendment</fullName>
+                    <default>false</default>
+                    <label>No Cost Amendment</label>
+                </value>
+                <value>
+                    <fullName>Ren Maint</fullName>
+                    <default>false</default>
+                    <label>Ren Maint</label>
+                </value>
+                <value>
+                    <fullName>Ren Maint HW</fullName>
+                    <default>false</default>
+                    <label>Ren Maint HW</label>
+                </value>
+                <value>
+                    <fullName>SAM - Forte</fullName>
+                    <default>false</default>
+                    <label>SAM - Forte</label>
+                </value>
+                <value>
+                    <fullName>SAM - Jasper</fullName>
+                    <default>false</default>
+                    <label>SAM - Jasper</label>
+                </value>
+                <value>
+                    <fullName>SAM - Rocketick</fullName>
+                    <default>false</default>
+                    <label>SAM - Rocketick</label>
+                </value>
+                <value>
+                    <fullName>Serv</fullName>
+                    <default>false</default>
+                    <label>Serv</label>
+                </value>
+                <value>
+                    <fullName>SUB</fullName>
+                    <default>false</default>
+                    <label>SUB</label>
+                </value>
+                <value>
+                    <fullName>SUB Add-on</fullName>
+                    <default>false</default>
+                    <label>SUB Add-on</label>
+                </value>
+                <value>
+                    <fullName>TBL</fullName>
+                    <default>false</default>
+                    <label>TBL</label>
+                </value>
+                <value>
+                    <fullName>VIP</fullName>
+                    <default>false</default>
+                    <label>VIP</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>toUpdate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>toUpdate</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Opp TT combination</label>
+    <pluralLabel>Opp TT combinations</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

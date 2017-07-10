@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Attributes associated to Products</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>AMT_GSS__c</fullName>
+        <externalId>false</externalId>
+        <label>AMT GSS</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BU_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>BU Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ATPG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Azuro</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CAD/CAM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chip Planning Solutions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CIC-Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Circuit Simulation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Component Information Manag</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computational Lithography</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conformal Constraint Designer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conformal ECO Designer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conformal Equivalency Checker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Conformal Low Power</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Controller</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CSV Verification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Denali MMAV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Denali Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Denali PureView</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Denali VIP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Design Creation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Design Planning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Digital Nm Analysis</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DSM-Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DV-Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Emulation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter DFT Architect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter Diagnostics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter Test Solutions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Encounter True-Time ATPG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Environment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Equivalence Checking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ESL Design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ESL Verification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extraction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Formal Analysis</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Foundry Libraries</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FPGA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FV-Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High-speed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IC Digital-Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Implementation Kits</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Layout</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Logical Equivalency Checker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manufacturing Modeling</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Memory Model</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mixed Language Simulation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mixed Signal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Model Property Checking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PCB Design Environment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PCB Simulation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PHY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Physical Design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Physical Verification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Place &amp; Route</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PSD-Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PV Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quickturn-Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rapid Prototyping</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RTL Compiler</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RTL Compiler Physical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Services-Alba Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Services-Custom IC Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Services-DPS Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Services-DSM Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Services-DV Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Services-EI Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Services-EXD Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Services-Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Services-PSD Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Services-SLD Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Simulation Acceleration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SoC-Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SPC-Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sub-system</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Synthesis</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System in Package (SiP)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System Level Design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SystemC based Simulation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tality-Misc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test Automation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Time to Integration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Verification Cockpit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Verification Kits</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Verilog-based Simulation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Verticals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VHDL-based Simulation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VIP Catalog</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VPA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>BU_Family__c</fullName>
+        <externalId>false</externalId>
+        <label>BU Family</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BU_Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>BU Summary</label>
+        <length>128</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bypass_Entitlement_Check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bypass Entitlement Check</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>CPM_ID__c</fullName>
+        <externalId>true</externalId>
+        <label>CPM ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cadence_Platform__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Cadence Platform</label>
+        <referenceTo>Cadence_Platform__c</referenceTo>
+        <relationshipLabel>Attributes</relationshipLabel>
+        <relationshipName>Attributes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Design_Technology__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Design Technology</label>
+        <referenceTo>Design_Technology__c</referenceTo>
+        <relationshipLabel>Attributes</relationshipLabel>
+        <relationshipName>Attributes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>External_Family_1__c</fullName>
+        <externalId>false</externalId>
+        <label>External Family 1</label>
+        <length>128</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_Family_2__c</fullName>
+        <externalId>false</externalId>
+        <label>External Family 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_Family_3__c</fullName>
+        <externalId>false</externalId>
+        <label>External Family 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>External_Product_Platform_View__c</fullName>
+        <externalId>false</externalId>
+        <label>External Product Platform View</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GUID__c</fullName>
+        <externalId>false</externalId>
+        <label>GUID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Operational_Marketing_View__c</fullName>
+        <externalId>false</externalId>
+        <label>Operational Marketing View</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Operational_Segment__c</fullName>
+        <externalId>false</externalId>
+        <label>Operational Segment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Attribute_Number__c</fullName>
+        <displayFormat>PA-{000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>Product Attribute Number</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Product_Sector__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Sector</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Profit_Centre__c</fullName>
+        <externalId>false</externalId>
+        <label>Profit Center</label>
+        <length>128</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Realization__c</fullName>
+        <externalId>false</externalId>
+        <label>Realization</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Row_Id_Transition__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( isMigrated_Record__c , Row_Id__c, Product_Attribute_Number__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Row Id Transition</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Row_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Row Id</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INACTIVE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>isMigrated_Record__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Migrated Record</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Product Attribute</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Status__c</columns>
+        <columns>BU_Category__c</columns>
+        <columns>BU_Summary__c</columns>
+        <columns>External_Family_1__c</columns>
+        <columns>External_Family_2__c</columns>
+        <columns>External_Family_3__c</columns>
+        <columns>Profit_Centre__c</columns>
+        <columns>Cadence_Platform__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Product_Sect</fullName>
+        <columns>NAME</columns>
+        <columns>Product_Sector__c</columns>
+        <columns>BU_Family__c</columns>
+        <columns>Cadence_Platform__c</columns>
+        <columns>External_Family_1__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>ACTIVE</value>
+        </filters>
+        <label>Product Sector</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>COS_TEAM</group>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>Product Attribute Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Attributes</pluralLabel>
+    <recordTypes>
+        <fullName>Default</fullName>
+        <active>true</active>
+        <label>Default</label>
+        <picklistValues>
+            <picklist>BU_Category__c</picklist>
+            <values>
+                <fullName>ATPG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Azuro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CAD%2FCAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CIC-Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CSV Verification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chip Planning Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Circuit Simulation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Component Information Manag</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Computational Lithography</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conformal Constraint Designer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conformal ECO Designer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conformal Equivalency Checker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conformal Low Power</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Controller</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DSM-Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DV-Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denali MMAV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denali Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denali PureView</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denali VIP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Design Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Design Planning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Digital Nm Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ESL Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ESL Verification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Emulation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Encounter DFT Architect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Encounter Diagnostics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Encounter Test Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Encounter True-Time ATPG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Equivalence Checking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Extraction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FPGA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FV-Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Formal Analysis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Foundry Libraries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High-speed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IC Digital-Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Implementation Kits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Layout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Logical Equivalency Checker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing Modeling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Memory Model</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mixed Language Simulation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mixed Signal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Model Property Checking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PCB Design Environment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PCB Simulation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PHY</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSD-Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PV Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physical Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Physical Verification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Place %26 Route</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quickturn-Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RTL Compiler</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RTL Compiler Physical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rapid Prototyping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SPC-Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services-Alba Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services-Custom IC Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services-DPS Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services-DSM Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services-DV Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services-EI Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services-EXD Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services-Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services-PSD Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Services-SLD Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Simulation Acceleration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SoC-Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sub-system</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synthesis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System Level Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>System in Package %28SiP%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SystemC based Simulation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tality-Misc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Automation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Time to Integration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VHDL-based Simulation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIP Catalog</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VPA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Verification Cockpit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Verification Kits</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Verilog-based Simulation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Verticals</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>ACTIVE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INACTIVE</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <searchResultsAdditionalFields>CPM_ID__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

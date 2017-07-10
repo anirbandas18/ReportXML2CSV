@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>ER_RequestFlow</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>ER_RequestFlow</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Activated_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Activated Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Backup_Requestor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Backup Requestor</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>equals</operation>
+                <value>4_4 - LegalApttusClone</value>
+            </filterItems>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>equals</operation>
+                <value>4_4 - Legal</value>
+            </filterItems>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>equals</operation>
+                <value>4_4 - Legal_Apttus</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>General_Work_Requests</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ER_Agreement_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>ER Agreement Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Submitted</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Employee_Access__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Employee Access</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Employee_Name_in_SFDC__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Employee Name in SFDC</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>equals</operation>
+                <value>4_4 - LegalApttusClone</value>
+            </filterItems>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>equals</operation>
+                <value>4_4 - Legal</value>
+            </filterItems>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>equals</operation>
+                <value>4_4 - Legal_Apttus</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Restricted_Employee_Form</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Employee_Restricted_From__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Note that the text provided here will be shared with the employee.</inlineHelpText>
+        <label>What is the employee restricted from?</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Existing_Project_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project Name</label>
+        <referenceTo>ER_Project__c</referenceTo>
+        <relationshipName>ER_Agreements</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Frequency_of_Notification__c</fullName>
+        <externalId>false</externalId>
+        <label>Frequency of Notification</label>
+        <picklist>
+            <picklistValues>
+                <fullName>30</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>60</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>90</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>120</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>150</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>180</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>210</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>240</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>270</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>300</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>330</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>365</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Has_Associated_Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Has Associated Project</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Has_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Does this restriction have an end date?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Is_Existing_Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Is this an existing project?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Existing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Manager_Access__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Manager Access</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>New_Project_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>New Project Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Applicable_Information__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Applicable Information</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Project_Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Project Lead</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$User.Employment_Status__c</field>
+                <operation>equals</operation>
+                <value>Available</value>
+            </filterItems>
+            <filterItems>
+                <field>$User.IsActive</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>notEqual</operation>
+                <value>Chatter External User, Chatter Free User, Chatter Moderator User, Contract Manager, Customer Community User, Customer Portal Manager Custom, Force.com - App Subscription User, Gold Partner User, Marketing User, Overage High Volume Customer Portal User, Pa</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Project_Lead</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reason_For_Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Please describe other reason</label>
+        <length>2000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Request_Number__c</fullName>
+        <displayFormat>{0}</displayFormat>
+        <externalId>false</externalId>
+        <label>Request Number</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Request_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Request Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Conflict of Interest</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Hire</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Settlement Agreement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Merger and Acquisition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Requester_EMT_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>ER_Agreements1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Restriction_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Restriction End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Restriction_Reason__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Note that the text provided here will be shared with the employee.</inlineHelpText>
+        <label>Restriction Reason</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Restriction_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Restriction Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Seeking_Assistance__c</fullName>
+        <externalId>false</externalId>
+        <label>Seeking Assistance</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Request</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Authoring</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Signatures</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Filing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Effect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Terminated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Amended</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <controllingField>Status_Category__c</controllingField>
+            <picklistValues>
+                <fullName>Activated</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Effect</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved Request</fullName>
+                <default>false</default>
+                <controllingFieldValues>Request</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Author Contract</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Authoring</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Being Amended</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Effect</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Being Renewed</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Effect</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Being Terminated</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Effect</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled Request</fullName>
+                <default>false</default>
+                <controllingFieldValues>Request</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <controllingFieldValues>Request</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expired</fullName>
+                <default>false</default>
+                <controllingFieldValues>Expired</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fully Signed</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Signatures</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Amendment</fullName>
+                <default>false</default>
+                <controllingFieldValues>Request</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Reconciliation</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Filing</controllingFieldValues>
+                <controllingFieldValues>In Signatures</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Renewal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internal Review</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Authoring</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internal Signatures</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Signatures</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Language Approval</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Authoring</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Language Approved</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Authoring</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal Review</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Authoring</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Party Review</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Authoring</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Party Signatures</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Signatures</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ready for Signatures</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Signatures</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reconciled</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Filing</controllingFieldValues>
+                <controllingFieldValues>In Signatures</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Request</fullName>
+                <default>true</default>
+                <controllingFieldValues>Request</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Request Approval</fullName>
+                <default>false</default>
+                <controllingFieldValues>Request</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Requestor Review</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Authoring</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Signature Declined</fullName>
+                <default>false</default>
+                <controllingFieldValues>In Authoring</controllingFieldValues>
+                <controllingFieldValues>In Signatures</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Initiated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>URL_Link_To_Request__c</fullName>
+        <externalId>false</externalId>
+        <formula>$Label.RVP_Notification_Forecast_URL + &apos;/apex/RestrictedEmployeeForm?id=&apos; + Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>URL Link To Request</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Restricted Employee Form</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>OBJECT_ID</columns>
+        <columns>NAME</columns>
+        <columns>Activated_Date__c</columns>
+        <columns>Requester_EMT_1__c</columns>
+        <columns>Backup_Requestor__c</columns>
+        <columns>Has_End_Date__c</columns>
+        <columns>Employee_Access__c</columns>
+        <columns>ER_Agreement_Status__c</columns>
+        <columns>Frequency_of_Notification__c</columns>
+        <columns>Has_Associated_Project__c</columns>
+        <columns>Is_Existing_Project__c</columns>
+        <columns>Manager_Access__c</columns>
+        <columns>New_Project_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Restricted Employee Form Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Restricted Employee Form</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>Edit_Saved_Agreement</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Edit</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+
+var userId = sforce.connection.getUserInfo().userId;
+
+var userAccessQry = &quot;SELECT  RecordId  ,HasEditAccess &quot; +
+    &quot;FROM UserRecordAccess WHERE UserId = &apos;&quot; + userId + &quot;&apos; AND RecordId = &quot; +
+    &quot;&apos;{!ER_Agreement__c.Id}&apos;&quot;;
+var userAccessResult = sforce.connection.query(userAccessQry);
+var UserAccessRecords = userAccessResult.getArray(&quot;records&quot;);
+
+
+var lockedRecordsQry = &quot;SELECT status FROM ProcessInstance WHERE status = &apos;pending&apos;&quot; +&quot; AND targetobjectid = &apos;{!ER_Agreement__c.Id}&apos;&quot;;
+
+var lockedRecordsResult = sforce.connection.query(lockedRecordsQry);
+var locked_Records = lockedRecordsResult.getArray(&quot;records&quot;);
+
+if (locked_Records.length &gt; 0) {
+    alert(&apos;Record is locked.&apos;)
+} else {
+    if (UserAccessRecords[0].HasEditAccess == &apos;true&apos; || 
+&apos;{!$Profile.Name}&apos; == &apos;4_4 - LegalApttusClone&apos; || 
+&apos;{!$Profile.Name}&apos; == &apos;4_4 - Legal&apos; || &apos;{!$Profile.Name}&apos; == &apos;4_4 - Legal_Apttus&apos;) {
+        window.location = &apos;/apex/ER_RequestFlow?id=&apos;
++&apos;{!ER_Agreement__c.Id}&apos;;
+    } else{
+        alert(&apos;Insufficient privilege.&apos;)
+    }
+
+}</url>
+    </webLinks>
+</CustomObject>

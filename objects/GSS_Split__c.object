@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Global Rep Split</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>GRS_ACCT_PERIOD_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date_DO_NOT_USE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GRS_Platform__c</fullName>
+        <externalId>false</externalId>
+        <label>PLATFORM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>DIP</fullName>
+                    <default>false</default>
+                    <label>DIP</label>
+                </value>
+                <value>
+                    <fullName>HW</fullName>
+                    <default>false</default>
+                    <label>HW</label>
+                </value>
+                <value>
+                    <fullName>SERV-ES</fullName>
+                    <default>false</default>
+                    <label>SERV-ES</label>
+                </value>
+                <value>
+                    <fullName>SERV-HDS</fullName>
+                    <default>false</default>
+                    <label>SERV-HDS</label>
+                </value>
+                <value>
+                    <fullName>SERV-SERV</fullName>
+                    <default>false</default>
+                    <label>SERV-SERV</label>
+                </value>
+                <value>
+                    <fullName>SW</fullName>
+                    <default>false</default>
+                    <label>SW</label>
+                </value>
+                <value>
+                    <fullName>TIP</fullName>
+                    <default>false</default>
+                    <label>TIP</label>
+                </value>
+                <value>
+                    <fullName>VIP</fullName>
+                    <default>false</default>
+                    <label>VIP</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>GRS_REPID__c</fullName>
+        <externalId>false</externalId>
+        <label>RepId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GRS_REPPCT__c</fullName>
+        <externalId>false</externalId>
+        <label>GSS_Percentage</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>7</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>GRS_REPTYPE__c</fullName>
+        <externalId>false</externalId>
+        <label>Rep Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>ACC</fullName>
+                    <default>false</default>
+                    <label>ACC</label>
+                </value>
+                <value>
+                    <fullName>AMT</fullName>
+                    <default>false</default>
+                    <label>AMT</label>
+                </value>
+                <value>
+                    <fullName>ATX</fullName>
+                    <default>false</default>
+                    <label>ATX</label>
+                </value>
+                <value>
+                    <fullName>ATX2</fullName>
+                    <default>false</default>
+                    <label>ATX2</label>
+                </value>
+                <value>
+                    <fullName>AX</fullName>
+                    <default>false</default>
+                    <label>AX</label>
+                </value>
+                <value>
+                    <fullName>GATX</fullName>
+                    <default>false</default>
+                    <label>GATX</label>
+                </value>
+                <value>
+                    <fullName>GATX2</fullName>
+                    <default>false</default>
+                    <label>GATX2</label>
+                </value>
+                <value>
+                    <fullName>GAX</fullName>
+                    <default>false</default>
+                    <label>GAX</label>
+                </value>
+                <value>
+                    <fullName>GHAX</fullName>
+                    <default>false</default>
+                    <label>GHAX</label>
+                </value>
+                <value>
+                    <fullName>GIPS</fullName>
+                    <default>false</default>
+                    <label>GIPS</label>
+                </value>
+                <value>
+                    <fullName>HAX</fullName>
+                    <default>false</default>
+                    <label>HAX</label>
+                </value>
+                <value>
+                    <fullName>IPS</fullName>
+                    <default>false</default>
+                    <label>IPS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>GRS_UNIQUEID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>GRS_UNIQUEID_DO_NOT_USE</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>GSS_Account_Index_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>GSS_Account_Index_Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GSS_Index__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Index</label>
+        <referenceTo>GSS_Index__c</referenceTo>
+        <relationshipLabel>GSS Account Teams</relationshipLabel>
+        <relationshipName>GSS_Splits</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>GSS_Role__c</fullName>
+        <externalId>false</externalId>
+        <label>GSS_Role_DO_NOT_USE</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GT_TERRITORY_CODE__c</fullName>
+        <externalId>false</externalId>
+        <label>Territory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>AS-CHN</fullName>
+                    <default>false</default>
+                    <label>AS-CHN</label>
+                </value>
+                <value>
+                    <fullName>AS-KR</fullName>
+                    <default>false</default>
+                    <label>AS-KR</label>
+                </value>
+                <value>
+                    <fullName>AS-SE</fullName>
+                    <default>false</default>
+                    <label>AS-SE</label>
+                </value>
+                <value>
+                    <fullName>AS-TW</fullName>
+                    <default>false</default>
+                    <label>AS-TW</label>
+                </value>
+                <value>
+                    <fullName>EM-CE</fullName>
+                    <default>false</default>
+                    <label>EM-CE</label>
+                </value>
+                <value>
+                    <fullName>EM-IS</fullName>
+                    <default>false</default>
+                    <label>EM-IS</label>
+                </value>
+                <value>
+                    <fullName>EM-NE</fullName>
+                    <default>false</default>
+                    <label>EM-NE</label>
+                </value>
+                <value>
+                    <fullName>EM-SC</fullName>
+                    <default>false</default>
+                    <label>EM-SC</label>
+                </value>
+                <value>
+                    <fullName>EM-SE</fullName>
+                    <default>false</default>
+                    <label>EM-SE</label>
+                </value>
+                <value>
+                    <fullName>ID-JP</fullName>
+                    <default>false</default>
+                    <label>ID-JP</label>
+                </value>
+                <value>
+                    <fullName>ID-NA</fullName>
+                    <default>false</default>
+                    <label>ID-NA</label>
+                </value>
+                <value>
+                    <fullName>IN-IND</fullName>
+                    <default>false</default>
+                    <label>IN-IND</label>
+                </value>
+                <value>
+                    <fullName>JP-MAJ</fullName>
+                    <default>false</default>
+                    <label>JP-MAJ</label>
+                </value>
+                <value>
+                    <fullName>NA-CE</fullName>
+                    <default>false</default>
+                    <label>NA-CE</label>
+                </value>
+                <value>
+                    <fullName>NA-CMW</fullName>
+                    <default>false</default>
+                    <label>NA-CMW</label>
+                </value>
+                <value>
+                    <fullName>NA-EST</fullName>
+                    <default>false</default>
+                    <label>NA-EST</label>
+                </value>
+                <value>
+                    <fullName>NA-NW</fullName>
+                    <default>false</default>
+                    <label>NA-NW</label>
+                </value>
+                <value>
+                    <fullName>NA-SE</fullName>
+                    <default>false</default>
+                    <label>NA-SE</label>
+                </value>
+                <value>
+                    <fullName>NA-SVS</fullName>
+                    <default>false</default>
+                    <label>NA-SVS</label>
+                </value>
+                <value>
+                    <fullName>NA-SW</fullName>
+                    <default>false</default>
+                    <label>NA-SW</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HQ__c</fullName>
+        <externalId>false</externalId>
+        <label>HQ</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>AS-CHN</fullName>
+                    <default>false</default>
+                    <label>AS-CHN</label>
+                </value>
+                <value>
+                    <fullName>AS-KR</fullName>
+                    <default>false</default>
+                    <label>AS-KR</label>
+                </value>
+                <value>
+                    <fullName>AS-SE</fullName>
+                    <default>false</default>
+                    <label>AS-SE</label>
+                </value>
+                <value>
+                    <fullName>AS-TW</fullName>
+                    <default>false</default>
+                    <label>AS-TW</label>
+                </value>
+                <value>
+                    <fullName>EM-CE</fullName>
+                    <default>false</default>
+                    <label>EM-CE</label>
+                </value>
+                <value>
+                    <fullName>EM-IS</fullName>
+                    <default>false</default>
+                    <label>EM-IS</label>
+                </value>
+                <value>
+                    <fullName>EM-NE</fullName>
+                    <default>false</default>
+                    <label>EM-NE</label>
+                </value>
+                <value>
+                    <fullName>EM-SC</fullName>
+                    <default>false</default>
+                    <label>EM-SC</label>
+                </value>
+                <value>
+                    <fullName>EM-SE</fullName>
+                    <default>false</default>
+                    <label>EM-SE</label>
+                </value>
+                <value>
+                    <fullName>ID-JP</fullName>
+                    <default>false</default>
+                    <label>ID-JP</label>
+                </value>
+                <value>
+                    <fullName>ID-NA</fullName>
+                    <default>false</default>
+                    <label>ID-NA</label>
+                </value>
+                <value>
+                    <fullName>IN-IND</fullName>
+                    <default>false</default>
+                    <label>IN-IND</label>
+                </value>
+                <value>
+                    <fullName>JP-MAJ</fullName>
+                    <default>false</default>
+                    <label>JP-MAJ</label>
+                </value>
+                <value>
+                    <fullName>NA-CE</fullName>
+                    <default>false</default>
+                    <label>NA-CE</label>
+                </value>
+                <value>
+                    <fullName>NA-CMW</fullName>
+                    <default>false</default>
+                    <label>NA-CMW</label>
+                </value>
+                <value>
+                    <fullName>NA-EST</fullName>
+                    <default>false</default>
+                    <label>NA-EST</label>
+                </value>
+                <value>
+                    <fullName>NA-NW</fullName>
+                    <default>false</default>
+                    <label>NA-NW</label>
+                </value>
+                <value>
+                    <fullName>NA-SE</fullName>
+                    <default>false</default>
+                    <label>NA-SE</label>
+                </value>
+                <value>
+                    <fullName>NA-SVS</fullName>
+                    <default>false</default>
+                    <label>NA-SVS</label>
+                </value>
+                <value>
+                    <fullName>NA-SW</fullName>
+                    <default>false</default>
+                    <label>NA-SW</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ICM_GSS_Index1__c</fullName>
+        <externalId>false</externalId>
+        <label>ICM GSS Index</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICM_GSS_Index__c</fullName>
+        <externalId>false</externalId>
+        <formula>GSS_Index__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ICM_GSS_Index</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICM_PeriodEnd__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( RIGHT(Period_End__c ,2) ,
+&quot;01&quot;,&quot;JANUARY&quot;,
+&quot;02&quot;,&quot;FEBRUARY&quot;,
+&quot;03&quot;,&quot;MARCH&quot;,
+&quot;04&quot;,&quot;APRIL&quot;,
+&quot;05&quot;,&quot;MAY&quot;,
+&quot;06&quot;,&quot;JUNE&quot;,
+&quot;07&quot;,&quot;JULY&quot;,
+&quot;08&quot;,&quot;AUGUST&quot;,
+&quot;09&quot;,&quot;SEPTEMBER&quot;,
+&quot;10&quot;,&quot;OCTOBER&quot;,
+&quot;11&quot;,&quot;NOVEMBER&quot;,
+&quot;12&quot;,&quot;DECEMBER&quot;,
+&quot;UNKOWN MONTH&quot;) + &apos; &apos; + LEFT(Period_End__c,4)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ICM_Period_End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICM_PeriodStart__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( RIGHT(Period_Start__c ,2) ,
+&quot;01&quot;,&quot;JANUARY&quot;,
+&quot;02&quot;,&quot;FEBRUARY&quot;,
+&quot;03&quot;,&quot;MARCH&quot;,
+&quot;04&quot;,&quot;APRIL&quot;,
+&quot;05&quot;,&quot;MAY&quot;,
+&quot;06&quot;,&quot;JUNE&quot;,
+&quot;07&quot;,&quot;JULY&quot;,
+&quot;08&quot;,&quot;AUGUST&quot;,
+&quot;09&quot;,&quot;SEPTEMBER&quot;,
+&quot;10&quot;,&quot;OCTOBER&quot;,
+&quot;11&quot;,&quot;NOVEMBER&quot;,
+&quot;12&quot;,&quot;DECEMBER&quot;,
+&quot;UNKOWN MONTH&quot;) + &apos; &apos; + LEFT(Period_Start__c ,4)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ICM_Period_Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICM_Role_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Role_ID__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ICM_Role_ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICM_Role_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Role_ID__r.Role_Type__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ICM_Role_Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Integration_Flag__c</fullName>
+        <description>0 = Previously loaded
+1 = Newly loaded</description>
+        <externalId>false</externalId>
+        <inlineHelpText>By design, it should always be 1 for integrated record</inlineHelpText>
+        <label>Integration Flag</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0</fullName>
+                    <default>false</default>
+                    <label>0</label>
+                </value>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Last_GSS_Modification__c</fullName>
+        <externalId>false</externalId>
+        <label>Last GSS Modification_DO_NOT_USE</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Period_End__c</fullName>
+        <externalId>false</externalId>
+        <label>GSS Accnt Period End</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Period_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>GSS Accnt Period Start</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PrimaryKeySet__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>false</externalId>
+        <label>PrimaryKeySet</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>ASIA PACIFIC</fullName>
+                    <default>false</default>
+                    <label>ASIA PACIFIC</label>
+                </value>
+                <value>
+                    <fullName>EMEA</fullName>
+                    <default>false</default>
+                    <label>EMEA</label>
+                </value>
+                <value>
+                    <fullName>INDIA</fullName>
+                    <default>false</default>
+                    <label>INDIA</label>
+                </value>
+                <value>
+                    <fullName>JAPAN</fullName>
+                    <default>false</default>
+                    <label>JAPAN</label>
+                </value>
+                <value>
+                    <fullName>NORTH AMERICA</fullName>
+                    <default>false</default>
+                    <label>NORTH AMERICA</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Role_ID__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Role ID</label>
+        <referenceTo>SalesRep__c</referenceTo>
+        <relationshipLabel>GSS Account Teams</relationshipLabel>
+        <relationshipName>GSS_Account_Teams</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Role_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Role_ID__r.Role_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Role Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Role__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( GRS_REPTYPE__c ,
+&quot;R&quot;,&quot;AX&quot;,
+&quot;S&quot;,&quot;SAM&quot;,
+&quot;C&quot;,&quot;CE&quot;,
+&quot;T&quot;,&quot;AMT&quot;,
+&quot;M&quot;,&quot;AMTN&quot;,
+&quot;UNKOWN Rep Type&quot;)</formula>
+        <label>Role</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending ICM</fullName>
+                    <default>false</default>
+                    <label>Pending ICM</label>
+                </value>
+                <value>
+                    <fullName>Pending Validation</fullName>
+                    <default>true</default>
+                    <label>Pending Validation</label>
+                </value>
+                <value>
+                    <fullName>Validation Failed</fullName>
+                    <default>false</default>
+                    <label>Validation Failed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>User_Login__c</fullName>
+        <externalId>false</externalId>
+        <label>User Login</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>GSS_Splits</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Validation_Error__c</fullName>
+        <externalId>false</externalId>
+        <label>Validation Error</label>
+        <length>131000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Validation__c</fullName>
+        <externalId>false</externalId>
+        <label>Validation Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Run</fullName>
+                    <default>true</default>
+                    <label>Run</label>
+                </value>
+                <value>
+                    <fullName>Skip</fullName>
+                    <default>false</default>
+                    <label>Skip</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>WGSS_Percentage__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <externalId>false</externalId>
+        <label>WGSS Percentage</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>7</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>isIncrementUpload__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>isIncrementUpload</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>GSS Account Team</label>
+    <listViews>
+        <fullName>Chris_Sherman</fullName>
+        <columns>GSS_Account_Index_Name__c</columns>
+        <columns>GSS_Index__c</columns>
+        <columns>GRS_Platform__c</columns>
+        <columns>GRS_REPPCT__c</columns>
+        <columns>User__c</columns>
+        <columns>Role_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GSS_Index__c</field>
+            <operation>contains</operation>
+            <value>Amlogic</value>
+        </filters>
+        <label>Scott sung</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>{000000}{MM}{DD}{YYYY}</displayFormat>
+        <label>Request Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>GSS Account Teams</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>OBJECT_ID</customTabListAdditionalFields>
+        <customTabListAdditionalFields>GSS_Index__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>User__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>GRS_ACCT_PERIOD_Start__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>GSS_Index__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>User__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Role__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>GRS_REPPCT__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>HQ_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>NOT(OR(ISPICKVAL(HQ__c ,&apos;AS-CHN&apos;),ISPICKVAL(HQ__c ,&apos;AS-KR&apos;),ISPICKVAL(HQ__c ,&apos;AS-SE&apos;),ISPICKVAL(HQ__c ,&apos;AS-TW&apos;),ISPICKVAL(HQ__c ,&apos;EM-CE&apos;),ISPICKVAL(HQ__c ,&apos;EM-IS&apos;),ISPICKVAL(HQ__c ,&apos;EM-NE&apos;),ISPICKVAL(HQ__c ,&apos;EM-SC&apos;),ISPICKVAL(HQ__c ,&apos;EM-SE&apos;),ISPICKVAL(HQ__c ,&apos;ID-JP&apos;), ISPICKVAL(HQ__c ,&apos;IN-IND&apos;),ISPICKVAL(HQ__c ,&apos;JP-MAJ&apos;),ISPICKVAL(HQ__c ,&apos;NA-CE&apos;),ISPICKVAL(HQ__c ,&apos;NA-CMW&apos;),ISPICKVAL(HQ__c ,&apos;NA-EST&apos;),ISPICKVAL(HQ__c ,&apos;NA-SE&apos;),ISPICKVAL(HQ__c ,&apos;NA-NW&apos;),ISPICKVAL(HQ__c ,&apos;NA-SVS&apos;),ISPICKVAL(HQ__c ,&apos;NA-SW&apos;)))</errorConditionFormula>
+        <errorDisplayField>HQ__c</errorDisplayField>
+        <errorMessage>Please select appropriate HQ from picklist</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Region_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>NOT(OR(ISPICKVAL( Region__c ,&apos;ASIA PACIFIC&apos;),ISPICKVAL(Region__c ,&apos;EMEA&apos;),ISPICKVAL(Region__c ,&apos;INDIA&apos;),ISPICKVAL(Region__c ,&apos;JAPAN&apos;),ISPICKVAL(Region__c ,&apos;NORTH AMERICA&apos;)))</errorConditionFormula>
+        <errorDisplayField>GSS_Index__c</errorDisplayField>
+        <errorMessage>Please select Appropriate Region from Picklist</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(OR(ISPICKVAL(  Status__c  ,&apos;Pending Validation&apos;),ISPICKVAL(Status__c,&apos;Pending ICM&apos;),ISPICKVAL(Status__c,&apos;Validation Failed&apos;)))</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>Please Insert Proper Status</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Territory_Validation</fullName>
+        <active>false</active>
+        <errorConditionFormula>NOT(OR(ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;AS-CHN&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;AS-KR&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;AS-SE&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;AS-TW&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;EM-CE&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;EM-IS&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;EM-NE&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;EM-SC&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;EM-SE&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;ID-JP&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;IN-IND&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;JP-MAJ&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;NA-CE&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;NA-CMW&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;NA-EST&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;NA-NW&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;NA-SVS&apos;),
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;NA-SE&apos;), 
+ISPICKVAL( GT_TERRITORY_CODE__c ,&apos;NA-SW&apos;)))</errorConditionFormula>
+        <errorDisplayField>GSS_Index__c</errorDisplayField>
+        <errorMessage>Please select appropriate Territory from picklist</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validation_On_Split_User_Change</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND( ! ISNEW() &amp;&amp; ISCHANGED(User__c))</errorConditionFormula>
+        <errorDisplayField>User__c</errorDisplayField>
+        <errorMessage>Split User must not change.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validation_for_Making_Account_Index</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISCHANGED( GSS_Index__c )</errorConditionFormula>
+        <errorDisplayField>GSS_Index__c</errorDisplayField>
+        <errorMessage>Account Index field can not be edited</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validation_for_Making_Platform_Unedited</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISCHANGED( GRS_PLATFORM__c)</errorConditionFormula>
+        <errorMessage>Platform can not be edited</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validation_for_Making_Role_ID_Unedited</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISCHANGED( Role_ID__c )</errorConditionFormula>
+        <errorDisplayField>Role_ID__c</errorDisplayField>
+        <errorMessage>Role Id can not be Edited</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validation_for_Making_Start_Period_Unedi</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISCHANGED( Period_Start__c )</errorConditionFormula>
+        <errorDisplayField>Period_Start__c</errorDisplayField>
+        <errorMessage>Period Start can not be updated</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

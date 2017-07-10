@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Fulfillment cards to the 90-day report include list in TKR</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>EDA_Card_Number__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>EDA Card Number</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Temp Key EDA Card Include</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,3710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>NewBookingPackageIntermediate_VP</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fieldSets>
+        <fullName>Booking_Package_Field_Set</fullName>
+        <description>Custom Visual force page, UpdateLockedBookingPackage_VP.page</description>
+        <displayedFields>
+            <field>Booked_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>SAP__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Shipped_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Contract_WBS__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Actual_Close_Quarter__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Purchase_Order_Number__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Booking Package Field Set</label>
+    </fieldSets>
+    <fields>
+        <fullName>Account_Director__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account Director</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Booking_Packages_Prov_Keys1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>(1 AND 2) OR 3</booleanFilter>
+            <errorMessage>Value does not exist or does not match filter criteria. (BP - Account)</errorMessage>
+            <filterItems>
+                <field>$Source.Parent_Account__c</field>
+                <operation>equals</operation>
+                <valueField>Account.Parent.Id</valueField>
+            </filterItems>
+            <filterItems>
+                <field>Account.Status__c</field>
+                <operation>notEqual</operation>
+                <value>Inactive</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>5_1 - Data Steward</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Booking Packages/Prov Requests (Account)</relationshipLabel>
+        <relationshipName>Booking_Packages</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Close_Quarter__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Actual Close Quarter</label>
+        <referenceTo>Expected_Close_Quarter__c</referenceTo>
+        <relationshipName>Booking_Packages_Prov_Keys1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Deal_TCV__c</fullName>
+        <externalId>false</externalId>
+        <formula>Actual_TCV_P_M__c + Services__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Actual Deal TCV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Quarter_Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Actual_Close_Quarter__r.Expected_Close_Date__c</formula>
+        <label>Actual Quarter Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Actual_TCV_P_M__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual TCV (P&amp;M)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+	<fields>
+        <fullName>Actual_TCV_USD__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual TCV (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Term__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Input the actual term length in number of months.</inlineHelpText>
+        <label>Actual Term</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Actual_Transaction_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Transaction Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>99-YR/Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AMEND</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AMEND-serv</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CONN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HW-99Yr</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HW-Lease</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HW-Ren Maint</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>eDAgold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>eDAplat</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FTA-Add-on</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FTA-New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP - Tensilica</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP Access Selection/DD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IP Combo</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan with fees</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ren Maint</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAM-Ren Maint</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Serv</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Serv - IP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SUB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SUB Add-on</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TBL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UNIV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-99-Yr</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-Bronze</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-eDAgold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-eDAplat</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-FTA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-FTA Add-on</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-IP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-Ren Maint</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-SAM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-SUB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-SUB Add-on</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-TBL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-UNIV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VAR-VIP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VIP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VIP/IP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HW-Cloud</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Appprval_Part_1_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Approval Part 1 Completed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Approval_Step_Tracking__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field will notify which approval step is approved.</description>
+        <externalId>false</externalId>
+        <label>Approval Step Tracking</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Approved_Step_Information__c</fullName>
+        <description>Contain Step Name and Approver Name of  the Approved Steps</description>
+        <externalId>false</externalId>
+        <label>AP OM</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Attachment_LTR__c</fullName>
+        <externalId>false</externalId>
+        <label>Attachment LTR</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Booked_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Booked Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Booking_Approval_Step__c</fullName>
+        <description>This field will be used to hold a value for the current approval step a record is waiting for.</description>
+        <externalId>false</externalId>
+        <label>Booking Approval Step</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Booking_Package_End__c</fullName>
+        <externalId>false</externalId>
+        <label>Booking Package End</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Booking_Package_Remaining_Steps__c</fullName>
+        <externalId>false</externalId>
+        <label>Booking Package Remaining Steps</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Booking_Package_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Booking Package Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Booking_Package_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>24*(Booking_Package_End__c - Booking_Package_Start__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Booking Package Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CDN_Agreement2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>CDN Agreement</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>(1 OR 2 OR 3) AND 4</booleanFilter>
+            <filterItems>
+                <field>$Source.Parent_Account__c</field>
+                <operation>equals</operation>
+                <valueField>Apttus__APTS_Agreement__c.Apttus__Account__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>$Source.Account__c</field>
+                <operation>equals</operation>
+                <valueField>Apttus__APTS_Agreement__c.Apttus__Account__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>5_1 - Data Steward</value>
+            </filterItems>
+            <filterItems>
+                <field>Apttus__APTS_Agreement__c.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Legacy Agreement Numbers</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Apttus__APTS_Agreement__c</referenceTo>
+        <relationshipLabel>Booking Packages/Prov Requests</relationshipLabel>
+        <relationshipName>Booking_Packages_Prov_Requests</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CDN_Agreement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>CDN Agreement</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2 OR 3</booleanFilter>
+            <errorMessage>Value does not exist or does not match filter criteria. (Agreement)</errorMessage>
+            <filterItems>
+                <field>$Source.Parent_Account__c</field>
+                <operation>equals</operation>
+                <valueField>Agreement__c.Account__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>$Source.Account__c</field>
+                <operation>equals</operation>
+                <valueField>Agreement__c.Account__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>5_1 - Data Steward</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Agreement__c</referenceTo>
+        <relationshipLabel>Booking Packages/Prov Requests</relationshipLabel>
+        <relationshipName>Booking_Packages</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CDS_Hungary_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>CDS/Hungary Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CDS_Hungary_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>CDS/Hungary Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Canada_Legal_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Canada Legal Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Canada_Legal_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Canada Legal Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel_Partner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Channel Partner</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <errorMessage>Value does not exist or does not match filter criteria. (Channel Partner)</errorMessage>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Partner-Parent Account</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>5_1 - Data Steward</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Booking Packages/Prov Requests (Channel Partner)</relationshipLabel>
+        <relationshipName>Booking_Packages_Channel_Partners</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contract_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Locked Down</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Processed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Terminated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>SUB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FTA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>eDAgold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>eDAplat</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TBL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contract_WBS__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract/WBS#</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contract__c</fullName>
+        <externalId>false</externalId>
+        <label>Contract</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_RA_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit/RA Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Credit_RA_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Credit/RA Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Credit Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Credit_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Credit Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Execution_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Execution Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Date_Order_Released__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Order Released</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Deal_Approval_Status__c</fullName>
+        <description>Describes Opportunity&apos;s Deal Approval Status</description>
+        <externalId>false</externalId>
+        <label>Deal Approval Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending Fast Track</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved Fast Track</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Deal_Approval_Time__c</fullName>
+        <description>Stores the difference between the date/time when a Booking Package is submitted for approval and the date/time when it is approved and Sap # is updated in the Booking Package.</description>
+        <externalId>false</externalId>
+        <label>Deal Approval Time</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dublin_OM_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Dublin OM Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Dublin_OM_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Dublin OM Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Edit_Booking_Package__c</fullName>
+        <description>This field will be used to contain the hyperlink used to edit a locked Booking Package.</description>
+        <externalId>false</externalId>
+        <formula>IF(
+ ISPICKVAL(Status__c ,&quot;Pending&quot;),
+ HYPERLINK(&quot;/apex/UpdateLockedBookingPackage_VP?id=&quot; &amp;  Id, &quot;Click here&quot; ,&quot;_self&quot;),
+&quot;This record is not locked&quot; 
+)</formula>
+        <inlineHelpText>If the Booking Package is in an approval process, click this link to update needed fields.</inlineHelpText>
+        <label>Edit Booking Package</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Entry_CDN_Agreement__c</fullName>
+        <externalId>false</externalId>
+        <label>Entry CDN Agreement</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Exclude_Shipped_Flag__c</fullName>
+        <description>Always checked if actual transaction type is one of IP, IP-Tensilica, IP Combo, IP Access Selection/DD, Serv, Serv - IP, Ren Maint, AMEND, AMEND- SERV, HW- Ren Maint, HW-Lease, HW-Cloud, HW-99 yr, Ren Maint, SAM - Ren Maint, VAR- IP, VAR-Ren Maint.</description>
+        <externalId>false</externalId>
+        <formula>AND($Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, $Setup.Data_Migration__c.Data_Migration_Bypass__c == false, OR( 
+TEXT(Actual_Transaction_Type__c)=&quot;AMEND-Serv&quot;, 
+TEXT(Actual_Transaction_Type__c)=&quot;AMEND&quot;, 
+TEXT(Actual_Transaction_Type__c)=&quot;HW-Ren Maint&quot;, 
+TEXT(Actual_Transaction_Type__c)=&quot;HW-Lease&quot;,
+TEXT(Actual_Transaction_Type__c)=&quot;HW-Cloud&quot;,  
+TEXT(Actual_Transaction_Type__c)=&quot;HW-99Yr&quot;, 
+TEXT(Actual_Transaction_Type__c)=&quot;IP&quot;, 
+TEXT(Actual_Transaction_Type__c)=&quot;IP - Tensilica&quot;, 
+TEXT(Actual_Transaction_Type__c)=&quot;IP Access Selection/DD&quot;, 
+TEXT(Actual_Transaction_Type__c)=&quot;IP Combo&quot;, 
+TEXT(Actual_Transaction_Type__c)=&quot;Ren Maint&quot;, 
+TEXT(Actual_Transaction_Type__c)=&quot;SAM-Ren Maint&quot;, 
+TEXT(Actual_Transaction_Type__c)=&quot;SERV&quot;, 
+TEXT(Actual_Transaction_Type__c)=&quot;VAR-IP&quot;, 
+TEXT(Actual_Transaction_Type__c)=&quot;VAR-Ren Maint&quot;,
+TEXT(Actual_Transaction_Type__c)=&quot;Serv - IP&quot;
+), $RecordType.Name =&quot;Booking Package&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This flag is checked and Shipped Date is cleared if the Actual transaction type is one of the following: IP,IP-Tensilica,Serv,Serv - IP,Ren Maint,AMEND,AMEND- SERV,HW- Ren Maint,HW-Lease,HW-Cloud,HW-99 yr,Ren Maint,SAM - Ren Maint,VAR- IP,VAR-Ren Maint.</inlineHelpText>
+        <label>Exclude Shipped Flag</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Close_Quarter__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Expected Close Quarter</label>
+        <referenceTo>Expected_Close_Quarter__c</referenceTo>
+        <relationshipName>Booking_Packages_Prov_Keys</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Expedite_Booking_Package__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This checkbox will be used to define a package as needing to be expedited.</description>
+        <externalId>false</externalId>
+        <label>Expedite Booking Package</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expedite_Comments_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+OR(
+RecordType.Name = &quot;Booking Package&quot; &amp;&amp; Expedite_Booking_Package__c = TRUE, 
+RecordType.Name = &quot;Prov Request&quot; &amp;&amp;  Expedite_Prov_Request__c = TRUE
+),
+&quot;Expedite Comments: &quot; &amp; Expedite_Comments__c ,
+NULL
+)</formula>
+        <label>Expedite Comments Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expedite_Comments__c</fullName>
+        <description>This field will be used to track comments on why the record should be expedited.</description>
+        <externalId>false</externalId>
+        <label>Expedite Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Expedite_Prov_Request__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Expedite Prov Request</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expedite_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+OR(
+RecordType.Name = &quot;Booking Package&quot; &amp;&amp; Expedite_Booking_Package__c = TRUE, 
+RecordType.Name = &quot;Prov Request&quot; &amp;&amp;  Expedite_Prov_Request__c = TRUE),
+&quot;--EXPEDITE--&quot;, 
+&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expedite Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expedited_Date__c</fullName>
+        <description>This field will be used to track when the Expedited checkbox was used (date/time).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will be updated automatically when the Expedited checkbox is checked.</inlineHelpText>
+        <label>Expedited Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Fast_Track_Approved__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Fast Track Approved</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Field_Admin_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Field Admin Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Field_Admin_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Field Admin Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Flow_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Flow Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FastTrack</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>IP_Access_Selection_sent_to_OM_NA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>IP Access/Tensilica sent to OM NA</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Number_AP__c</fullName>
+        <description>Contains SAP Invoice number</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Available for Asia Pacific Region only.</inlineHelpText>
+        <label>Invoice Number(AP)</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ireland_Legal_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Ireland Legal Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Ireland_Legal_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Ireland Legal Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Kanji_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Kanji Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Legal_1_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal 1 Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Legal_1_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Legal 1 Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legal_2_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal 2 Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Legal_2_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Legal 2 Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legal_3_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal 3 Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Legal_3_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Legal 3 Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legal_4_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal 4 Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Legal_4_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Legal 4 Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legal_Review_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal Review Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Review_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal Review Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legal_review__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>If required select Region.</inlineHelpText>
+        <label>Legal review</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Asia Pacific</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>India</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>North America</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Maint1__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(
+Actual_Transaction_Type__c,
+&quot;CVA-Lease&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100), 
+&quot;CVA-99Yr&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;CVA-Ren Maint&quot;, Actual_TCV_P_M__c * (1*(Actual_Term__c /12)/100),
+&quot;eDAgold&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;eDAplat&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;FTA-Add-on&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;FTA-New&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;IP&quot;, Actual_TCV_P_M__c * (0.18*(Actual_Term__c /12)/100),
+&quot;Ren Maint&quot;, Actual_TCV_P_M__c * (1*(Actual_Term__c /12)/100),
+&quot;SAM&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;SAM-Ren Maint&quot;, Actual_TCV_P_M__c * (1*(Actual_Term__c /12)/100),
+&quot;Serv&quot;, Actual_TCV_P_M__c * (0*(Actual_Term__c /12)/100),
+&quot;SUB&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;SUB Add-on&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;TBL&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;UNIV&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;VAR-eDAgold&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;VAR-eDAplat&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;VAR-FTA&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;VAR-FTA Add-on&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;VAR-Ren Maint&quot;, Actual_TCV_P_M__c * (1*(Actual_Term__c /12)/100),
+&quot;VAR-SAM&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;VAR-SUB&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;VAR-SUB Add-on&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;VAR-TBL&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;VAR-VIP&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;VAR-99-Yr&quot;, Actual_TCV_P_M__c * (0.12*(Actual_Term__c /12)/100),
+&quot;VIP&quot;, Actual_TCV_P_M__c * (0.09*(Actual_Term__c /12)/100),
+&quot;99-YR/Other&quot;, Actual_TCV_P_M__c * (0.12*(Actual_Term__c /12)/100),
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Maint</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Maint_TCV__c</fullName>
+        <externalId>false</externalId>
+        <formula>Actual_TCV_P_M__c * Maint__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Maint</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Maint__c</fullName>
+        <externalId>false</externalId>
+        <label>Maint %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>NET_Trans__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>NET Trans</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Needs_Legal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Needs Legal</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>New_Customer__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>New Customer</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Non_Standard_Payment_Term__c</fullName>
+        <description>When &apos;Others/Non-Standard&apos; Payment Term selected, User need to give the Non-Standard Payment Term in the &apos;Non-Standard Payment Term&apos; text field</description>
+        <externalId>false</externalId>
+        <label>Non-Standard Payment Term</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Number_of_Days__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OM_Booking_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>OM Booking Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>OM_Booking_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>OM Booking Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OM_Sign_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>OM Sign Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>OM_Sign_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>OM Sign Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_AutoNumber__c</fullName>
+        <description>Used for Email Templates</description>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Opportunity_Id__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Used for Email Templates</inlineHelpText>
+        <label>Opportunity_AutoNumber</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_ID__c</fullName>
+        <description>This field will display the ID of the Opportunity related to the Booking Package.</description>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Opportunity_Id__c</formula>
+        <label>Opportunity ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>Booking_Packages</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Order_Management_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Management Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Order_Management_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Order Management Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_Id__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Owner Id</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Booking_Packages_Prov_Requests</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PIA_Orders__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>PIA Orders</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>(1 AND 2) OR 3</booleanFilter>
+            <errorMessage>Value does not exist or does not match filter criteria. (Parent Account)</errorMessage>
+            <filterItems>
+                <field>Account.Status__c</field>
+                <operation>notEqual</operation>
+                <value>Inactive</value>
+            </filterItems>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Parent Account, Partner-Parent Account</value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>5_1 - Data Steward</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Booking Packages/Prov Requests (Parent Account)</relationshipLabel>
+        <relationshipName>Booking_Packages_Prov_Keys</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Terms</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Net 30</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NE 30</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Net 45</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Net 60</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NE 60</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Net 90</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>NE 90</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Net 120</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PIA 0</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PIA 30</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PIA 90</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>PIA 180</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Others/Non-Standard</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>Equal Annual</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Actual_TCV_P_M__c - Maint1__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <formula>Actual_TCV_P_M__c - Maint_TCV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Purchase_Order_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Purchase Order Number</label>
+        <length>35</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reason_for_Request__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for Request</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rec_Risk_Rating__c</fullName>
+        <externalId>false</externalId>
+        <label>Rec Risk Rating</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>A</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>B</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>C</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>D</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>E</fullName>
+                    <default>false</default>
+                </value>
+                <value>
+                    <fullName>F</fullName>
+                    <default>false</default>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <description>This picklist will drive the available options for what Actual Transaction Types are shown on a Booking Package.</description>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <picklist>
+            <picklistValues>
+                <fullName>North America</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>India</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Asia Pacific</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Accounting_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Revenue Accounting Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Accounting_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Revenue Accounting Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Row_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Row Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SAM_Technologies__c</fullName>
+        <externalId>false</externalId>
+        <label>SAM Technologies</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Altos</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Azuro</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Forte</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jasper</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rocketick</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sigirity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>SAP__c</fullName>
+        <externalId>false</externalId>
+        <label>SAP #</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Finance_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Finance Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Finance_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Sales Finance Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Operations_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Operations Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Operations_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Sales Operations Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>San_Jose_Rev_Acct_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>San Jose Rev Acct Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>San_Jose_Rev_Acct_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>San Jose Rev Acct Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sandy_Rev_Acct_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Sandy Rev Acct Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Sandy_Rev_Acct_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Sandy Rev Acct Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Send_to_Legal_Values__c</fullName>
+        <externalId>false</externalId>
+        <label>Send to Legal Values</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Send_to_Legal__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Legal Group 1 MOD =  NA T&amp;C&apos;s w/MOD in footer OR Cadence Canada
+
+Legal Group 1 STD/PAC = US T&amp;C&apos;s w/STD or PAC in footer
+
+Legal 2 = Cadence Ireland
+
+Legal 3 = Cadence Israel, AB, BV, GmbH, Limited, SAS, Sri, Ltd, Netherlands BV
+
+Legal 4 = Japan</inlineHelpText>
+        <label>Send to Legal</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Legal 1 STD/PAC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal 1 MOD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal 2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal 4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Services__c</fullName>
+        <externalId>false</externalId>
+        <label>Services</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Shipped_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Shipped Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Signatories__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select CDNS Entity for required signatures.</inlineHelpText>
+        <label>Signatories</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cadence Design Systems Inc. STD/PAC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems Inc. MOD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems (Canada) Ltd.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems (Ireland) Limited</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems (Israel) Ltd.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems AB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems B.V.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems GmbH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems Limited</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems S.A.S.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems S.r.I</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems (Netherlands) B.V</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems (Japan) B.V.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Taiwan - Cadence Design Systems Limited</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Design Systems Kft. (Hungary)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+	<fields>
+        <fullName>Signatory_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Signatory Start</label>
+        <summarizedField>Booking_Package_Signatories__c.Start__c</summarizedField>
+        <summaryForeignKey>Booking_Package_Signatories__c.Booking_Package__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Signatory_Total_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Signatory Total Time</label>
+        <summarizedField>Booking_Package_Signatories__c.Time_Hours__c</summarizedField>
+        <summaryForeignKey>Booking_Package_Signatories__c.Booking_Package__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Submitted</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Ts_Cs__c</fullName>
+        <description>Created for Ticket #3275607</description>
+        <externalId>false</externalId>
+        <label>Ts &amp; Cs</label>
+        <picklist>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PAC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Beyond Expiration date of Contract</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prior to effective date of Contract</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ramp Config w/Initial Shipment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>US_Legal_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>US Legal Start</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>US_Legal_Time__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>US Legal Time (hours)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>date_posted__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Posted</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>isMigrated_Record__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Migrated Record</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Booking Package / Provisional Request</label>
+    <listViews>
+        <fullName>AP_Legal</fullName>
+        <columns>NAME</columns>
+        <filterScope>Queue</filterScope>
+        <label>AP Legal</label>
+        <queue>AP_Legal</queue>
+    </listViews>
+    <listViews>
+        <fullName>Credit</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Credit</label>
+        <queue>Credit</queue>
+    </listViews>
+    <listViews>
+        <fullName>Current_Quarter_Package</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Opportunity_ID__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Actual_TCV_P_M__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Status__c</columns>
+        <columns>Shipped_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Shipped_Date__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </filters>
+        <filters>
+            <field>Opportunity_ID__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>Current Quarter Packages</label>
+    </listViews>
+    <listViews>
+        <fullName>Dublin_Order_Management</fullName>
+        <columns>NAME</columns>
+        <columns>OBJECT_ID</columns>
+        <filterScope>Queue</filterScope>
+        <label>Dublin Order Management</label>
+        <queue>Dublin_Order_Management</queue>
+        <sharedTo/>
+    </listViews>
+    <listViews>
+        <fullName>EMEA_BPR</fullName>
+        <columns>NAME</columns>
+        <columns>Parent_Account__c</columns>
+        <columns>Actual_Deal_TCV__c</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>Region__c</columns>
+        <columns>Expected_Close_Quarter__c</columns>
+        <columns>SAP__c</columns>
+        <columns>Booked_Date__c</columns>
+        <columns>Actual_Quarter_Close_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATEDBY_USER</field>
+            <operation>equals</operation>
+            <value>Cadence Migration</value>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterThan</operation>
+            <value>3/10/2014 12:00 AM</value>
+        </filters>
+        <label>EMEA BPR</label>
+        <sharedTo>
+            <group>BP_Testing_Approvers</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>JP_Credit_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>JP Credit</label>
+        <queue>JP_Credit</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>JP_RA_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>JP RA</label>
+        <queue>JP_RA</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>LEGAL_SD</fullName>
+        <columns>NAME</columns>
+        <columns>Parent_Account__c</columns>
+        <columns>Booking_Approval_Step__c</columns>
+        <columns>SAP__c</columns>
+        <columns>Send_to_Legal__c</columns>
+        <columns>Ts_Cs__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Region__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Booking_Approval_Step__c</field>
+            <operation>contains</operation>
+            <value>Approval to Legal,Approval to Legal Group 1 MOD</value>
+        </filters>
+        <filters>
+            <field>Send_to_Legal__c</field>
+            <operation>equals</operation>
+            <value>Legal 1 STD/PAC,Legal 1 MOD</value>
+        </filters>
+        <label>Legal Assignment</label>
+        <sharedTo>
+            <group>Legal_Group_1</group>
+            <role>Order_Fulfillment_Manager</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Prov_Keys</fullName>
+        <columns>NAME</columns>
+        <columns>Actual_Transaction_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Booking_Package__c.Prov_Request</value>
+        </filters>
+        <label>Prov Keys</label>
+    </listViews>
+    <listViews>
+        <fullName>Prov_Keys_test</fullName>
+        <columns>NAME</columns>
+        <columns>Actual_Transaction_Type__c</columns>
+        <columns>Actual_Quarter_Close_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Account_Director__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Booking_Package__c.Prov_Request</value>
+        </filters>
+        <label>Prov Keys test</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_2_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Signatory Ireland</label>
+        <queue>Signatory_2</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_3_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Signatory EMEA</label>
+        <queue>Signatory_3</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_4_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Signatory Japan</label>
+        <queue>Signatory_4</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_AB_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Signatory AB</label>
+        <queue>Signatory_AB</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_BV_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Signatory BV</label>
+        <queue>Signatory_BV</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_GmbH_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Signatory GmbH</label>
+        <queue>Signatory_GmbH</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_Group_1_MOD_Booking_Package</fullName>
+        <columns>Account__c</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Actual_Close_Quarter__c</field>
+            <operation>equals</operation>
+            <value>Q1-20176</value>
+        </filters>
+        <label>Signatory NA MOD / Canada</label>
+        <language>en_US</language>
+        <queue>Signatory_Group_1_MOD</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_Group_1_STD_PAC_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Signatory NA STD/PAC</label>
+        <queue>Signatory_Group_1_STD_PAC</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_Israel_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Signatory Israel</label>
+        <queue>Signatory_Israel</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_Limited_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Signatory Limited</label>
+        <queue>Signatory_Limited</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_Netherlands_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Signatory Netherlands</label>
+        <queue>Signatory_Netherlands</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_SAS_Booking_Package</fullName>
+        <columns>Account__c</columns>
+        <columns>Actual_Close_Quarter__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Signatory SAS</label>
+        <language>en_US</language>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_SrI_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Signatory SrI</label>
+        <queue>Signatory_SrI</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Signatory_Taiwan_Booking_Package</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Signatory Taiwan</label>
+        <queue>Signatory_Taiwan</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>BP-{000}</displayFormat>
+        <label>Detail Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Booking Packages/Prov Requests</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Booking_Package</fullName>
+        <active>true</active>
+        <description>Use this type of record to create a Booking Package request.</description>
+        <label>Booking Package</label>
+        <picklistValues>
+            <picklist>Actual_Transaction_Type__c</picklist>
+            <values>
+                <fullName>99-YR%2FOther</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AMEND</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AMEND-serv</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CONN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FTA-Add-on</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FTA-New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HW-99Yr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HW-Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HW-Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HW-Ren Maint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP - Tensilica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP Access Selection%2FDD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP Combo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan with fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ren Maint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAM-Ren Maint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUB Add-on</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serv</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serv - IP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UNIV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-99-Yr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-FTA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-FTA Add-on</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-IP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-Ren Maint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-SAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-SUB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-SUB Add-on</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-TBL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-UNIV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-VIP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-eDAgold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-eDAplat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIP%2FIP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eDAgold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eDAplat</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Status__c</picklist>
+            <values>
+                <fullName>Locked Down</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Processed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Type__c</picklist>
+            <values>
+                <fullName>FTA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUB</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Deal_Approval_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved Fast Track</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Submitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending Fast Track</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Flow_Type__c</picklist>
+            <values>
+                <fullName>FastTrack</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Legal_review__c</picklist>
+            <values>
+                <fullName>Asia Pacific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North America</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Terms__c</picklist>
+            <values>
+                <fullName>NE 30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NE 60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NE 90</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 120</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 45</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 90</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others%2FNon-Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIA 0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIA 180</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIA 30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIA 90</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rec_Risk_Rating__c</picklist>
+            <values>
+                <fullName>A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Region__c</picklist>
+            <values>
+                <fullName>Asia Pacific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North America</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SAM_Technologies__c</picklist>
+            <values>
+                <fullName>Altos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Azuro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Forte</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jasper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rocketick</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sigirity</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Send_to_Legal__c</picklist>            
+            <values>
+                <fullName>Legal 1 MOD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 1 STD%2FPAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 4</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Signatories__c</picklist>
+            <values>
+                <fullName>Cadence Design Systems %28Canada%29 Ltd%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems %28Ireland%29 Limited</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems %28Israel%29 Ltd%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems %28Japan%29 B%2EV%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems %28Netherlands%29 B%2EV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems AB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems B%2EV%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems GmbH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems Inc%2E MOD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems Inc%2E STD%2FPAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems Kft%2E %28Hungary%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems Limited</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems S%2EA%2ES%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cadence Design Systems S%2Er%2EI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taiwan - Cadence Design Systems Limited</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Submitted</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ts_Cs__c</picklist>
+            <values>
+                <fullName>MOD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Beyond Expiration date of Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prior to effective date of Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ramp Config w%2FInitial Shipment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Prov_Request</fullName>
+        <active>true</active>
+        <description>Use this type of record to create a Provisional Key Request.</description>
+        <label>Prov Request</label>
+        <picklistValues>
+            <picklist>Actual_Transaction_Type__c</picklist>
+            <values>
+                <fullName>99-YR%2FOther</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AMEND</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AMEND-serv</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FTA-Add-on</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FTA-New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HW-99Yr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HW-Cloud</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HW-Lease</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HW-Ren Maint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP - Tensilica</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan with fees</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ren Maint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAM-Ren Maint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUB Add-on</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serv</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UNIV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-99-Yr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-Bronze</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-FTA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-FTA Add-on</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-Ren Maint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-SAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-SUB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-SUB Add-on</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-TBL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-UNIV</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-VIP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-eDAgold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VAR-eDAplat</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>VIP%2FIP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eDAgold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eDAplat</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Status__c</picklist>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Locked Down</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Processed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Terminated</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Contract_Type__c</picklist>
+            <values>
+                <fullName>FTA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SAM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TBL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eDAgold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>eDAplat</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Terms__c</picklist>
+            <values>
+                <fullName>NE 30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NE 60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NE 90</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 120</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 45</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 60</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net 90</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others%2FNon-Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIA 0</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIA 180</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIA 30</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PIA 90</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rec_Risk_Rating__c</picklist>
+            <values>
+                <fullName>A</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>D</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Region__c</picklist>
+            <values>
+                <fullName>Asia Pacific</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>North America</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SAM_Technologies__c</picklist>
+            <values>
+                <fullName>Altos</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Azuro</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Send_to_Legal__c</picklist>            
+            <values>
+                <fullName>Legal 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal 4</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Signatories__c</picklist>
+            <values>
+                <fullName>Cadence Design Systems Kft%2E %28Hungary%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Submitted</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Ts_Cs__c</picklist>
+            <values>
+                <fullName>MOD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>STD</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Beyond Expiration date of Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Prior to effective date of Contract</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ramp Config w%2FInitial Shipment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Region__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Actual_Transaction_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Account__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Opportunity__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Actual_Term_Must_Be_Positive</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND($Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+Actual_Term__c &lt;0)</errorConditionFormula>
+        <errorDisplayField>Actual_Term__c</errorDisplayField>
+        <errorMessage>Actual Term must be a number greater or equal to 0.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Actual_Term_cannot_be_Null_for_some_TT</fullName>
+        <active>true</active>
+        <description>If Actual Transaction Type is not equal to SERV, Serv - IP, 99-YR/Other, VAR-99-Yr, HW-99Yr, AMEND-Serv or AMEND, Actual Term cannot be blank.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /* Merge Issue */ 
+ $Setup.Data_Migration__c.Data_Migration_Bypass__c == false,
+	AND(
+		NOT(TEXT(Actual_Transaction_Type__c)=&quot;SERV&quot;),
+                NOT(TEXT(Actual_Transaction_Type__c)=&quot;Serv - IP&quot;),
+		NOT(TEXT(Actual_Transaction_Type__c)=&quot;99-YR/Other&quot;),
+		NOT(TEXT(Actual_Transaction_Type__c)=&quot;VAR-99-Yr&quot;),
+		NOT(TEXT(Actual_Transaction_Type__c)= $Label.BP_TransType_CVA_99Yr ),
+NOT(TEXT(Actual_Transaction_Type__c)=&quot;AMEND-Serv&quot;),
+NOT(TEXT(Actual_Transaction_Type__c)=&quot;AMEND&quot;)
+	),
+	ISBLANK(Actual_Term__c),
+         $RecordType.Name =&quot;Booking Package&quot;
+)</errorConditionFormula>
+        <errorDisplayField>Actual_Term__c</errorDisplayField>
+        <errorMessage>If Actual Transaction Type is not equal to SERV, Serv - IP, 99-YR/Other, VAR-99-Yr, HW-99Yr, AMEND-Serv or AMEND, Actual Term cannot be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>BP_Cant_Use_Both_CDN_Agreement_Fields</fullName>
+        <active>true</active>
+        <description>This validation rule will fire if both the manual and lookup CDN Agreement fields are populated.</description>
+        <errorConditionFormula>AND( 
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+NOT(ISBLANK( CDN_Agreement__c )) , 
+NOT(ISBLANK( Entry_CDN_Agreement__c )) 
+)</errorConditionFormula>
+        <errorDisplayField>Entry_CDN_Agreement__c</errorDisplayField>
+        <errorMessage>You can only use one CDN Agreement field. Please use the lookup to find an existing Agreement, or use the Entry field to type in the Agreement number.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Edit_Locked_BP</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+    $Profile.Name&lt;&gt;&quot;2_4 - Regional Sales VPsClone&quot;,
+    $Profile.Name&lt;&gt;&quot;2_5 - Sales OperationsCloneMarketo&quot;,
+    $Profile.Name&lt;&gt;&quot;2_5 - Sales OperationsClone&quot;,
+    $Profile.Name&lt;&gt;&quot;3_1 - Order Fulfillment - Manager&quot;,
+    $Profile.Name&lt;&gt;&quot;3_1 - Order Fulfillment - ManagerClone&quot;,
+    $Profile.Name&lt;&gt;&quot;3_2 - Order Fulfillment - User&quot;,
+    $Profile.Name&lt;&gt;&quot;3_2 – Order Management Apttus SuperUser&quot;,
+    $Profile.Name&lt;&gt;&quot;3_3 - Order Fulfillment - AP&quot;,
+    $Profile.Name&lt;&gt;&quot;3_3 AND 5_3-Order Fulfillmnet-AP PLUS AE&quot;,
+    $Profile.Name&lt;&gt;&quot;4_5 - Credit&quot;,
+    $Profile.Name&lt;&gt;&quot;5_1 - Data Steward&quot;,
+    $Profile.Name&lt;&gt;&quot;Integration&quot;,
+    $Profile.Name&lt;&gt;&quot;System Administrator Custom&quot;,
+    $Profile.Name&lt;&gt;&quot;System Administrator&quot;,
+    $Profile.Name&lt;&gt;&quot;System Admin ReadOnly&quot;,
+    $Profile.Name&lt;&gt; Account_Director__r.Profile.Name,
+   
+    ISPICKVAL(Status__c, &quot;Pending&quot;)
+)</errorConditionFormula>
+        <errorMessage>You cannot edit Booking Package while it is locked for Approval.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Expedite_Comments_cannot_be_blank</fullName>
+        <active>true</active>
+        <description>This validation rule will require the Expedite Comments field if the Expedite Booking Package checkbox is used.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+ Expedite_Booking_Package__c =TRUE,
+ISBLANK( Expedite_Comments__c )
+)</errorConditionFormula>
+        <errorDisplayField>Expedite_Comments__c</errorDisplayField>
+        <errorMessage>Expedite Comments cannot be blank if Expedite Booking Package is checked. Please provide comments.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Invoice_No</fullName>
+        <active>true</active>
+        <description>Invoice Number field is editable only for Region &quot;Asia Pacific&quot;</description>
+        <errorConditionFormula>AND($Setup.Data_Migration__c.Data_Migration_Bypass__c == false, 
+$Profile.Name != &apos;5_1 - Data Steward&apos;, 
+NOT(CONTAINS($User.LastName , &apos;Migration&apos;)),
+isMigrated_Record__c == false,
+AND(NOT(ISBLANK( Invoice_Number_AP__c )), NOT(ISPICKVAL(Region__c, &apos;Asia Pacific&apos;))))</errorConditionFormula>
+        <errorDisplayField>Invoice_Number_AP__c</errorDisplayField>
+        <errorMessage>Invoice No. is editable only for Asia Pacific flow</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Number_Of_Days_Or_Start_and_End</fullName>
+        <active>true</active>
+        <description>This validation rule will fire if both Number of Days and Proposed Start and Proposed End are populated. Users should use one of the other.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+NOT(ISBLANK( Number_of_Days__c )),
+NOT(ISBLANK(  Proposed_Start_Date__c )),
+NOT(ISBLANK(  Proposed_End_Date__c  ))
+)</errorConditionFormula>
+        <errorDisplayField>Number_of_Days__c</errorDisplayField>
+        <errorMessage>Please use Number of Days or Proposed Start and End Dates, but not both</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Only_One_Legal_1</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+INCLUDES(Send_to_Legal__c, &quot;Legal 1 MOD&quot;),
+INCLUDES(Send_to_Legal__c, &quot;Legal 1 STD/PAC&quot;)
+)</errorConditionFormula>
+        <errorDisplayField>Send_to_Legal__c</errorDisplayField>
+        <errorMessage>Between Legal 1 MOD and Legal 1 STD/PAC, only one can be selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Region_EMEA_And_AP_Legal_Groups</fullName>
+        <active>false</active>
+        <description>This rule will trigger if EMEA or Asia Pacific is selected as the Region but Legal 2 or 3 is not one of the groups selected.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+NOT(ISPICKVAL( Actual_Transaction_Type__c,&quot;HW-99Yr&quot;)),
+OR(
+ISPICKVAL(Region__c , &quot;EMEA&quot;),
+ISPICKVAL(Region__c , &quot;Asia Pacific&quot;)
+),
+NOT(ISNULL(Send_to_Legal__c )),
+NOT(INCLUDES(Send_to_Legal__c, &quot;Legal 2&quot;)),
+NOT(INCLUDES(Send_to_Legal__c, &quot;Legal 3&quot;))
+)</errorConditionFormula>
+        <errorDisplayField>Send_to_Legal__c</errorDisplayField>
+        <errorMessage>If Region = EMEA or Asia Pacific and any legal group is selected, Legal 2 or Legal 3 must be included.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Region_India_Legal_Groups</fullName>
+        <active>false</active>
+        <description>This rule will trigger if India is selected as the Region but Legal 2 is not one of the groups selected.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+ ISPICKVAL(Region__c , &quot;India&quot;),
+NOT(ISNULL(Send_to_Legal__c )),
+ NOT(INCLUDES(Send_to_Legal__c, &quot;Legal 2&quot;))
+)</errorConditionFormula>
+        <errorDisplayField>Send_to_Legal__c</errorDisplayField>
+        <errorMessage>If Region = India and any legal group is selected, Legal 2 must be included.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Region_JP_Legal_Groups</fullName>
+        <active>false</active>
+        <description>This rule will trigger if Japan is selected as the Region but Legal 4 is not one of the groups selected.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+ ISPICKVAL(Region__c , &quot;Japan&quot;),
+NOT(ISNULL(Send_to_Legal__c )),
+ NOT(INCLUDES(Send_to_Legal__c, &quot;Legal 4&quot;))
+)</errorConditionFormula>
+        <errorDisplayField>Send_to_Legal__c</errorDisplayField>
+        <errorMessage>If Region = Japan and any legal group is selected, Legal 4 must be included.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Region_NA_Legal_Groups</fullName>
+        <active>false</active>
+        <description>This rule will trigger if North America is selected as the Region but Legal 1 is not one of the groups selected.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+ ISPICKVAL(Region__c , &quot;North America&quot;),
+NOT(ISNULL(Send_to_Legal__c )),
+NOT(OR(INCLUDES(Send_to_Legal__c, &quot;Legal 1 MOD&quot;),INCLUDES(Send_to_Legal__c, &quot;Legal 1 STD/PAC&quot;)))
+
+)</errorConditionFormula>
+        <errorDisplayField>Send_to_Legal__c</errorDisplayField>
+        <errorMessage>If Region = North America and any legal group is selected, Legal 1 must be included.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SAM_SAM_Technologies_cannot_be_blank</fullName>
+        <active>true</active>
+        <description>If SAM is selected, SAM Technologies cannot be blank.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+ isMigrated_Record__c == false,
+        CONTAINS(TEXT(Actual_Transaction_Type__c), &quot;SAM&quot;) ,
+	ISPICKVAL( SAM_Technologies__c, &quot;&quot;)
+)</errorConditionFormula>
+        <errorDisplayField>SAM_Technologies__c</errorDisplayField>
+        <errorMessage>If a SAM is selected, SAM Technologies cannot be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SAM_SAM_Technologies_must_be_blank</fullName>
+        <active>true</active>
+        <description>If non-SAM is selected, SAM Technologies must be blank.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+ isMigrated_Record__c == false,
+                NOT(CONTAINS(TEXT(Actual_Transaction_Type__c), &quot;SAM&quot;)) ,
+		NOT(ISBLANK(TEXT( SAM_Technologies__c )))
+)</errorConditionFormula>
+        <errorDisplayField>SAM_Technologies__c</errorDisplayField>
+        <errorMessage>If a SAM is not selected, SAM Technologies must be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SAP_Must_Contain_Numbers_Only</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+NOT(ISBLANK(SAP__c)),
+NOT (ISNUMBER( SAP__c ))
+)</errorConditionFormula>
+        <errorDisplayField>SAP__c</errorDisplayField>
+        <errorMessage>SAP Number must contain only numbers.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>VAR_Channel_Partner_Not_NULL</fullName>
+        <active>true</active>
+        <description>If a VAR Actual Transaction Type is selected, Channel Partner cannot be blank.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+ isMigrated_Record__c == false,
+	CONTAINS(TEXT(Actual_Transaction_Type__c), &quot;VAR&quot;) ,
+	Channel_Partner__c=&quot;&quot;
+)</errorConditionFormula>
+        <errorDisplayField>Channel_Partner__c</errorDisplayField>
+        <errorMessage>Channel Partner cannot be blank if a VAR is selected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>VAR_Channel_Partner_must_be_NULL</fullName>
+        <active>true</active>
+        <description>If a non-VAR Actual Transaction Type is selected, Channel Partner must be blank.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, /*ASR #566115 : Merging Issue */ 
+ isMigrated_Record__c == false,
+	NOT(
+		CONTAINS(TEXT(Actual_Transaction_Type__c), &quot;VAR&quot;)
+	),
+	Channel_Partner__c&lt;&gt;&quot;&quot;
+)</errorConditionFormula>
+        <errorDisplayField>Channel_Partner__c</errorDisplayField>
+        <errorMessage>Channel Partner must be blank if a non-VAR is selected.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Booking_Package</fullName>
+        <availability>online</availability>
+        <description>This should only be used on the Oppty List view.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Booking Package</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/{!$Setup.Field_Id_Hierarchy_CS__c.BP_Keyprefix__c}/e?retURL=%2F{!Opportunity.Id}&amp;{!$Setup.Field_Id_Hierarchy_CS__c.BP_Opportunity__c}={!Opportunity.Name}&amp;{!$Setup.Field_Id_Hierarchy_CS__c.BP_Opportunity__c}_lkid={!Opportunity.Id}&amp;{!$Setup.Field_Id_Hierarchy_CS__c.BP_Account__c}_lkid={!Opportunity.AccountId}&amp;{!$Setup.Field_Id_Hierarchy_CS__c.BP_Account__c}={!Opportunity.Account}</url>
+    </webLinks>
+</CustomObject>

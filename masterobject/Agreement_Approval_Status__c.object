@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Set the Agreement Approval Status based on Approval Status and Line Item Approval Status fields.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Agreement_Approval_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Agreement Approval Status</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_Item_Approval_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Line Item Approval Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Agreement Approval Status</label>
+    <visibility>Public</visibility>
+</CustomObject>

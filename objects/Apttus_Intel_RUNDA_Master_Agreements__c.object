@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Holds Applicable RUNDA# and it&apos;s corresponding Master Agreement Name</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>RUNDA_Master_Agreement_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>RUNDA Master Agreement Name</label>
+        <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RUNDA__c</fullName>
+        <externalId>false</externalId>
+        <label>RUNDA #</label>
+        <length>15</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Apttus Intel RUNDA Master Agreements</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>To schedule the next job or not in BMCRF_CR_ScheduleNotification__c class</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>scheduleFlag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>if  its checked then the scheduler&apos;s NextFireTime will set to null in BMCRF_CR_ScheduleNotification class</description>
+        <externalId>false</externalId>
+        <label>scheduleFlag</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>BMCRF_CR_ScheduleFlag</label>
+    <visibility>Protected</visibility>
+</CustomObject>

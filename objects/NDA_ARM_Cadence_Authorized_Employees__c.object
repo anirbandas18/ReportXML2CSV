@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object to hold the authorized employees for ARM</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Access_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Access Expiration Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Agreement_Approval_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Related_Agreement__r.Apttus_Approval__Approval_Status__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Agreement Approval Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agreement_Status_Category__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Related_Agreement__r.Apttus__Status_Category__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Agreement Status Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agreement_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Related_Agreement__r.Apttus__Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Agreement Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deleted_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Deleted On</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>End_Flow_Flag__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is set true when a record is saved from ARM_Access_End_Flow page and is reset from trigger.</description>
+        <externalId>false</externalId>
+        <label>End Flow Flag</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>End_Flow_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>$Label.RVP_Notification_Forecast_URL + &apos;/apex/ARM_Access_End_Flow?Id=&apos; +  Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>End Flow URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Export_Control_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>Related_Agreement__r.Is_Export_Control_Volume__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Export Control Flag</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Access_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Access Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Never_Accessed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Never Accessed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ref_ARM_Restriction_Applied__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;Employee is restricted from working in specific areas of Cadence’s business due to employee’s access of ARM data. You may follow the Document Link to view details related to this restriction.&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ref_ARM_Restriction_Applied</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ref_ARM_Restriction_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(Never_Accessed__c,NULL,(if(ISNULL(Last_Access_Date__c), Access_End_Date__c+365, Last_Access_Date__c+365)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ref_ARM_Restriction_End_Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ref_ARM_Restriction_ProjectID__c</fullName>
+        <externalId>false</externalId>
+        <label>Ref_ARM_Restriction_ProjectID</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ref_ARM_Restriction_ProjectName__c</fullName>
+        <externalId>false</externalId>
+        <label>Ref_ARM_Restriction_ProjectName</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ref_ARM_Restriction_Reason__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (Never_Accessed__c,&quot;Never_Accessed&quot;, NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ref_ARM_Restriction_Reason</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ref_ARM_Restriction_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>if (Never_Accessed__c, NULL, if(ISNULL(Related_Agreement__r.Apttus__Activated_Date__c),DATEVALUE(Related_Agreement__r.LastModifiedDate),Related_Agreement__r.Apttus__Activated_Date__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ref_ARM_Restriction_Start_Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ref_ARM_Restriction_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(Never_Accessed__c,true,false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ref_ARM_Restriction_Status</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Ref_ARM_Restriction_URLLink__c</fullName>
+        <externalId>false</externalId>
+        <formula>$Label.RVP_Notification_Forecast_URL + &apos;/apex/Agreement_Detail?id=&apos; + Related_Agreement__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Ref_ARM_Restriction_URLLink</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Refrigeration_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Never_Accessed__c = true  , null ,  
+IF( NOT(ISBLANK(Last_Access_Date__c )),  Last_Access_Date__c + 365 , 
+IF( NOT(ISBLANK(Access_End_Date__c )),  Access_End_Date__c + 365 ,null)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Refrigeration End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Related_Agreement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related Agreement</label>
+        <referenceTo>Apttus__APTS_Agreement__c</referenceTo>
+        <relationshipLabel>NDA ARM Cadence Authorized Employees</relationshipLabel>
+        <relationshipName>NDA_ARM_Cadence_Authorized_Employees</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Show the Status as Active if Never Accessed is false else show Inactive</description>
+        <externalId>false</externalId>
+        <formula>IF( Never_Accessed__c , &quot;Inactive&quot;, &quot;Active&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Employee Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TestUser__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>TestUser</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Update_Access_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK( End_Flow_URL__c , &apos;Update Access Date&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Update Access Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>NDA_ARM_Cadence_Authorized_Employees</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>isDeleted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>isDeleted</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>isTemp__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Field to check if the record is a temporary record. Value set true from trigger. Used in workflows to check if the workflow needs to be executed.</description>
+        <externalId>false</externalId>
+        <label>isTemp</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>NDA ARM Cadence Authorized Employees</label>
+    <nameField>
+        <displayFormat>Employee - {0}</displayFormat>
+        <label>Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>NDA ARM Cadence Authorized Employees</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

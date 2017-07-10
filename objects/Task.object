@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <content>TaskNewOverride_VF</content>
+        <skipRecordTypeSelect>true</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <fields>
+        <fullName>ActivityDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>CallDisposition</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDurationInSeconds</fullName>
+    </fields>
+    <fields>
+        <fullName>CallObject</fullName>
+    </fields>
+    <fields>
+        <fullName>CallType</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+                <highPriority>true</highPriority>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Normal</fullName>
+                <default>true</default>
+                <highPriority>false</highPriority>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <highPriority>false</highPriority>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecurrenceInterval</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurrenceRegeneratedType</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+                <closed>true</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <closed>true</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+                <closed>false</closed>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Done</fullName>
+                <default>false</default>
+                <closed>true</closed>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Call – Sales Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Call – EMA Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Call – COS/CSSO password reset</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Call - Referred to COS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Call - Created Case</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Call - Existing Case</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Call – Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent Email – New User Template</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent Email – COS/CSSO password reset</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent Email – More Info Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent Email – EMA Referral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent Email – Referred to COS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent Email – Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact Merge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account Merge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reassign Case</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TaskSubtype</fullName>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypes>
+        <fullName>ACR</fullName>
+        <active>true</active>
+        <description>When creating a new Article Creation Request then select this record type.</description>
+        <label>ACR</label>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Admin SSG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Maintenance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Publish Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS Contact Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIP Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email - Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired Article Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knowledge Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to Expert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to ILS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to SSG</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call %E2%80%93 Sales Referral</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>AMR_EAR_APR</fullName>
+        <active>true</active>
+        <description>When creating a new Article Maintenance Review, Expired Article Review, or Article Proposal Request then select this record type.</description>
+        <label>AMR/EAR/APR</label>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Admin SSG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Maintenance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Publish Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS Contact Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIP Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email - Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired Article Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knowledge Maintenance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knowledge Publish Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to Expert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to ILS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to SSG</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call %E2%80%93 Sales Referral</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Default</fullName>
+        <active>true</active>
+        <description>When creating a standard task then select this record type.</description>
+        <label>Default</label>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Admin SSG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Maintenance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Publish Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS Contact Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIP Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email - Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired Article Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired Knowledge Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knowledge Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knowledge Maintenance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knowledge Publish Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to Expert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to ILS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to SSG</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Account Merge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call %E2%80%93 COS%2FCSSO password reset</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call %E2%80%93 EMA Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call %E2%80%93 Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call %E2%80%93 Sales Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Created Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Existing Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Referred to COS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact Merge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reassign Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email %E2%80%93 COS%2FCSSO password reset</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email %E2%80%93 EMA Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email %E2%80%93 More Info Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email %E2%80%93 New User Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email %E2%80%93 Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email %E2%80%93 Referred to COS</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>EAR</fullName>
+        <active>true</active>
+        <description>Expired Article Review</description>
+        <label>EAR</label>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Admin SSG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Maintenance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Publish Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS Contact Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIP Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email - Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired Article Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired Knowledge Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to Expert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to ILS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to SSG</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call %E2%80%93 COS%2FCSSO password reset</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call %E2%80%93 EMA Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call %E2%80%93 Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call %E2%80%93 Sales Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Letter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Quote</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email %E2%80%93 COS%2FCSSO password reset</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email %E2%80%93 EMA Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email %E2%80%93 More Info Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email %E2%80%93 New User Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email %E2%80%93 Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sent Email %E2%80%93 Referred to COS</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SSG</fullName>
+        <active>true</active>
+        <description>When creating a new SSG type activity then select this record type.</description>
+        <label>SSG</label>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Admin SSG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Maintenance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Publish Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS Contact Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIP Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email - Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired Article Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to Expert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to ILS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to SSG</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call %E2%80%93 Sales Referral</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>ArticlePublisher_on_OwnerChange</fullName>
+        <active>true</active>
+        <description>Task should not be transferred to a User, who don&apos;t have Article_Publisher Permissions.</description>
+        <errorConditionFormula>AND( $Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, 
+$User.LastName &lt;&gt; &apos;Migration&apos;, 
+NOT($Profile.Name = &apos;Integration&apos;), 
+AND(OR( ISPICKVAL(  Activity_Type__c , &apos;Article Creation Request&apos;) , ISPICKVAL(  Activity_Type__c , &apos;Article Maintenance Request&apos;),ISPICKVAL(  Activity_Type__c , &apos;Expired Article Review&apos;) , ISPICKVAL(  Activity_Type__c , &apos;Article Publish Request&apos;)), 
+NOT( Owner:User.Article_Publisher__c ))
+, if(WhatId != null , NOT(BEGINS(WhatId , &apos;a4H&apos;)) , true)
+, if(WhatId != null , NOT(BEGINS(WhatId , &apos;a4K&apos;)) , true)
+)</errorConditionFormula>
+        <errorDisplayField>OwnerId</errorDisplayField>
+        <errorMessage>You can not transfer the Task to this user. Because this user do not have Article Publisher permission.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Comment_Section_mandatory_check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT($Profile.Name = &quot;5_1 - Data Steward&quot;), 
+	NOT($User.LastName = &apos;Migration&apos;), 
+	NOT($User.LastName = &apos;Code Migration&apos;),  
+	NOT($Profile.Name = &apos;Integration&apos;),
+	OR(RecordType.DeveloperName = &apos;ACR&apos;) ,
+	ISBLANK(Description))</errorConditionFormula>
+        <errorDisplayField>Description</errorDisplayField>
+        <errorMessage>Comments section should not be blank.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Article_Creation_Request</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Article Creation Request</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a1q/e?RecordType=012K00000004UL3&amp;CF00NK0000000jipK={!Case.CaseNumber}&amp;CF00NK0000000jipK_lkid={!Case.Id}&amp;00NK0000000jipH=Article%20Creation%20Request&amp;Name=Article Creation Request_{!Case.CaseNumber}&amp;CF00NK0000000jipQ={!Case.Product__c}&amp;CF00NK0000000jipQ_lkid={!Case.ProductId__c}&amp;retURL=/{!Case.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Article_Maintenance_Request</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Article Maintenance Request</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/{!$ObjectType.Queued_Task__c}/e?nooverride=1&amp;RecordType={!$Setup.Org_Field_IDs__c.Task_Article_Maintenance_Request_RcdTyp__c}&amp;{!$Setup.Org_Field_IDs__c.Task_Article_Maintenance_Request_Article__c}={!Article__c.Name}&amp;{!$Setup.Org_Field_IDs__c.Task_Article_Maintenance_Request_RcdTyp__c}_lkid={!Article__c.Id}&amp;{!$Setup.Org_Field_IDs__c.Queued_Task_Activity_Type_ID__c}=Article%20Maintenance%20Request&amp;Name=Article Maintenance Request_{!Article__c.Name}&amp;{!$Setup.Org_Field_IDs__c.Case_Article_Art_Crtn_Req_Case_Product__c}={!Article__c.Product__c}&amp;{!$Setup.Org_Field_IDs__c.Case_Article_Art_Crtn_Req_Case_Product__c}_lkid={!Article__c.ProductId__c}&amp;_retURL=/{!Article__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Article</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create Article</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>var activityType = &apos;{!Task.Activity_Type__c}&apos;;
+
+if(activityType == &quot;Article Creation Request&quot;){
+ window.open(&quot;/apex/CreateArticleFromACR?product={!Task.Product__c}&amp;name={!Task.Who}&amp;casenumber={!Task.What}&amp;acr_task_id={!Task.Id}&quot;, &quot;_blank&quot;, &quot;toolbar=yes, scrollbars=yes&quot;);
+}
+else{
+window.location.href = &apos;/apex/CreateArticleFromACR?product={!Task.Product__c}&amp;name={!Task.Who}&amp;casenumber={!Task.What}&amp;acr_task_id={!Task.Id}&apos;;
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Expert_Request</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Expert Request</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/18.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/18.0/apex.js&quot;)} 
+
+var OwnerIdStartWith = &apos;{!Case.OwnerId}&apos;.substring (0,3); 
+if(OwnerIdStartWith == &apos;00G&apos;) { 
+alert(&quot;The case is Owned by queue, Task Can&apos;t be created&quot;); 
+} 
+else if (&apos;{!Case.Status}&apos; == &apos;Closed&apos;){ 
+alert(&quot;The case in closed status. So, Task Can&apos;t be created&quot;); 
+} 
+else if (&apos;{!Case.Product__c}&apos; == null || &apos;{!Case.Product__c}&apos; == &apos;&apos;) { 
+alert(&quot;Product is missing. So, Task Can&apos;t be created&quot;); 
+} 
+else 
+{ 
+window.open(&quot;/apex/CaseExpertChange_VP?id={!Case.Id}&amp;isEdit=true&quot;); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Knowledge_Maintenance_Request</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Knowledge Maintenance Request</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/{!$ObjectType.Queued_Task__c}/e?nooverride=1&amp;RecordType={!$Setup.Org_Field_IDs__c.Task_Article_Maintenance_Request_RcdTyp__c}&amp;{!$Setup.Org_Field_IDs__c.Task_Article_Maintenance_Request_Article__c}={!Article__c.Name}&amp;{!$Setup.Org_Field_IDs__c.Task_Article_Maintenance_Request_RcdTyp__c}_lkid={!Article__c.Id}&amp;{!$Setup.Org_Field_IDs__c.Queued_Task_Activity_Type_ID__c}=Knowledge%20Maintenance%20Request&amp;Name=Knowledge Maintenance Request_{!Article__c.Name}&amp;{!$Setup.Org_Field_IDs__c.Case_Article_Art_Crtn_Req_Case_Product__c}={!Article__c.Product__c}&amp;{!$Setup.Org_Field_IDs__c.Case_Article_Art_Crtn_Req_Case_Product__c}_lkid={!Article__c.ProductId__c}&amp;_retURL=/{!Article__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mark_Task_Completed</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mark Task Completed</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!requireScript(&quot;/soap/ajax/24.0/connection.js&quot;)}
+var taskRecords = sforce.connection.query(&quot;SELECT Id, Status from Task Where Id = &apos;{!Task.Id}&apos;&quot;);
+
+var task = taskRecords.getArray(&apos;records&apos;)[0];
+
+if(task.Status !=&quot;Completed&quot;){
+ task.Status = &quot;Completed&quot;;
+ result = sforce.connection.update([task]);
+
+ if (result[0].getBoolean(&quot;success&quot;))
+ {
+  window.parent.location.href = &quot;/{!Task.Id}&quot;;
+ }
+ else
+ {
+  alert(&quot;Failed to update task: &quot; + result[0].errors.message);
+ }
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Article</fullName>
+        <availability>online</availability>
+        <description>Issue I-35948</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Article</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a1q/e?nooverride=1&amp;RecordType=012K00000004UL3&amp;00hK0000000NUAj=Article%20Creation%20Request&amp;Name=Article%20Creation%20Request-{!Article__c.Id}&amp;CF00NK0000000jipQ={!Article__c.Product__c}&amp;CF00NK0000000jipQ_lkid={!Article__c.ProductId__c}&amp;_retURL=/{!Article__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_SSG_Task</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New SSG Task</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a15/e?RecordType=012d0000000gzfO&amp;CF00Nd0000006If7m={!Case.CaseNumber}&amp;CF00Nd0000006If7m_lkid={!Case.Id}&amp;00Nd0000006If7d=Question%20to%20SSG&amp;CF00Nd0000006If7t={!Case.Product__c}&amp;CF00Nd0000006If7t_lkid={!Case.ProductId__c}&amp;CF00Nd0000006If7p={!Contact.Name}&amp;CF00Nd0000006If7p_lkid={!Contact.Id}&amp;retURL=/{!Case.Id}</url>
+    </webLinks>
+</CustomObject>

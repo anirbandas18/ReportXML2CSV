@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Auto Close should not work for the Email Hub Products having Email Address listed in this custom setting</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>EmailAddress__c</fullName>
+        <externalId>false</externalId>
+        <label>EmailAddress</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Feature__c</fullName>
+        <externalId>false</externalId>
+        <label>Product_Feature</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sender_Display__c</fullName>
+        <externalId>false</externalId>
+        <label>Sender Display</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>AutoClose_ProductFeatureIgnoreList</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Type</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Disc_Amt_Perc__c</fullName>
+        <externalId>false</externalId>
+        <label>Disc Amt Perc</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Discount_Amount_Format__c</fullName>
+        <description>used in renewal maintenance report</description>
+        <externalId>false</externalId>
+        <formula>if (Discount_Amount__c&gt;0,&apos;-&apos; &amp; Quote_Name__r.Quote_Currency__r.Symbol__c &amp; &apos; &apos; &amp; IF(abs(Discount_Amount__c) &gt;= 1000000, 
+TEXT(FLOOR(round(abs(Discount_Amount__c),0) / 1000000)) &amp; &quot;,&quot;, 
+&quot;&quot;) &amp; 
+IF( 
+abs(Discount_Amount__c) &gt;= 1000, 
+RIGHT(TEXT(FLOOR(round(abs(Discount_Amount__c),0) / 1000)), 3) &amp; &quot;,&quot;, 
+&quot;&quot;) &amp; 
+RIGHT(TEXT(FLOOR(round(abs(Discount_Amount__c),0))), 3) , Quote_Name__r.Quote_Currency__r.Symbol__c &amp; &apos; &apos; &amp; IF(abs(Discount_Amount__c) &gt;= 1000000, 
+TEXT(FLOOR(round(abs(Discount_Amount__c),0) / 1000000)) &amp; &quot;,&quot;, 
+&quot;&quot;) &amp; 
+IF( 
+abs(Discount_Amount__c) &gt;= 1000, 
+RIGHT(TEXT(FLOOR(round(abs(Discount_Amount__c),0) / 1000)), 3) &amp; &quot;,&quot;, 
+&quot;&quot;) &amp; 
+RIGHT(TEXT(FLOOR(round(abs(Discount_Amount__c),0))), 3))</formula>
+        <label>Discount Amount</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Discount_Amount_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>-1 *  Discount_Amount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Discount Amount Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Discount_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Discount Amount</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Discount_Percentage_Format__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( Discount_Amount__c&gt;0, &apos;-&apos; &amp; TEXT(round(abs(Discount_Percentage__c)*100,2)) &amp; &apos;%&apos;, TEXT(round(abs(Discount_Percentage__c)*100,2)) &amp; &apos;%&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Discount Percentage Format</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Discount_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <label>Discount Percentage</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Line_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Line Number</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_Currency__c</fullName>
+        <description>stores old currency code.</description>
+        <externalId>false</externalId>
+        <label>Quote Currency</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_List_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote List Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_Name__c</fullName>
+        <description>Name of the related Quote</description>
+        <externalId>false</externalId>
+        <label>Quote Name</label>
+        <referenceTo>Quote</referenceTo>
+        <relationshipName>Quote_Header_Discount</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ROW_ID__c</fullName>
+        <description>Store the details of the row_id</description>
+        <externalId>true</externalId>
+        <label>ROW ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isMigrated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>TO Identify that record is migrated or not</description>
+        <externalId>false</externalId>
+        <label>isMigrated</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Header Discount</label>
+    <nameField>
+        <label>Discount Description</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Header Discount</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>Return_To_Quote</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Return to Quote</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/RenMaint_Layout?id={!RenMaint_Discount__c.Quote_NameId__c}</url>
+    </webLinks>
+</CustomObject>

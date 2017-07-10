@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>generic batch job related parameters</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>FieldNameValueMap__c</fullName>
+        <description>new line seperated field value map.
+Field name and value seperated by ;</description>
+        <externalId>false</externalId>
+        <label>FieldNameValueMap</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SelectQuery__c</fullName>
+        <description>for putting select query</description>
+        <externalId>false</externalId>
+        <label>SelectQuery</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>execute__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If this flag is true than query of this entry will be processed</description>
+        <externalId>false</externalId>
+        <label>execute</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>SObjectBatchSettings</label>
+    <visibility>Public</visibility>
+</CustomObject>

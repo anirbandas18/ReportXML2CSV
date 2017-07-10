@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used to Attach to contact to designate which case assignment rule to Utilize.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>Case Assignment</label>
+    <listViews>
+        <fullName>Audio_Codec_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Audio Codec Queue</label>
+        <queue>Audio_Codec_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>BBE_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>BBE Queue</label>
+        <queue>BBE_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Fusion_Programming_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Fusion Programming</label>
+        <queue>Fusion_Programming</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Hardware_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Hardware Queue</label>
+        <queue>Hardware_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Huawei_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Huawei Queue</label>
+        <queue>Huawei_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>IVP_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>IVP Queue</label>
+        <queue>IVP_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>India_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>India Queue</label>
+        <queue>India_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Intel_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Intel Queue</label>
+        <queue>Intel_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Japan_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Japan Queue</label>
+        <queue>Japan_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Processor_Generation_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Processor Generation Queue</label>
+        <queue>Processor_Generation_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Software_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Software Queue</label>
+        <queue>Software_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TIP_Support_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>TIP Support Queue</label>
+        <queue>TIP_Support_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Target_Hardware_and_Emulation_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Target Hardware and Emulation Queue</label>
+        <queue>Target_Hardware_and_Emulation_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>USA_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>USA Queue</label>
+        <queue>USA_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Unassigned_Queue_Case_Assignment</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Unassigned Queue</label>
+        <queue>Unassigned_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>Case Assignment Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Case Assignments</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

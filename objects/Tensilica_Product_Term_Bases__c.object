@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Defines various term base duration for Tensilica products.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Design_Term_Base__c</fullName>
+        <description>Denotes duration in months.</description>
+        <externalId>false</externalId>
+        <label>Design Term Base</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Group_Name__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Denotes the tensilica product group like Term etc.</description>
+        <externalId>false</externalId>
+        <label>Group Name</label>
+        <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Term_Base__c</fullName>
+        <description>Denotes duration in months.</description>
+        <externalId>false</externalId>
+        <label>Term Base</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Tensilica Product Term Bases</label>
+    <visibility>Protected</visibility>
+</CustomObject>

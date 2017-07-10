@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Map Region and Request</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>LWR_Region__c</fullName>
+        <description>Region Request Type mapping</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Region Request Type mapping</inlineHelpText>
+        <label>LWR Region</label>
+        <length>100</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LWRequest_Type__c</fullName>
+        <description>Region Request Type mapping</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Region Request Type mapping</inlineHelpText>
+        <label>LWRequest Type</label>
+        <length>100</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>LWR Region Request Type Mapping</label>
+    <visibility>Public</visibility>
+</CustomObject>

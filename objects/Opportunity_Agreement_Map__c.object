@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Based on opportunity transaction type, only selective parent account’s legal commitments will be showing up in opportunity, based on opportunity transaction type and parent account legal commitments agreement type</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Agreement_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Agreement Type</label>
+        <length>20</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Transaction_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Transaction Type</label>
+        <length>20</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Opportunity Agreement Map</label>
+    <visibility>Public</visibility>
+</CustomObject>

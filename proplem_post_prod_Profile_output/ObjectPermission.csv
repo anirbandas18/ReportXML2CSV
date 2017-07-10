@@ -1,0 +1,4 @@
+	, www Profile.xml
+Account,allowCreate=false/allowRead=true/allowEdit=false/allowDelete=false/modifyAllrecords=null/viewAllRecords=false
+Case,allowCreate=false/allowRead=true/allowEdit=false/allowDelete=false/modifyAllrecords=null/viewAllRecords=false
+Contact,allowCreate=false/allowRead=true/allowEdit=false/allowDelete=false/modifyAllrecords=null/viewAllRecords=false

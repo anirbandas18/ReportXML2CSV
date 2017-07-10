@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>If Case Owner of a case is a queue then queue should be listed here to allow to create or link CCR.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>QueuesAllowedForCCR</label>
+    <visibility>Protected</visibility>
+</CustomObject>

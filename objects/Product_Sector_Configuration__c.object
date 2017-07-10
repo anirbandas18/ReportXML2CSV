@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>productSectorConfiguration</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>productSectorConfiguration</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>productSectorConfiguration</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Circuit_Simulation_Characterization_AX__c</fullName>
+        <externalId>false</externalId>
+        <label>Circuit Simulation&amp;Characterization AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Circuit_Simulation_Characterization_F__c</fullName>
+        <description>Circuit Simulation &amp; Characterization Final Percentage</description>
+        <externalId>false</externalId>
+        <label>Circuit Simulation &amp; Characterization %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Circuit_Simulation_Characterization_Sp__c</fullName>
+        <externalId>false</externalId>
+        <label>Circuit Simulation&amp;Characterization DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Circuit_Simulation_Characterization_TC__c</fullName>
+        <externalId>false</externalId>
+        <label>Circuit Simulation &amp; Characterization $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Circuit_Simulation_Decimal_TCV__c</fullName>
+        <description>calculate decimal tcvs</description>
+        <externalId>false</externalId>
+        <formula>( Circuit_Simulation_Characterization_F__c *  Opp_TCV__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Circuit Simulation&amp;Characterization $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Custom_Enviornment_Decimal_TCV__c</fullName>
+        <description>Hold Decimal TCV values for Custom Enviornment field</description>
+        <externalId>false</externalId>
+        <formula>Custom_Environment_Layout_Final__c * Opp_TCV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Custom Environment &amp; Layout $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Custom_Environment_Layout_AX_Override__c</fullName>
+        <externalId>false</externalId>
+        <label>Custom Environment &amp; Layout AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Custom_Environment_Layout_Final__c</fullName>
+        <externalId>false</externalId>
+        <label>Custom Environment &amp; Layout %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Custom_Environment_Layout_Split__c</fullName>
+        <externalId>false</externalId>
+        <label>Custom Environment &amp; Layout DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Custom_Environment_Layout_TCV__c</fullName>
+        <description>Custom Environment &amp; Layout TCV</description>
+        <externalId>false</externalId>
+        <label>Custom Environment &amp; Layout $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Design_IP_AX_Override__c</fullName>
+        <description>Design IP AX Override Percentage</description>
+        <externalId>false</externalId>
+        <label>Design IP AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Design_IP_Decimal_TCV__c</fullName>
+        <description>Hold Decimal Values for Design IP TCV</description>
+        <externalId>false</externalId>
+        <formula>Design_IP_Final__c * Opp_TCV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Design IP $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Design_IP_Final__c</fullName>
+        <description>Design IP Final Percentage</description>
+        <externalId>false</externalId>
+        <label>Design IP %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Design_IP_Split__c</fullName>
+        <description>Design IP Split Percentage</description>
+        <externalId>false</externalId>
+        <label>Design IP DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Design_IP_TCV__c</fullName>
+        <description>Design IP TCV</description>
+        <externalId>false</externalId>
+        <label>Design IP $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Digital_Implementation_AX_Override__c</fullName>
+        <description>Digital Implementation Override Percentage</description>
+        <externalId>false</externalId>
+        <label>Digital Implementation AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Digital_Implementation_Decimal_TCV__c</fullName>
+        <description>Hold Decimal TCV value for Digital Implementation PS</description>
+        <externalId>false</externalId>
+        <formula>Digital_Implementation_Final__c * Opp_TCV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Digital Implementation $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Digital_Implementation_Final__c</fullName>
+        <description>Digital Implementation Final Percentage</description>
+        <externalId>false</externalId>
+        <label>Digital Implementation %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Digital_Implementation_Split__c</fullName>
+        <description>Digital Implementation Split Percentage</description>
+        <externalId>false</externalId>
+        <label>Digital Implementation DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Digital_Implementation_TCV__c</fullName>
+        <description>Digital Implementation TCV</description>
+        <externalId>false</externalId>
+        <label>Digital Implementation $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Electrical_Signoff_AX_Override__c</fullName>
+        <description>Electrical Signoff Override Percentage</description>
+        <externalId>false</externalId>
+        <label>Electrical Signoff AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Electrical_Signoff_Decimal_TCV__c</fullName>
+        <description>Hold Decimal TCV value for Electrical Signoff</description>
+        <externalId>false</externalId>
+        <formula>Electrical_Signoff_Final__c * Opp_TCV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Electrical Signoff $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Electrical_Signoff_Final__c</fullName>
+        <description>Electrical Signoff Final Percentage</description>
+        <externalId>false</externalId>
+        <label>Electrical Signoff %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Electrical_Signoff_Split__c</fullName>
+        <description>Electrical Signoff Split Percentage</description>
+        <externalId>false</externalId>
+        <label>Electrical Signoff DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Electrical_Signoff_TCV__c</fullName>
+        <description>Electrical Signoff TCV</description>
+        <externalId>false</externalId>
+        <label>Electrical Signoff $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emulation_Acceleration_AX_Override__c</fullName>
+        <description>Emulation &amp; Acceleration AX Override Percentage</description>
+        <externalId>false</externalId>
+        <label>Emulation &amp; Acceleration AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emulation_Acceleration_Decimal_TCV__c</fullName>
+        <description>Holds Decimal TCV Value for Emulation Acceleration PS</description>
+        <externalId>false</externalId>
+        <formula>Emulation_Acceleration_Final__c * Opp_TCV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Emulation &amp; Acceleration $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emulation_Acceleration_Final__c</fullName>
+        <description>Emulation &amp; Acceleration Final Percentage</description>
+        <externalId>false</externalId>
+        <label>Emulation &amp; Acceleration %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Emulation_Acceleration_Split__c</fullName>
+        <description>Emulation &amp; Acceleration Split Percentage</description>
+        <externalId>false</externalId>
+        <label>Emulation &amp; Acceleration DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Emulation_Acceleration_TCV__c</fullName>
+        <description>Emulation &amp; Acceleration TCV</description>
+        <externalId>false</externalId>
+        <label>Emulation &amp; Acceleration $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Formal_Verification_AX_Override__c</fullName>
+        <description>Formal Verification Override</description>
+        <externalId>false</externalId>
+        <label>Formal Verification AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Formal_Verification_Decimal_TCV__c</fullName>
+        <description>Hold Decimal TCV for Formal Verification PS</description>
+        <externalId>false</externalId>
+        <formula>Formal_Verification_Final__c * Opp_TCV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Formal Verification $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Formal_Verification_Final__c</fullName>
+        <description>Formal Verification Final Percentage</description>
+        <externalId>false</externalId>
+        <label>Formal Verification %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Formal_Verification_Split__c</fullName>
+        <description>Formal Verification Split Percentage</description>
+        <externalId>false</externalId>
+        <label>Formal Verification DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Formal_Verification_TCV__c</fullName>
+        <description>Formal Verification TCV</description>
+        <externalId>false</externalId>
+        <label>Formal Verification $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Functional_Verification_AX_Override__c</fullName>
+        <description>Functional Verification Override percentage</description>
+        <externalId>false</externalId>
+        <label>Functional Verification AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Functional_Verification_Decimal_TCV__c</fullName>
+        <description>Holds Decimal TCV Value for Funcational Verification PS</description>
+        <externalId>false</externalId>
+        <formula>Functional_Verification_Final__c * Opp_TCV__c</formula>
+        <label>Functional Verification $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Functional_Verification_Final__c</fullName>
+        <description>Functional Verification Final Percentage</description>
+        <externalId>false</externalId>
+        <label>Functional Verification %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Functional_Verification_Split__c</fullName>
+        <description>Functional Verification Split Percentage</description>
+        <externalId>false</externalId>
+        <label>Functional Verification DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Functional_Verification_TCV__c</fullName>
+        <description>Functional Verification TCV</description>
+        <externalId>false</externalId>
+        <label>Functional Verification $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IC_PackageSiP_codesign_TCV__c</fullName>
+        <description>IC Package/SiP co-design TCV</description>
+        <externalId>false</externalId>
+        <label>IC Package SiP co-design $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IC_Package_SiP_Decimal_TCV__c</fullName>
+        <description>Hold Decimal TCV value fro IC Package SiP codesign Final</description>
+        <externalId>false</externalId>
+        <formula>IC_Package_SiP_codesign_Final__c * Opp_TCV__c</formula>
+        <label>IC Package SiP co-design $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IC_Package_SiP_codesign_AX_Override__c</fullName>
+        <description>IC Package/SiP co-design Override</description>
+        <externalId>false</externalId>
+        <label>IC Package SiP co-design AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IC_Package_SiP_codesign_Final__c</fullName>
+        <description>IC Package/SiP co-design Final Percentage</description>
+        <externalId>false</externalId>
+        <label>IC Package SiP co-design %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>IC_Package_SiP_codesign_Split__c</fullName>
+        <externalId>false</externalId>
+        <label>IC Package SiP co-design DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opp_TCV__c</fullName>
+        <description>Get Opportunity TCV value to calculate Product Sector fields</description>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.TCV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp TCV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opp_Transaction_Type__c</fullName>
+        <description>Opportunity Transaction Type for calculating formula fields</description>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Transaction_Type_ref__c</formula>
+        <label>Opp Transaction Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_External_id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Opportunity External id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Opportunity_Id__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Transaction_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Transaction Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>Product_Sector_Table_Line_Items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>PCB_Design_AX_Override__c</fullName>
+        <description>PCB Design Override Percentage</description>
+        <externalId>false</externalId>
+        <label>PCB Design AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PCB_Design_Decimal_TCV__c</fullName>
+        <description>Holds Decimal TCV from PCB Design PS</description>
+        <externalId>false</externalId>
+        <formula>PCB_Design_Final__c * Opp_TCV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PCB Design $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PCB_Design_Final__c</fullName>
+        <description>PCB Design Final Percentage</description>
+        <externalId>false</externalId>
+        <label>PCB Design %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>PCB_Design_Split__c</fullName>
+        <description>PCB Design Split Percentage</description>
+        <externalId>false</externalId>
+        <label>PCB Design DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PCB_Design_TCV__c</fullName>
+        <description>PCB Design TCV</description>
+        <externalId>false</externalId>
+        <label>PCB Design $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Physical_Signoff_AX_Override__c</fullName>
+        <description>Physical Signoff Override percentage</description>
+        <externalId>false</externalId>
+        <label>Physical Signoff AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Physical_Signoff_Decimal_TCV__c</fullName>
+        <description>Holds Decimal TCV for Physical Signoff PS</description>
+        <externalId>false</externalId>
+        <formula>Physical_Signoff_Final__c * Opp_TCV__c</formula>
+        <label>Physical Signoff $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Physical_Signoff_Final__c</fullName>
+        <description>Physical Signoff Percentage</description>
+        <externalId>false</externalId>
+        <label>Physical Signoff %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Physical_Signoff_Split__c</fullName>
+        <description>Physical Signoff Split Percentage</description>
+        <externalId>false</externalId>
+        <label>Physical Signoff DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Physical_Signoff_TCV__c</fullName>
+        <description>Physical Signoff TCV</description>
+        <externalId>false</externalId>
+        <label>Physical Signoff $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Services_AX_Override__c</fullName>
+        <description>Services AX Override Percentage</description>
+        <externalId>false</externalId>
+        <label>Services AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Services_Decimal_TCV__c</fullName>
+        <description>Holds Decimal TCV Value for Services PS</description>
+        <externalId>false</externalId>
+        <formula>Services_Final__c * Opp_TCV__c</formula>
+        <label>Services $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Services_Final__c</fullName>
+        <description>Services Final Percentage</description>
+        <externalId>false</externalId>
+        <label>Services %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Services_Split__c</fullName>
+        <description>Services Split Percentage</description>
+        <externalId>false</externalId>
+        <label>Services DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Services_TCV__c</fullName>
+        <description>Services TCV</description>
+        <externalId>false</externalId>
+        <label>Services $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Synthesis_Test_AX_Override__c</fullName>
+        <description>Synthesis &amp; Test Override Percentage</description>
+        <externalId>false</externalId>
+        <label>Synthesis &amp; Test AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Synthesis_Test_Decimal_TCV__c</fullName>
+        <description>Holds Decimal TCV value for Synthesis Test PS</description>
+        <externalId>false</externalId>
+        <formula>Synthesis_Test_Final__c * Opp_TCV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Synthesis &amp; Test $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Synthesis_Test_Final__c</fullName>
+        <description>Synthesis &amp; Test Final</description>
+        <externalId>false</externalId>
+        <label>Synthesis &amp; Test %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Synthesis_Test_Split__c</fullName>
+        <description>Synthesis &amp; Test Split Percentage</description>
+        <externalId>false</externalId>
+        <label>Synthesis &amp; Test DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Synthesis_Test_TCV__c</fullName>
+        <description>Synthesis &amp; Test TCV</description>
+        <externalId>false</externalId>
+        <label>Synthesis &amp; Test $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SystemLevel_Design_AX_Override__c</fullName>
+        <description>System-Level Design Override Percentage</description>
+        <externalId>false</externalId>
+        <label>System-Level Design AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SystemLevel_Design_Decimal_TCV__c</fullName>
+        <description>Holds Decimal TCV Value for System Level Design</description>
+        <externalId>false</externalId>
+        <formula>SystemLevel_Design_Final__c * Opp_TCV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>System-Level Design $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SystemLevel_Design_Final__c</fullName>
+        <description>System-Level Design Final Percentage</description>
+        <externalId>false</externalId>
+        <label>System-Level Design %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SystemLevel_Design_Split__c</fullName>
+        <description>System-Level Design Split Percentage</description>
+        <externalId>false</externalId>
+        <label>System-Level Design DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SystemLevel_Design_TCV__c</fullName>
+        <description>System-Level Design TCV</description>
+        <externalId>false</externalId>
+        <label>System-Level Design $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TCV_Calculation_Value__c</fullName>
+        <description>It will hold the value of TCV while we are displaying it on VF page</description>
+        <externalId>false</externalId>
+        <label>Total $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_AX_Override__c</fullName>
+        <description>Total AX Override percentage</description>
+        <externalId>false</externalId>
+        <label>Total AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Final__c</fullName>
+        <description>Total Final Percentage</description>
+        <externalId>false</externalId>
+        <label>Total %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Total_Split__c</fullName>
+        <description>Total Split Percentage</description>
+        <externalId>false</externalId>
+        <label>Total DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Total_TCV_Value__c</fullName>
+        <description>Total TCV Value</description>
+        <externalId>false</externalId>
+        <label>Total $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VIP_AX_Override__c</fullName>
+        <description>VIP Override percentage</description>
+        <externalId>false</externalId>
+        <label>VIP AX%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VIP_Decimal_TCV__c</fullName>
+        <description>Holds Decimal TCV Value for VIP PS</description>
+        <externalId>false</externalId>
+        <formula>VIP_Final__c * Opp_TCV__c</formula>
+        <label>VIP $dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VIP_Final__c</fullName>
+        <description>VIP Final Percentage</description>
+        <externalId>false</externalId>
+        <label>VIP %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>VIP_Split__c</fullName>
+        <description>VIP Split Percentage</description>
+        <externalId>false</externalId>
+        <label>VIP DMS%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VIP_TCV__c</fullName>
+        <description>VIP TCV</description>
+        <externalId>false</externalId>
+        <label>VIP $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>isDMSOverride__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>isDMSOverride</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>isFirstLoad__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>check whether the page is load for the first time.</description>
+        <externalId>false</externalId>
+        <label>isFirstLoad</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Product Sector Configuration</label>
+    <nameField>
+        <displayFormat>PSCN-{0000}</displayFormat>
+        <label>PS Config Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Product Sector Configurations</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>New_Product_Sector</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Product Sector</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js&apos;)}
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js&apos;)}
+
+var Transaction_Type = [&quot;99-YR/Other&quot;,&quot;eDAgold&quot;,&quot;eDAplat&quot;,&quot;FTA-Add-on&quot;,&quot;FTA-New&quot;,&quot;SUB&quot;,&quot;SUB Add-on&quot;,&quot;TBL&quot;,&quot;Ren Maint&quot;, &quot;VIP&quot;, &quot;Ren Maint HW&quot;,&quot;Hardware - 99 Year&quot;,&quot;Hardware - Lease&quot;,&quot;IP&quot;,&quot;IP - Tensilica&quot;,&quot;SAM - Jasper&quot;,&quot;SAM - Forte&quot;,&quot;Serv&quot;];
+var currOppTT = &apos;{!Opportunity.Transaction_Type__c}&apos;;
+
+var result = sforce.connection.query(&quot;SELECT Id FROM Product_Sector_Configuration__c  WHERE Opportunity__c = &apos;{!Opportunity.Id}&apos; LIMIT 1 &quot;); 
+
+if (result.size &gt; 0) {
+    alert(&apos;Product Sector record already exists for Opportunity {!Opportunity.Opportunity_Id__c}. Please click Edit link to make changes to Product sectors.&apos;);
+}
+else {
+    var URL = &apos;/apex/productSectorConfiguration?CF00Nq0000000yg32=&apos; + &apos;{!Opportunity.Name}&apos; + &apos;&amp;CF00Nq0000000yg32_lkid=&apos; + &apos;{!Opportunity.Id}&apos; + &apos;&amp;scontrolCaching=1&amp;retURL=%2F&apos; + &apos;{!Opportunity.Id}&apos; + &apos;&amp;sfdc.override=1&apos;;
+
+    window.open(URL, &apos;_self&apos;);
+}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Account legal Content Mapping is stored under the custom setting to be used within apex.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Group_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Group Id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Group_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Group Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Legal Notification Mapping</label>
+    <visibility>Public</visibility>
+</CustomObject>

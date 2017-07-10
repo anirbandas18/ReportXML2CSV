@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Custom settings to bypass Channel Type roll up / down functionality and SAP Validation on delete on Account objects</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Data_Migration_Bypass__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Bypass flag for data validation or manipulation while Data Migration is in progress</description>
+        <externalId>false</externalId>
+        <label>Data Migration Bypass</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>gss_del_trigger_bypass__c</fullName>
+        <externalId>false</externalId>
+        <label>gss_del_trigger_bypass</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>gss_ins_trigger_bypass__c</fullName>
+        <description>Bypass code to stop the Insert Trigger on gss_split__c when Interface is doing Mass Inserts</description>
+        <externalId>false</externalId>
+        <inlineHelpText>bypass code is 2655 
+Dont put this value unless you want to stop the insert trigger</inlineHelpText>
+        <label>gss_ins_trigger_bypass</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Data Migration</label>
+    <visibility>Protected</visibility>
+</CustomObject>

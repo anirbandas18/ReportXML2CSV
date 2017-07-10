@@ -1,0 +1,2119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>QueuedTaskTab</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object is used for a cast for queues.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>If the Queued Task is related to an Account. Please select Account.</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Queued Tasks</relationshipLabel>
+        <relationshipName>Queued_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Activity_Currency__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity Currency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>USD - U.S. Dollar</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CAD - Canadian Dollar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CHF - Swiss Frank</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DKK - Danish Krone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EUR - Euro</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GBP - British Pound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ILS - Israeli Shekel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>JPY - Japanese Yen</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NOK - Norwegian Krone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SEK - Swedish Krona</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Activity_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Activity Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Admin SSG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Article Creation Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Article Maintenance Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Article Publish Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>COS Contact Creation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DIP Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email - Inbound</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expired Article Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Question to SSG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Case Creation Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Question To Expert</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Expired Knowledge Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Knowledge Creation Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Knowledge Publish Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Knowledge Maintenance Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Change Login Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Article_Author__c</fullName>
+        <externalId>false</externalId>
+        <formula>Article__r.Document_Author_Name__r.FirstName +&apos; &apos;+ Article__r.Document_Author_Name__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Article Author</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Article_Feedback__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Article Feedback</label>
+        <referenceTo>Article_Feedback__c</referenceTo>
+        <relationshipLabel>Queued Tasks</relationshipLabel>
+        <relationshipName>Queued_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Article_K_Team__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Article__r.Product__r.K_Team__c )</formula>
+        <label>Article K Team</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Article__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Article</label>
+        <referenceTo>Article__c</referenceTo>
+        <relationshipLabel>Queued Tasks</relationshipLabel>
+        <relationshipName>Queued_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CCR_Contact_Support_Center__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(CCR__r.Contact_Name__r.Support_Center__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CCR Contact Support Center</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCR__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>If the Queued Task is related to a CCR please search for CCR.</inlineHelpText>
+        <label>CCR</label>
+        <referenceTo>CCR__c</referenceTo>
+        <relationshipLabel>Queued Tasks</relationshipLabel>
+        <relationshipName>Queued_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Case_Contact_Support_Center__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Case__r.Contact.Support_Center__c)</formula>
+        <label>Case Contact Support Center</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_K_Team__c</fullName>
+        <description>This is the KTeam associated to the product related to the case.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Case__r.Product__r.K_Team__c)</formula>
+        <inlineHelpText>This is the KTeam related to the product associated to the case.</inlineHelpText>
+        <label>KTeam</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_Origin__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Case__r.Origin)</formula>
+        <label>Case Origin</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_To_Email_Address__c</fullName>
+        <description>Email Sent To From Email To Case</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email Sent To From Email To Case</inlineHelpText>
+        <label>Case To Email Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Queued Tasks</relationshipLabel>
+        <relationshipName>Queued_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Contact_Support_Center__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Contact__r.Support_Center__c)</formula>
+        <label>Contact Support Center</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Please select a contact if it&apos;s related to this Queued Task.</inlineHelpText>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Queued Tasks</relationshipLabel>
+        <relationshipName>Queued_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Owner_External_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>Owner External Id</label>
+        <length>14</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product_Class__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product_Class__c</referenceTo>
+        <relationshipLabel>Queued Tasks</relationshipLabel>
+        <relationshipName>Queued_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Feature__c</fullName>
+        <externalId>false</externalId>
+        <formula>Article__r.Product_Feature__r.Name</formula>
+        <label>Product Feature</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_K_Team__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Product_Class__r.K_Team__c)</formula>
+        <label>Product K Team</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Submitter_Mgr__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitter Manager</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitter_Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitter Region</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitter_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitter Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitter__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitter</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Support_Center_CCR__c</fullName>
+        <externalId>false</externalId>
+        <label>Support Center CCR</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>If the Queued Task is related to the user, please search and select User.</inlineHelpText>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Queued_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Queued Task</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Case__c</columns>
+        <columns>Article__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CCR__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Activity_Type__c</field>
+            <operation>equals</operation>
+            <value>Expired Article Review</value>
+        </filters>
+        <filters>
+            <field>Article__c</field>
+            <operation>equals</operation>
+            <value>11101628</value>
+        </filters>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>CIC_KTeam</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Rejected</value>
+        </filters>
+        <label>CIC_KTeam</label>
+        <language>en_US</language>
+        <queue>CIC_KTeam</queue>
+    </listViews>
+    <listViews>
+        <fullName>COS_KCOORD_Queued_Task</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Due_Date__c</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Product_Feature__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Rejected</value>
+        </filters>
+        <label>COS_KCOORD</label>
+        <language>en_US</language>
+        <queue>COS_KCOORD</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>COS_KTeam</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Rejected</value>
+        </filters>
+        <label>COS_KTeam</label>
+        <language>en_US</language>
+        <queue>COS_KTeam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>COS_Kchamp_Queued_Task</fullName>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Rejected</value>
+        </filters>
+        <label>COS_Kchamp</label>
+        <language>en_US</language>
+        <queue>COS_Kchamp</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>DIP_KTeam</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Rejected</value>
+        </filters>
+        <label>DIP_KTeam</label>
+        <language>en_US</language>
+        <queue>DIP_KTeam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>FED_KTeam</fullName>
+        <booleanFilter>1 AND (2 OR (3 AND 4))</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Not Started,In Progress,Waiting on someone else</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Queued_Task__c.ACR,Queued_Task__c.AMR_EAR_APR,Queued_Task__c.Default,Queued_Task__c.SSG</value>
+        </filters>
+        <filters>
+            <field>Product_Class__c</field>
+            <operation>equals</operation>
+            <value>Joules,Voltus-Fi</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Queued_Task__c.EAR</value>
+        </filters>
+        <label>FED_KTeam</label>
+        <language>en_US</language>
+        <queue>FED_KTeam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>FEG_KTeam</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Not Started,In Progress,Waiting on someone else</value>
+        </filters>
+        <label>FEG_KTeam</label>
+        <language>en_US</language>
+        <queue>FEG_KTeam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>HD_KTeam</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Rejected</value>
+        </filters>
+        <label>HD_KTeam</label>
+        <language>en_US</language>
+        <queue>HD_KTeam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ICD_KTeam</fullName>
+        <booleanFilter>1 AND (2 OR (3 AND 4))</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Not Started,In Progress,Waiting on someone else</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Queued_Task__c.ACR,Queued_Task__c.AMR_EAR_APR,Queued_Task__c.Default,Queued_Task__c.SSG</value>
+        </filters>
+        <filters>
+            <field>Product_Class__c</field>
+            <operation>equals</operation>
+            <value>Joules,Voltus-Fi</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Queued_Task__c.EAR</value>
+        </filters>
+        <label>ICD_KTeam</label>
+        <language>en_US</language>
+        <queue>ICD_KTeam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ICD_KTeam1</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Not Started,In Progress,Waiting on someone else</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Queued_Task__c.EAR</value>
+        </filters>
+        <filters>
+            <field>Product_Class__c</field>
+            <operation>notEqual</operation>
+            <value>Joules,Voltus-Fi</value>
+        </filters>
+        <label>ICD_KTeam1</label>
+        <language>en_US</language>
+        <queue>ICD_KTeam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>ICD_rachit</fullName>
+        <booleanFilter>1 AND (2 AND 3)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Not Started,In Progress,Waiting on someone else</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Queued_Task__c.EAR</value>
+        </filters>
+        <filters>
+            <field>Product_Class__c</field>
+            <operation>notEqual</operation>
+            <value>Joules,Voltus-Fi</value>
+        </filters>
+        <label>ICD_rachit</label>
+        <language>en_US</language>
+        <queue>ICD_KTeam</queue>
+    </listViews>
+    <listViews>
+        <fullName>JSP_Kteam</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <filterScope>Queue</filterScope>
+        <label>JSP_Kteam</label>
+        <language>en_US</language>
+        <queue>JSP_Kteam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Japan_KTeam</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Submitter__c</columns>
+        <columns>Submitter_Region__c</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Rejected</value>
+        </filters>
+        <label>Japan_KTeam</label>
+        <language>en_US</language>
+        <queue>Japan_KTeam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SPB_KTeam</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Rejected</value>
+        </filters>
+        <filters>
+            <field>Activity_Type__c</field>
+            <operation>notContain</operation>
+            <value>Expired Article Review</value>
+        </filters>
+        <label>SPB_KTeam</label>
+        <language>en_US</language>
+        <queue>SPB_KTeam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_China</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <label>SSG_China</label>
+        <queue>SSG_China</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_France</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <filterScope>Queue</filterScope>
+        <label>SSG_France</label>
+        <queue>SSG_France</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_Germany</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Not Started</value>
+        </filters>
+        <label>SSG_Germany</label>
+        <language>en_US</language>
+        <queue>SSG_Germany</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_Hong_Kong</fullName>
+        <filterScope>Queue</filterScope>
+        <label>SSG_Hong_Kong</label>
+        <queue>SSG_Hong_Kong</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_India</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Not Started</value>
+        </filters>
+        <label>SSG_India</label>
+        <language>en_US</language>
+        <queue>SSG_India</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_Israel</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Contact__c</columns>
+        <columns>Status__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <label>SSG_Israel</label>
+        <queue>SSG_Israel</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_Japan</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </filters>
+        <label>SSG_Japan</label>
+        <language>en_US</language>
+        <queue>SSG_Japan</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_Korea</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <filterScope>Queue</filterScope>
+        <label>SSG_Korea</label>
+        <queue>SSG_Korea</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_North_America</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>CCR__c</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </filters>
+        <label>SSG_North_America</label>
+        <language>en_US</language>
+        <queue>SSG_North_America</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_Russia</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <filterScope>Queue</filterScope>
+        <label>SSG_Russia</label>
+        <queue>SSG_Russia</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_Singapore</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <filterScope>Queue</filterScope>
+        <label>SSG_Singapore</label>
+        <queue>SSG_Singapore</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_Taiwan</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <filterScope>Queue</filterScope>
+        <label>SSG_Taiwan</label>
+        <queue>SSG_Taiwan</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_United_Kingdom</fullName>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <filterScope>Queue</filterScope>
+        <label>SSG_United_Kingdom</label>
+        <queue>SSG_United_Kingdom</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>SSG_United_States</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Status__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Case__c</columns>
+        <columns>CCR__c</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed</value>
+        </filters>
+        <label>SSG_United_States</label>
+        <language>en_US</language>
+        <queue>SSG_United_States</queue>
+        <sharedTo>
+            <group>SSG_Queued_Tasks</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>VIP_KTeam</fullName>
+        <columns>NAME</columns>
+        <columns>Activity_Type__c</columns>
+        <columns>Due_Date__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Article__c</columns>
+        <columns>Case__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Queue</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Completed,Rejected</value>
+        </filters>
+        <label>VIP_KTeam</label>
+        <language>en_US</language>
+        <queue>VIP_KTeam</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>Queued Task</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Queued Tasks</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>ACR</fullName>
+        <active>true</active>
+        <description>When creating a new Article Creation Request then select ACR record type.</description>
+        <label>ACR</label>
+        <picklistValues>
+            <picklist>Activity_Currency__c</picklist>
+            <values>
+                <fullName>CAD - Canadian Dollar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CHF - Swiss Frank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DKK - Danish Krone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EUR - Euro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GBP - British Pound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ILS - Israeli Shekel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JPY - Japanese Yen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NOK - Norwegian Krone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SEK - Swedish Krona</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USD - U%2ES%2E Dollar</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Admin SSG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Maintenance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Publish Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS Contact Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIP Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email - Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired Article Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knowledge Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question To Expert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to SSG</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>AMR_EAR_APR</fullName>
+        <active>true</active>
+        <description>When creating a new Article Maintenance Review, Expired Article Review, or Article Proposal Request then select this record type.</description>
+        <label>AMR/EAR/APR</label>
+        <picklistValues>
+            <picklist>Activity_Currency__c</picklist>
+            <values>
+                <fullName>CAD - Canadian Dollar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CHF - Swiss Frank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DKK - Danish Krone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EUR - Euro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GBP - British Pound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ILS - Israeli Shekel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JPY - Japanese Yen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NOK - Norwegian Krone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SEK - Swedish Krona</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USD - U%2ES%2E Dollar</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Article Maintenance Request</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Knowledge Maintenance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knowledge Publish Request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Default</fullName>
+        <active>true</active>
+        <description>When creating a standard queued task then select this record type.</description>
+        <label>Default</label>
+        <picklistValues>
+            <picklist>Activity_Currency__c</picklist>
+            <values>
+                <fullName>CAD - Canadian Dollar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CHF - Swiss Frank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DKK - Danish Krone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EUR - Euro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GBP - British Pound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ILS - Israeli Shekel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JPY - Japanese Yen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NOK - Norwegian Krone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SEK - Swedish Krona</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USD - U%2ES%2E Dollar</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Admin SSG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Maintenance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Publish Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS Contact Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIP Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email - Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired Article Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired Knowledge Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knowledge Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knowledge Maintenance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Knowledge Publish Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question To Expert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to SSG</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>EAR</fullName>
+        <active>true</active>
+        <description>Expired Article Review</description>
+        <label>EAR</label>
+        <picklistValues>
+            <picklist>Activity_Currency__c</picklist>
+            <values>
+                <fullName>CAD - Canadian Dollar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CHF - Swiss Frank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DKK - Danish Krone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EUR - Euro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GBP - British Pound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ILS - Israeli Shekel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JPY - Japanese Yen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NOK - Norwegian Krone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SEK - Swedish Krona</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USD - U%2ES%2E Dollar</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Admin SSG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Maintenance Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article Publish Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>COS Contact Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Case Creation Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIP Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email - Inbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired Article Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expired Knowledge Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question To Expert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question to SSG</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SSG</fullName>
+        <active>true</active>
+        <description>When creating a new SSG type activity then select this record type.</description>
+        <label>SSG</label>
+        <picklistValues>
+            <picklist>Activity_Currency__c</picklist>
+            <values>
+                <fullName>CAD - Canadian Dollar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CHF - Swiss Frank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DKK - Danish Krone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EUR - Euro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GBP - British Pound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ILS - Israeli Shekel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JPY - Japanese Yen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NOK - Norwegian Krone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SEK - Swedish Krona</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USD - U%2ES%2E Dollar</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Activity_Type__c</picklist>
+            <values>
+                <fullName>Question to SSG</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Activity_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Due_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LAST_UPDATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Product_K_Team__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Product_Class__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Article__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Case__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <listViewButtons>Accept</listViewButtons>
+        <lookupDialogsAdditionalFields>OWNER.ALIAS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Activity_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Case__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Activity_Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Case__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Activity_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Case__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Article__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product_Class__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>ACR_Close_check</fullName>
+        <active>true</active>
+        <description>To check the conditions before closing the ACR Task</description>
+        <errorConditionFormula>AND(
+        ISPICKVAL(Activity_Type__c, &quot;Article Creation Request&quot;),
+        ISPICKVAL( Status__c , &quot;Completed&quot;),
+        OR(
+           ISBLANK(Article__c), 
+           AND(
+               upper(Submitter__c) != upper(Article__r.Submitter__r.Email),
+               upper(Submitter__c) != upper(Article__r.Submitter__r.Login_Name__c),
+               upper(Submitter__c) != upper(Article__r.Submitter__r.FirstName+&apos; &apos;+Article__r.Submitter__r.LastName)  
+               )
+           )   
+       )</errorConditionFormula>
+        <errorMessage>No Article is linked to the ACR OR Article&apos;s Author &amp; Queued Task&apos;s Submitter are not the same.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>AMR_Close_check</fullName>
+        <active>true</active>
+        <description>To check the conditions before closing the AMR Task</description>
+        <errorConditionFormula>AND(
+     ISPICKVAL(Activity_Type__c, &quot;Article Maintenance Request&quot;),
+     ISPICKVAL( Status__c , &quot;Completed&quot;),
+     ISBLANK(Article__c)
+    )</errorConditionFormula>
+        <errorMessage>No Article is linked to the AMR task.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Comments_should_not_be_null_for_Article</fullName>
+        <active>true</active>
+        <description>Comments should not be null for Article Related Queued Tasks</description>
+        <errorConditionFormula>AND($Profile.Name &lt;&gt; &quot;5_1 - Data Steward&quot;, 
+$User.LastName &lt;&gt; &apos;Migration&apos;, 
+$User.LastName &lt;&gt; &apos;Code Migration&apos;, 
+$Profile.Name &lt;&gt; &apos;Integration&apos;, 
+(TEXT(Activity_Type__c) = &apos;Expired Article Review&apos; || TEXT(Activity_Type__c) = &apos;Article Creation Request&apos; || 
+TEXT(Activity_Type__c) = &apos;Article Publish Request&apos; || 
+TEXT(Activity_Type__c) = &apos;Article Maintenance Request&apos; || TEXT(Activity_Type__c) = &apos;Knowledge Maintenance Request&apos;), 
+Comments__c = &apos;&apos; 
+)</errorConditionFormula>
+        <errorDisplayField>Comments__c</errorDisplayField>
+        <errorMessage>Please enter &apos;Comments&apos;, Comments should not be blank for Article Related Tasks</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Select_Only_one_related_To</fullName>
+        <active>true</active>
+        <description>prevent users from selecting more than one of the following fields: &quot;Case&quot;, &quot;Article&quot;, &quot;CCR&quot;, &quot;Account&quot;, &quot;Contact&quot; or &quot;User&quot;. &quot;Product&quot; may be selected without &quot;Case&quot;, &quot;Article&quot;, or &quot;CCR&quot;.
+
+Old Error Message: User is allowed to select one &quot;Case&quot;, &quot;Artic</description>
+        <errorConditionFormula>IF(AND(ISBLANK(Product_Class__c), OR( 
+AND(ISBLANK(Case__c) , ISBLANK(Article__c) , ISBLANK(CCR__c),ISBLANK(Account__c), ISBLANK(User__c), ISBLANK(Contact__c)) 
+, AND(! ISBLANK(Case__c) , ! ISBLANK(Article__c)) 
+, AND( ! ISBLANK(Case__c) , ! ISBLANK(CCR__c)) 
+, AND( ! ISBLANK(Article__c) , ! ISBLANK(CCR__c)) 
+, AND( ! ISBLANK(Case__c) , ! ISBLANK(Account__c)) 
+, AND( ! ISBLANK(Account__c) , ! ISBLANK(CCR__c)) 
+, AND( ! ISBLANK(Account__c) , ! ISBLANK(Article__c)) 
+, AND( ! ISBLANK(Case__c) , ! ISBLANK(User__c)) 
+, AND( ! ISBLANK(User__c) , ! ISBLANK(CCR__c)) 
+, AND( ! ISBLANK(User__c) , ! ISBLANK(Account__c)) 
+, AND( ! ISBLANK(User__c) , ! ISBLANK(Article__c)))), true, false)</errorConditionFormula>
+        <errorMessage>&quot;User must specify Case, Product or Article&quot;</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Accept</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Accept</masterLabel>
+        <openType>replace</openType>
+        <page>QueuedTaskAccept_VF</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Accept_Detail</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Accept</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.location.href = &apos;/apex/QueuedTaskAccept_VF?id={!Queued_Task__c.Id}&apos;;</url>
+    </webLinks>
+</CustomObject>

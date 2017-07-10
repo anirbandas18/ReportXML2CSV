@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Auto_Close_Days_DIP__c</fullName>
+        <externalId>false</externalId>
+        <label>Auto Close Days DIP</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Auto_Close_Days_TIP__c</fullName>
+        <externalId>false</externalId>
+        <label>Auto Close Days TIP</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Auto_Close_Days_VIP__c</fullName>
+        <externalId>false</externalId>
+        <label>Auto Close Days VIP</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Auto_Complete_Days_DIP__c</fullName>
+        <externalId>false</externalId>
+        <label>Auto Complete Days DIP</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Auto_Complete_Days_TIP__c</fullName>
+        <externalId>false</externalId>
+        <label>Auto Complete Days TIP</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Auto_Complete_Days_VIP__c</fullName>
+        <externalId>false</externalId>
+        <label>Auto Complete Days VIP</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Auto_Notification_Days_DIP__c</fullName>
+        <externalId>false</externalId>
+        <label>Auto Notification Days DIP</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Auto_Notification_Days_TIP__c</fullName>
+        <description>Auto Notification Days for TIP</description>
+        <externalId>false</externalId>
+        <label>Auto Notification Days TIP</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Auto_Notification_Days_VIP__c</fullName>
+        <description>Auto Notification Days for VIP</description>
+        <externalId>false</externalId>
+        <label>Auto Notification Days VIP</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Failure_Email_Frequency_In_Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>Failure Email Frequency In Hours</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InDays__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>InDays</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TestAutoCloseCaseList__c</fullName>
+        <description>This field would be used only for testing purpose and should always remain blank on production. Please do not enter any value in this field.</description>
+        <externalId>false</externalId>
+        <label>TestAutoCloseCaseList</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Time_to_Send_Failure_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Time to Send Failure Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <label>Case Auto Completed/Closed Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

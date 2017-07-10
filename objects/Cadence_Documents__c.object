@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Upload and Download all cadence objects from this object. This object is primarily used for storing documents</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Country__c</fullName>
+        <description>field based on region</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Country based on region</inlineHelpText>
+        <label>Country</label>
+        <picklist>
+            <controllingField>Region__c</controllingField>
+            <picklistValues>
+                <fullName>England</fullName>
+                <default>false</default>
+                <controllingFieldValues>EMEA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>France</fullName>
+                <default>false</default>
+                <controllingFieldValues>EMEA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Germany</fullName>
+                <default>false</default>
+                <controllingFieldValues>EMEA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ireland</fullName>
+                <default>false</default>
+                <controllingFieldValues>EMEA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Israel</fullName>
+                <default>false</default>
+                <controllingFieldValues>EMEA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Italy</fullName>
+                <default>false</default>
+                <controllingFieldValues>EMEA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>India</fullName>
+                <default>false</default>
+                <controllingFieldValues>India</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Netherlands</fullName>
+                <default>false</default>
+                <controllingFieldValues>EMEA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sweden</fullName>
+                <default>false</default>
+                <controllingFieldValues>EMEA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>China</fullName>
+                <default>false</default>
+                <controllingFieldValues>Asia Pacific</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Taiwan</fullName>
+                <default>false</default>
+                <controllingFieldValues>Asia Pacific</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Asia-Pacific (excluding Japan)</fullName>
+                <default>false</default>
+                <controllingFieldValues>Asia Pacific</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Japan</fullName>
+                <default>false</default>
+                <controllingFieldValues>Japan</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>US/Canada</fullName>
+                <default>false</default>
+                <controllingFieldValues>North America</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Document_Format_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Document Format Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>PDF</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Word</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Document_Name__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Document Name</label>
+        <length>200</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Inactive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Inactive</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <description>This is a filter field for mapping</description>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Asia Pacific</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EMEA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Global-Noida</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>India</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>North America</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Restricted_Profiles__c</fullName>
+        <description>It contains Profile Names which are restricted to download the document.</description>
+        <externalId>false</externalId>
+        <label>Restricted Profiles</label>
+        <picklist>
+            <picklistValues>
+                <fullName>2_1 - Inside Sales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2_1 - Inside SalesClone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2_2 - AX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2_2 - AX_Clone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2_3 - Account Directors</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2_4 - Regional Sales VPs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2_4 - Regional Sales VPsClone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2_4 AND 5_3 - Regional Sales VPs AND AEs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2_5 - Sales Operations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2_5 - Sales OperationsClone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2_5 - Sales OperationsCloneApttus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2_6 - AMT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3_1 - Order Fulfillment - Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3_1 - Order Fulfillment - ManagerClone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3_2 - Order Fulfillment - User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3_3 - Order Fulfillment - AP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3_3 AND 5_3-Order Fulfillmnet-AP PLUS AE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3_4 - Order Management - AP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3_5 - Order Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3_6 - Order Management-Index</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4_1 - Sales Finance _Forecast_</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4_2 - WFO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4_3 - Sales Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4_4 - Apttus Platform Profile</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4_4 - Legal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4_4 - LegalApttus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4_4 - LegalApttusClone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4_5 - Credit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4_6 - Revenue Accounting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4_7 - BP Approvers</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4_8 - WFO Operations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5_1 - Data Steward</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5_2_Support Administrator</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5_3_Support Manager/AE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5_3_Support Manager_AEClone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5_3_Support Manager_AEClone_Munnangi</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5_4_Support TFO AE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6.1 - Marketing Administrator</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7.0 – R&amp;D</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8.0 - TFO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BP-CRUD-only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chatter External User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chatter Free User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chatter Moderator User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contract Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Portal Manager Custom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gold Partner User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HSV_MFG_OPS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Integration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Locked Down Training</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Locked Down Training pwd never expires</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketo Profile</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Overage High Volume Customer Portal User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Read Only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Read Only Custom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ServiceMax Admin</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ServiceMax Contracts User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ServiceMax Dispatcher</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ServiceMax Inventory Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ServiceMax Inventory User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ServiceMax Service Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ServiceMax Service User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ServiceMax Standard Read Only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solution Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Standard Platform User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Standard User</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System Administrator</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System Administrator Custom</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System Administrator Custom Jira</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Template_Type__c</fullName>
+        <description>Additional filter for document download</description>
+        <externalId>false</externalId>
+        <label>Template Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cadence Software License – SLMA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence License for DIP and TIP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Hardware Purchase Agreement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Hardware Legal Agreement (Quick Cycles Addendum)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cadence Services Agreement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Procurement: Cadence Consulting Agreement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product Quotation Terms and Conditions</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Procurement Form</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Cadence Documents</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Document_Name__c</columns>
+        <columns>Document_Format_Type__c</columns>
+        <columns>Region__c</columns>
+        <columns>Country__c</columns>
+        <columns>Template_Type__c</columns>
+        <columns>Is_Inactive__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Restricted_Profiles__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_word</fullName>
+        <columns>NAME</columns>
+        <columns>Document_Name__c</columns>
+        <columns>Document_Format_Type__c</columns>
+        <columns>Region__c</columns>
+        <columns>Country__c</columns>
+        <columns>Template_Type__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>Restricted_Profiles__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Document_Format_Type__c</field>
+            <operation>equals</operation>
+            <value>Word</value>
+        </filters>
+        <label>All word</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>AsiaPac_Templates</fullName>
+        <columns>NAME</columns>
+        <columns>Document_Name__c</columns>
+        <columns>Document_Format_Type__c</columns>
+        <columns>Template_Type__c</columns>
+        <columns>Region__c</columns>
+        <columns>Country__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>Asia Pacific</value>
+        </filters>
+        <filters>
+            <field>Template_Type__c</field>
+            <operation>contains</operation>
+            <value>Cadence License for Design IP</value>
+        </filters>
+        <label>AsiaPac Templates</label>
+        <sharedTo>
+            <group>Apttus_AsiaPac</group>
+            <role>System_Administrator</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>EMEA_Templates</fullName>
+        <columns>NAME</columns>
+        <columns>Document_Name__c</columns>
+        <columns>Document_Format_Type__c</columns>
+        <columns>Template_Type__c</columns>
+        <columns>Country__c</columns>
+        <columns>Region__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>EMEA</value>
+        </filters>
+        <label>EMEA Templates</label>
+        <sharedTo>
+            <group>Apttus_EMEA</group>
+            <role>System_Administrator</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>India_SLMA</fullName>
+        <columns>NAME</columns>
+        <columns>Country__c</columns>
+        <columns>Document_Format_Type__c</columns>
+        <columns>Document_Name__c</columns>
+        <columns>Region__c</columns>
+        <columns>Template_Type__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>India</value>
+        </filters>
+        <label>India Template</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Japan_Templates</fullName>
+        <columns>NAME</columns>
+        <columns>Document_Name__c</columns>
+        <columns>Document_Format_Type__c</columns>
+        <columns>Template_Type__c</columns>
+        <columns>Region__c</columns>
+        <columns>Country__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>Japan</value>
+        </filters>
+        <label>Japan Templates</label>
+        <sharedTo>
+            <group>Apttus_Japan</group>
+            <role>System_Administrator</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>NA_Templates</fullName>
+        <columns>NAME</columns>
+        <columns>Document_Format_Type__c</columns>
+        <columns>Document_Name__c</columns>
+        <columns>Template_Type__c</columns>
+        <columns>Country__c</columns>
+        <columns>Region__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Restricted_Profiles__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Region__c</field>
+            <operation>equals</operation>
+            <value>North America</value>
+        </filters>
+        <label>NA Templates</label>
+        <sharedTo>
+            <group>Apttus_NA</group>
+            <role>System_Administrator</role>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>CD-{000000}</displayFormat>
+        <label>Cadence Documents Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Cadence Documents</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

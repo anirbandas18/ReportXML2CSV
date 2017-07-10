@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Defines different header names for different Royalty types selected on quote of IP-Tensilica type.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Option_Royalty_Type__c</fullName>
+        <description>Should be exactly same as defined in the Royalty Type pick list of quote.</description>
+        <externalId>false</externalId>
+        <label>Option Royalty Type</label>
+        <length>100</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Text_Core_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Text Core Type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Text_RateOrFee__c</fullName>
+        <externalId>false</externalId>
+        <label>Text RateOrFee</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Text_Shipment_Criteria__c</fullName>
+        <externalId>false</externalId>
+        <label>Text Shipment Criteria</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Royalty Table Headings</label>
+    <visibility>Public</visibility>
+</CustomObject>

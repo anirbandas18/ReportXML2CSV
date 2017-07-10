@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Settings related to custom Account merge</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>bccNotificationEmailAddresses__c</fullName>
+        <description>notify some users in bcc</description>
+        <externalId>false</externalId>
+        <label>bccNotificationEmailAddresses</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>excludedObjects__c</fullName>
+        <externalId>false</externalId>
+        <label>excludedObjects</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>isCustomAccountMerge__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>isCustomAccountMerge</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Account Merge Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

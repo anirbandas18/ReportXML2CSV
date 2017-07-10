@@ -1,0 +1,4051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>ServiceMax uses a common tab Parts Orders as a home for RMA and Shipment orders both. Parts Order Line lists parts returned or shipped.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Parts Order Lines</relationshipLabel>
+        <relationshipName>Parts_Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Configuration_File_Sent__c</fullName>
+        <externalId>false</externalId>
+        <label>Configuration File Sent?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Create_Depot_Repair_Work_Order__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Create Depot Repair Work Order</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Errors__c</fullName>
+        <externalId>false</externalId>
+        <label>Errors</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Failure_Code_Second_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Failure Code Second Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Failure_Code__c</controllingField>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>27V Path</fullName>
+                    <default>false</default>
+                    <label>27V Path</label>
+                </value>
+                <value>
+                    <fullName>Alignment</fullName>
+                    <default>false</default>
+                    <label>Alignment</label>
+                </value>
+                <value>
+                    <fullName>Board Level</fullName>
+                    <default>false</default>
+                    <label>Board Level</label>
+                </value>
+                <value>
+                    <fullName>Bootup</fullName>
+                    <default>false</default>
+                    <label>Bootup</label>
+                </value>
+                <value>
+                    <fullName>bracket</fullName>
+                    <default>false</default>
+                    <label>bracket</label>
+                </value>
+                <value>
+                    <fullName>Burnt</fullName>
+                    <default>false</default>
+                    <label>Burnt</label>
+                </value>
+                <value>
+                    <fullName>Chip</fullName>
+                    <default>false</default>
+                    <label>Chip</label>
+                </value>
+                <value>
+                    <fullName>Contaminated</fullName>
+                    <default>false</default>
+                    <label>Contaminated</label>
+                </value>
+                <value>
+                    <fullName>Corrosion</fullName>
+                    <default>false</default>
+                    <label>Corrosion</label>
+                </value>
+                <value>
+                    <fullName>C-Stack</fullName>
+                    <default>false</default>
+                    <label>C-Stack</label>
+                </value>
+                <value>
+                    <fullName>Customer Power</fullName>
+                    <default>false</default>
+                    <label>Customer Power</label>
+                </value>
+                <value>
+                    <fullName>Damage</fullName>
+                    <default>false</default>
+                    <label>Damage</label>
+                </value>
+                <value>
+                    <fullName>DCB</fullName>
+                    <default>false</default>
+                    <label>DCB</label>
+                </value>
+                <value>
+                    <fullName>Dead on Arrival</fullName>
+                    <default>false</default>
+                    <label>Dead on Arrival</label>
+                </value>
+                <value>
+                    <fullName>Debug</fullName>
+                    <default>false</default>
+                    <label>Debug</label>
+                </value>
+                <value>
+                    <fullName>Defect</fullName>
+                    <default>false</default>
+                    <label>Defect</label>
+                </value>
+                <value>
+                    <fullName>DIAG</fullName>
+                    <default>false</default>
+                    <label>DIAG</label>
+                </value>
+                <value>
+                    <fullName>Diags</fullName>
+                    <default>false</default>
+                    <label>Diags</label>
+                </value>
+                <value>
+                    <fullName>DIMMs</fullName>
+                    <default>false</default>
+                    <label>DIMMs</label>
+                </value>
+                <value>
+                    <fullName>Down Rev</fullName>
+                    <default>false</default>
+                    <label>Down Rev</label>
+                </value>
+                <value>
+                    <fullName>EDRAM</fullName>
+                    <default>false</default>
+                    <label>EDRAM</label>
+                </value>
+                <value>
+                    <fullName>Electrical</fullName>
+                    <default>false</default>
+                    <label>Electrical</label>
+                </value>
+                <value>
+                    <fullName>Electronic ID</fullName>
+                    <default>false</default>
+                    <label>Electronic ID</label>
+                </value>
+                <value>
+                    <fullName>Environmental</fullName>
+                    <default>false</default>
+                    <label>Environmental</label>
+                </value>
+                <value>
+                    <fullName>External</fullName>
+                    <default>false</default>
+                    <label>External</label>
+                </value>
+                <value>
+                    <fullName>Fan</fullName>
+                    <default>false</default>
+                    <label>Fan</label>
+                </value>
+                <value>
+                    <fullName>Fan Controller</fullName>
+                    <default>false</default>
+                    <label>Fan Controller</label>
+                </value>
+                <value>
+                    <fullName>Firmware</fullName>
+                    <default>false</default>
+                    <label>Firmware</label>
+                </value>
+                <value>
+                    <fullName>Front Cover</fullName>
+                    <default>false</default>
+                    <label>Front Cover</label>
+                </value>
+                <value>
+                    <fullName>Hardware</fullName>
+                    <default>false</default>
+                    <label>Hardware</label>
+                </value>
+                <value>
+                    <fullName>Hoses</fullName>
+                    <default>false</default>
+                    <label>Hoses</label>
+                </value>
+                <value>
+                    <fullName>Host</fullName>
+                    <default>false</default>
+                    <label>Host</label>
+                </value>
+                <value>
+                    <fullName>House Water</fullName>
+                    <default>false</default>
+                    <label>House Water</label>
+                </value>
+                <value>
+                    <fullName>HSMA</fullName>
+                    <default>false</default>
+                    <label>HSMA</label>
+                </value>
+                <value>
+                    <fullName>Initialization</fullName>
+                    <default>false</default>
+                    <label>Initialization</label>
+                </value>
+                <value>
+                    <fullName>Interconnect</fullName>
+                    <default>false</default>
+                    <label>Interconnect</label>
+                </value>
+                <value>
+                    <fullName>Internal</fullName>
+                    <default>false</default>
+                    <label>Internal</label>
+                </value>
+                <value>
+                    <fullName>Jackscrew</fullName>
+                    <default>false</default>
+                    <label>Jackscrew</label>
+                </value>
+                <value>
+                    <fullName>Latch</fullName>
+                    <default>false</default>
+                    <label>Latch</label>
+                </value>
+                <value>
+                    <fullName>Leak</fullName>
+                    <default>false</default>
+                    <label>Leak</label>
+                </value>
+                <value>
+                    <fullName>level sensor</fullName>
+                    <default>false</default>
+                    <label>level sensor</label>
+                </value>
+                <value>
+                    <fullName>Loopback</fullName>
+                    <default>false</default>
+                    <label>Loopback</label>
+                </value>
+                <value>
+                    <fullName>MAC Address</fullName>
+                    <default>false</default>
+                    <label>MAC Address</label>
+                </value>
+                <value>
+                    <fullName>MBI/O</fullName>
+                    <default>false</default>
+                    <label>MBI/O</label>
+                </value>
+                <value>
+                    <fullName>Mechanical</fullName>
+                    <default>false</default>
+                    <label>Mechanical</label>
+                </value>
+                <value>
+                    <fullName>Missing</fullName>
+                    <default>false</default>
+                    <label>Missing</label>
+                </value>
+                <value>
+                    <fullName>Miss Wire</fullName>
+                    <default>false</default>
+                    <label>Miss Wire</label>
+                </value>
+                <value>
+                    <fullName>Module</fullName>
+                    <default>false</default>
+                    <label>Module</label>
+                </value>
+                <value>
+                    <fullName>Network</fullName>
+                    <default>false</default>
+                    <label>Network</label>
+                </value>
+                <value>
+                    <fullName>nozzle</fullName>
+                    <default>false</default>
+                    <label>nozzle</label>
+                </value>
+                <value>
+                    <fullName>Offline</fullName>
+                    <default>false</default>
+                    <label>Offline</label>
+                </value>
+                <value>
+                    <fullName>o-ring</fullName>
+                    <default>false</default>
+                    <label>o-ring</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>OverCurrent</fullName>
+                    <default>false</default>
+                    <label>OverCurrent</label>
+                </value>
+                <value>
+                    <fullName>Overtemp</fullName>
+                    <default>false</default>
+                    <label>Overtemp</label>
+                </value>
+                <value>
+                    <fullName>Over Temperature</fullName>
+                    <default>false</default>
+                    <label>Over Temperature</label>
+                </value>
+                <value>
+                    <fullName>OverVoltage</fullName>
+                    <default>false</default>
+                    <label>OverVoltage</label>
+                </value>
+                <value>
+                    <fullName>P4</fullName>
+                    <default>false</default>
+                    <label>P4</label>
+                </value>
+                <value>
+                    <fullName>Paint scratched</fullName>
+                    <default>false</default>
+                    <label>Paint scratched</label>
+                </value>
+                <value>
+                    <fullName>Polarity</fullName>
+                    <default>false</default>
+                    <label>Polarity</label>
+                </value>
+                <value>
+                    <fullName>power switch</fullName>
+                    <default>false</default>
+                    <label>power switch</label>
+                </value>
+                <value>
+                    <fullName>Pressure Transducer</fullName>
+                    <default>false</default>
+                    <label>Pressure Transducer</label>
+                </value>
+                <value>
+                    <fullName>Programming</fullName>
+                    <default>false</default>
+                    <label>Programming</label>
+                </value>
+                <value>
+                    <fullName>PSU Alarm</fullName>
+                    <default>false</default>
+                    <label>PSU Alarm</label>
+                </value>
+                <value>
+                    <fullName>Pump</fullName>
+                    <default>false</default>
+                    <label>Pump</label>
+                </value>
+                <value>
+                    <fullName>Pump Controller</fullName>
+                    <default>false</default>
+                    <label>Pump Controller</label>
+                </value>
+                <value>
+                    <fullName>Reload FPGA</fullName>
+                    <default>false</default>
+                    <label>Reload FPGA</label>
+                </value>
+                <value>
+                    <fullName>Return</fullName>
+                    <default>false</default>
+                    <label>Return</label>
+                </value>
+                <value>
+                    <fullName>Ribbon Cable</fullName>
+                    <default>false</default>
+                    <label>Ribbon Cable</label>
+                </value>
+                <value>
+                    <fullName>Runtime</fullName>
+                    <default>false</default>
+                    <label>Runtime</label>
+                </value>
+                <value>
+                    <fullName>Runtime/Diags</fullName>
+                    <default>false</default>
+                    <label>Runtime/Diags</label>
+                </value>
+                <value>
+                    <fullName>Short</fullName>
+                    <default>false</default>
+                    <label>Short</label>
+                </value>
+                <value>
+                    <fullName>Shorts</fullName>
+                    <default>false</default>
+                    <label>Shorts</label>
+                </value>
+                <value>
+                    <fullName>Spill</fullName>
+                    <default>false</default>
+                    <label>Spill</label>
+                </value>
+                <value>
+                    <fullName>Stuck bits</fullName>
+                    <default>false</default>
+                    <label>Stuck bits</label>
+                </value>
+                <value>
+                    <fullName>Surfaced scratched</fullName>
+                    <default>false</default>
+                    <label>Surfaced scratched</label>
+                </value>
+                <value>
+                    <fullName>SW/FW</fullName>
+                    <default>false</default>
+                    <label>SW/FW</label>
+                </value>
+                <value>
+                    <fullName>TIB</fullName>
+                    <default>false</default>
+                    <label>TIB</label>
+                </value>
+                <value>
+                    <fullName>Trace Issue</fullName>
+                    <default>false</default>
+                    <label>Trace Issue</label>
+                </value>
+                <value>
+                    <fullName>Transcievers</fullName>
+                    <default>false</default>
+                    <label>Transcievers</label>
+                </value>
+                <value>
+                    <fullName>UnderCurrent</fullName>
+                    <default>false</default>
+                    <label>UnderCurrent</label>
+                </value>
+                <value>
+                    <fullName>UnderVoltage</fullName>
+                    <default>false</default>
+                    <label>UnderVoltage</label>
+                </value>
+                <value>
+                    <fullName>undetected</fullName>
+                    <default>false</default>
+                    <label>undetected</label>
+                </value>
+                <value>
+                    <fullName>Undetermined Length</fullName>
+                    <default>false</default>
+                    <label>Undetermined Length</label>
+                </value>
+                <value>
+                    <fullName>unprogrammable</fullName>
+                    <default>false</default>
+                    <label>unprogrammable</label>
+                </value>
+                <value>
+                    <fullName>Utility Panel</fullName>
+                    <default>false</default>
+                    <label>Utility Panel</label>
+                </value>
+                <value>
+                    <fullName>Workmanship</fullName>
+                    <default>false</default>
+                    <label>Workmanship</label>
+                </value>
+                <value>
+                    <fullName>Wrong part</fullName>
+                    <default>false</default>
+                    <label>Wrong part</label>
+                </value>
+                <value>
+                    <fullName>XBI/O</fullName>
+                    <default>false</default>
+                    <label>XBI/O</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>MBS Box</controllingFieldValue>
+                <controllingFieldValue>MBS Cable</controllingFieldValue>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <controllingFieldValue>PDU</controllingFieldValue>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <controllingFieldValue>PS Shelf</controllingFieldValue>
+                <controllingFieldValue>Clock Cable</controllingFieldValue>
+                <controllingFieldValue>SA Card</controllingFieldValue>
+                <controllingFieldValue>Ship Kit</controllingFieldValue>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>System Level</controllingFieldValue>
+                <controllingFieldValue>HDDC</controllingFieldValue>
+                <controllingFieldValue>B2B Cable</controllingFieldValue>
+                <controllingFieldValue>Buffer Cable</controllingFieldValue>
+                <controllingFieldValue>Buffer Card</controllingFieldValue>
+                <controllingFieldValue>Cable</controllingFieldValue>
+                <controllingFieldValue>TIB</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <valueName>Damage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MBS Box</controllingFieldValue>
+                <controllingFieldValue>MBS Cable</controllingFieldValue>
+                <controllingFieldValue>MCM</controllingFieldValue>
+                <controllingFieldValue>NA</controllingFieldValue>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <controllingFieldValue>NMP</controllingFieldValue>
+                <controllingFieldValue>OCA</controllingFieldValue>
+                <controllingFieldValue>OTHER</controllingFieldValue>
+                <controllingFieldValue>PDU</controllingFieldValue>
+                <controllingFieldValue>PSC</controllingFieldValue>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <controllingFieldValue>PS Shelf</controllingFieldValue>
+                <controllingFieldValue>Chassis</controllingFieldValue>
+                <controllingFieldValue>PSU</controllingFieldValue>
+                <controllingFieldValue>Clock Cable</controllingFieldValue>
+                <controllingFieldValue>PXP</controllingFieldValue>
+                <controllingFieldValue>Cooling</controllingFieldValue>
+                <controllingFieldValue>SA Card</controllingFieldValue>
+                <controllingFieldValue>Cover</controllingFieldValue>
+                <controllingFieldValue>Ship Kit</controllingFieldValue>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>Speedbridge</controllingFieldValue>
+                <controllingFieldValue>Down Rev Part</controllingFieldValue>
+                <controllingFieldValue>System</controllingFieldValue>
+                <controllingFieldValue>Fan</controllingFieldValue>
+                <controllingFieldValue>System Level</controllingFieldValue>
+                <controllingFieldValue>HDDC</controllingFieldValue>
+                <controllingFieldValue>Interposer</controllingFieldValue>
+                <controllingFieldValue>12V PSU</controllingFieldValue>
+                <controllingFieldValue>24V PSU</controllingFieldValue>
+                <controllingFieldValue>27V PSU</controllingFieldValue>
+                <controllingFieldValue>ART</controllingFieldValue>
+                <controllingFieldValue>B2B Cable</controllingFieldValue>
+                <controllingFieldValue>Back Plane</controllingFieldValue>
+                <controllingFieldValue>Buffer Cable</controllingFieldValue>
+                <controllingFieldValue>Buffer Card</controllingFieldValue>
+                <controllingFieldValue>Cable</controllingFieldValue>
+                <controllingFieldValue>TIB</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <controllingFieldValue>Logic Board</controllingFieldValue>
+                <controllingFieldValue>LVPSU</controllingFieldValue>
+                <valueName>Debug</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MBS Box</controllingFieldValue>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <controllingFieldValue>PDU</controllingFieldValue>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <controllingFieldValue>PS Shelf</controllingFieldValue>
+                <controllingFieldValue>Chassis</controllingFieldValue>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>System Level</controllingFieldValue>
+                <controllingFieldValue>12V PSU</controllingFieldValue>
+                <controllingFieldValue>24V PSU</controllingFieldValue>
+                <controllingFieldValue>27V PSU</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <controllingFieldValue>Logic Board</controllingFieldValue>
+                <controllingFieldValue>LVPSU</controllingFieldValue>
+                <valueName>Mechanical</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MBS Box</controllingFieldValue>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <controllingFieldValue>Ship Kit</controllingFieldValue>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>HDDC</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <valueName>Missing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MBS Box</controllingFieldValue>
+                <controllingFieldValue>MBS Cable</controllingFieldValue>
+                <controllingFieldValue>MCM</controllingFieldValue>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <controllingFieldValue>OTHER</controllingFieldValue>
+                <controllingFieldValue>PDU</controllingFieldValue>
+                <controllingFieldValue>PSC</controllingFieldValue>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <controllingFieldValue>PS Shelf</controllingFieldValue>
+                <controllingFieldValue>Clock Cable</controllingFieldValue>
+                <controllingFieldValue>SA Card</controllingFieldValue>
+                <controllingFieldValue>Ship Kit</controllingFieldValue>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>System Level</controllingFieldValue>
+                <controllingFieldValue>HDDC</controllingFieldValue>
+                <controllingFieldValue>12V PSU</controllingFieldValue>
+                <controllingFieldValue>24V PSU</controllingFieldValue>
+                <controllingFieldValue>27V PSU</controllingFieldValue>
+                <controllingFieldValue>ART</controllingFieldValue>
+                <controllingFieldValue>B2B Cable</controllingFieldValue>
+                <controllingFieldValue>Buffer Cable</controllingFieldValue>
+                <controllingFieldValue>Buffer Card</controllingFieldValue>
+                <controllingFieldValue>TIB</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <controllingFieldValue>LVPSU</controllingFieldValue>
+                <valueName>Other</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MBS Box</controllingFieldValue>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <controllingFieldValue>PSC</controllingFieldValue>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <controllingFieldValue>LVPSU</controllingFieldValue>
+                <valueName>Programming</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MBS Box</controllingFieldValue>
+                <valueName>Stuck bits</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MBS Box</controllingFieldValue>
+                <controllingFieldValue>MBS Cable</controllingFieldValue>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <controllingFieldValue>B2B Cable</controllingFieldValue>
+                <controllingFieldValue>Buffer Cable</controllingFieldValue>
+                <controllingFieldValue>Logic Board</controllingFieldValue>
+                <valueName>XBI/O</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MBS Cable</controllingFieldValue>
+                <controllingFieldValue>Buffer Cable</controllingFieldValue>
+                <valueName>Defect</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MBS Cable</controllingFieldValue>
+                <controllingFieldValue>Clock Cable</controllingFieldValue>
+                <controllingFieldValue>B2B Cable</controllingFieldValue>
+                <controllingFieldValue>Buffer Cable</controllingFieldValue>
+                <controllingFieldValue>Cable</controllingFieldValue>
+                <valueName>Latch</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MCM</controllingFieldValue>
+                <controllingFieldValue>Logic Board</controllingFieldValue>
+                <valueName>Chip</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MCM</controllingFieldValue>
+                <valueName>Hardware</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MCM</controllingFieldValue>
+                <valueName>Initialization</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>MCM</controllingFieldValue>
+                <controllingFieldValue>LVPSU</controllingFieldValue>
+                <valueName>Overtemp</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <valueName>Bootup</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <controllingFieldValue>SA Card</controllingFieldValue>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>ART</controllingFieldValue>
+                <controllingFieldValue>Buffer Card</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <valueName>Down Rev</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <valueName>Electronic ID</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <valueName>HSMA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <valueName>MAC Address</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <valueName>Network</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <controllingFieldValue>Clock Cable</controllingFieldValue>
+                <controllingFieldValue>ART</controllingFieldValue>
+                <controllingFieldValue>B2B Cable</controllingFieldValue>
+                <controllingFieldValue>Buffer Card</controllingFieldValue>
+                <controllingFieldValue>Cable</controllingFieldValue>
+                <valueName>Short</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>NCC</controllingFieldValue>
+                <controllingFieldValue>SA Card</controllingFieldValue>
+                <valueName>Transcievers</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>OTHER</controllingFieldValue>
+                <valueName>Customer Power</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>PDU</controllingFieldValue>
+                <controllingFieldValue>PSC</controllingFieldValue>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <controllingFieldValue>PS Shelf</controllingFieldValue>
+                <controllingFieldValue>Chassis</controllingFieldValue>
+                <controllingFieldValue>System Level</controllingFieldValue>
+                <controllingFieldValue>12V PSU</controllingFieldValue>
+                <controllingFieldValue>24V PSU</controllingFieldValue>
+                <controllingFieldValue>27V PSU</controllingFieldValue>
+                <valueName>Electrical</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>PSC</controllingFieldValue>
+                <controllingFieldValue>PS Shelf</controllingFieldValue>
+                <controllingFieldValue>12V PSU</controllingFieldValue>
+                <controllingFieldValue>24V PSU</controllingFieldValue>
+                <controllingFieldValue>27V PSU</controllingFieldValue>
+                <valueName>27V Path</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>PSC</controllingFieldValue>
+                <valueName>Fan Controller</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>PSC</controllingFieldValue>
+                <controllingFieldValue>SA Card</controllingFieldValue>
+                <controllingFieldValue>LVPSU</controllingFieldValue>
+                <valueName>Firmware</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>PSC</controllingFieldValue>
+                <valueName>Pump Controller</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <controllingFieldValue>Logic Board</controllingFieldValue>
+                <valueName>MBI/O</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <valueName>Polarity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <valueName>Shorts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>CDP</controllingFieldValue>
+                <controllingFieldValue>Chassis</controllingFieldValue>
+                <valueName>Workmanship</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>PS Shelf</controllingFieldValue>
+                <controllingFieldValue>Buffer Cable</controllingFieldValue>
+                <valueName>Alignment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chassis</controllingFieldValue>
+                <valueName>Fan</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chassis</controllingFieldValue>
+                <valueName>Hoses</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chassis</controllingFieldValue>
+                <valueName>House Water</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chassis</controllingFieldValue>
+                <valueName>Pressure Transducer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chassis</controllingFieldValue>
+                <controllingFieldValue>ART</controllingFieldValue>
+                <valueName>Pump</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chassis</controllingFieldValue>
+                <valueName>Utility Panel</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clock Cable</controllingFieldValue>
+                <controllingFieldValue>B2B Cable</controllingFieldValue>
+                <controllingFieldValue>Cable</controllingFieldValue>
+                <valueName>Jackscrew</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Clock Cable</controllingFieldValue>
+                <controllingFieldValue>B2B Cable</controllingFieldValue>
+                <controllingFieldValue>Cable</controllingFieldValue>
+                <valueName>undetected</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>PXP</controllingFieldValue>
+                <controllingFieldValue>Speedbridge</controllingFieldValue>
+                <valueName>Host</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>PXP</controllingFieldValue>
+                <controllingFieldValue>Speedbridge</controllingFieldValue>
+                <valueName>SW/FW</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cooling</controllingFieldValue>
+                <valueName>Corrosion</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cooling</controllingFieldValue>
+                <valueName>Leak</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cooling</controllingFieldValue>
+                <valueName>Over Temperature</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cooling</controllingFieldValue>
+                <valueName>Spill</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SA Card</controllingFieldValue>
+                <valueName>bracket</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>SA Card</controllingFieldValue>
+                <valueName>unprogrammable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cover</controllingFieldValue>
+                <valueName>Front Cover</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cover</controllingFieldValue>
+                <valueName>Paint scratched</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cover</controllingFieldValue>
+                <valueName>Surfaced scratched</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Ship Kit</controllingFieldValue>
+                <valueName>Wrong part</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <valueName>Burnt</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <valueName>Diags</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <valueName>DIMMs</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <valueName>Reload FPGA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <valueName>Runtime</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>DCC</controllingFieldValue>
+                <controllingFieldValue>UMC</controllingFieldValue>
+                <valueName>Runtime/Diags</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Speedbridge</controllingFieldValue>
+                <valueName>Return</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>System Level</controllingFieldValue>
+                <valueName>Environmental</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>System Level</controllingFieldValue>
+                <controllingFieldValue>Buffer Cable</controllingFieldValue>
+                <controllingFieldValue>TIB</controllingFieldValue>
+                <valueName>Interconnect</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>System Level</controllingFieldValue>
+                <valueName>Offline</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>HDDC</controllingFieldValue>
+                <valueName>External</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>HDDC</controllingFieldValue>
+                <valueName>Internal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>HDDC</controllingFieldValue>
+                <valueName>Loopback</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>HDDC</controllingFieldValue>
+                <valueName>TIB</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Interposer</controllingFieldValue>
+                <valueName>C-Stack</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Interposer</controllingFieldValue>
+                <valueName>Module</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>12V PSU</controllingFieldValue>
+                <controllingFieldValue>Logic Board</controllingFieldValue>
+                <valueName>EDRAM</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ART</controllingFieldValue>
+                <valueName>level sensor</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ART</controllingFieldValue>
+                <valueName>nozzle</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ART</controllingFieldValue>
+                <valueName>o-ring</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>ART</controllingFieldValue>
+                <valueName>power switch</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>B2B Cable</controllingFieldValue>
+                <valueName>Undetermined Length</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cable</controllingFieldValue>
+                <valueName>Contaminated</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Cable</controllingFieldValue>
+                <valueName>Miss Wire</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>TIB</controllingFieldValue>
+                <valueName>Ribbon Cable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Logic Board</controllingFieldValue>
+                <valueName>Board Level</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Logic Board</controllingFieldValue>
+                <valueName>DCB</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Logic Board</controllingFieldValue>
+                <valueName>P4</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Logic Board</controllingFieldValue>
+                <valueName>Trace Issue</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>LVPSU</controllingFieldValue>
+                <valueName>OverCurrent</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>LVPSU</controllingFieldValue>
+                <valueName>OverVoltage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>LVPSU</controllingFieldValue>
+                <valueName>PSU Alarm</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>LVPSU</controllingFieldValue>
+                <valueName>UnderCurrent</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>LVPSU</controllingFieldValue>
+                <valueName>UnderVoltage</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Failure_Code_Third_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Failure Code Third Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Failure_Code_Second_Level__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ABIST</fullName>
+                    <default>false</default>
+                    <label>ABIST</label>
+                </value>
+                <value>
+                    <fullName>Air Condition</fullName>
+                    <default>false</default>
+                    <label>Air Condition</label>
+                </value>
+                <value>
+                    <fullName>Alignment</fullName>
+                    <default>false</default>
+                    <label>Alignment</label>
+                </value>
+                <value>
+                    <fullName>Art</fullName>
+                    <default>false</default>
+                    <label>Art</label>
+                </value>
+                <value>
+                    <fullName>B2B</fullName>
+                    <default>false</default>
+                    <label>B2B</label>
+                </value>
+                <value>
+                    <fullName>Burnt</fullName>
+                    <default>false</default>
+                    <label>Burnt</label>
+                </value>
+                <value>
+                    <fullName>CDP</fullName>
+                    <default>false</default>
+                    <label>CDP</label>
+                </value>
+                <value>
+                    <fullName>CDP Cable</fullName>
+                    <default>false</default>
+                    <label>CDP Cable</label>
+                </value>
+                <value>
+                    <fullName>Chassis</fullName>
+                    <default>false</default>
+                    <label>Chassis</label>
+                </value>
+                <value>
+                    <fullName>Corrosion</fullName>
+                    <default>false</default>
+                    <label>Corrosion</label>
+                </value>
+                <value>
+                    <fullName>C-stack</fullName>
+                    <default>false</default>
+                    <label>C-stack</label>
+                </value>
+                <value>
+                    <fullName>Damage</fullName>
+                    <default>false</default>
+                    <label>Damage</label>
+                </value>
+                <value>
+                    <fullName>DCB</fullName>
+                    <default>false</default>
+                    <label>DCB</label>
+                </value>
+                <value>
+                    <fullName>DCC</fullName>
+                    <default>false</default>
+                    <label>DCC</label>
+                </value>
+                <value>
+                    <fullName>DCC_CON1</fullName>
+                    <default>false</default>
+                    <label>DCC_CON1</label>
+                </value>
+                <value>
+                    <fullName>DCC_CON2</fullName>
+                    <default>false</default>
+                    <label>DCC_CON2</label>
+                </value>
+                <value>
+                    <fullName>DCC_CON3</fullName>
+                    <default>false</default>
+                    <label>DCC_CON3</label>
+                </value>
+                <value>
+                    <fullName>Dcc_con 4</fullName>
+                    <default>false</default>
+                    <label>Dcc_con 4</label>
+                </value>
+                <value>
+                    <fullName>DCC_MEM</fullName>
+                    <default>false</default>
+                    <label>DCC_MEM</label>
+                </value>
+                <value>
+                    <fullName>down rev</fullName>
+                    <default>false</default>
+                    <label>down rev</label>
+                </value>
+                <value>
+                    <fullName>Earthquake</fullName>
+                    <default>false</default>
+                    <label>Earthquake</label>
+                </value>
+                <value>
+                    <fullName>edram</fullName>
+                    <default>false</default>
+                    <label>edram</label>
+                </value>
+                <value>
+                    <fullName>Embedded Memory</fullName>
+                    <default>false</default>
+                    <label>Embedded Memory</label>
+                </value>
+                <value>
+                    <fullName>Fiber Cable</fullName>
+                    <default>false</default>
+                    <label>Fiber Cable</label>
+                </value>
+                <value>
+                    <fullName>filler tank</fullName>
+                    <default>false</default>
+                    <label>filler tank</label>
+                </value>
+                <value>
+                    <fullName>fitting</fullName>
+                    <default>false</default>
+                    <label>fitting</label>
+                </value>
+                <value>
+                    <fullName>Fittings</fullName>
+                    <default>false</default>
+                    <label>Fittings</label>
+                </value>
+                <value>
+                    <fullName>Glitch</fullName>
+                    <default>false</default>
+                    <label>Glitch</label>
+                </value>
+                <value>
+                    <fullName>heat exchanger</fullName>
+                    <default>false</default>
+                    <label>heat exchanger</label>
+                </value>
+                <value>
+                    <fullName>Hi/Lo Pressure</fullName>
+                    <default>false</default>
+                    <label>Hi/Lo Pressure</label>
+                </value>
+                <value>
+                    <fullName>HiPot</fullName>
+                    <default>false</default>
+                    <label>HiPot</label>
+                </value>
+                <value>
+                    <fullName>Hoses</fullName>
+                    <default>false</default>
+                    <label>Hoses</label>
+                </value>
+                <value>
+                    <fullName>House Water</fullName>
+                    <default>false</default>
+                    <label>House Water</label>
+                </value>
+                <value>
+                    <fullName>inserts/pems</fullName>
+                    <default>false</default>
+                    <label>inserts/pems</label>
+                </value>
+                <value>
+                    <fullName>Kink</fullName>
+                    <default>false</default>
+                    <label>Kink</label>
+                </value>
+                <value>
+                    <fullName>LB</fullName>
+                    <default>false</default>
+                    <label>LB</label>
+                </value>
+                <value>
+                    <fullName>LBIST</fullName>
+                    <default>false</default>
+                    <label>LBIST</label>
+                </value>
+                <value>
+                    <fullName>Leak</fullName>
+                    <default>false</default>
+                    <label>Leak</label>
+                </value>
+                <value>
+                    <fullName>Logic board</fullName>
+                    <default>false</default>
+                    <label>Logic board</label>
+                </value>
+                <value>
+                    <fullName>main manifold</fullName>
+                    <default>false</default>
+                    <label>main manifold</label>
+                </value>
+                <value>
+                    <fullName>MBI/O</fullName>
+                    <default>false</default>
+                    <label>MBI/O</label>
+                </value>
+                <value>
+                    <fullName>MCM</fullName>
+                    <default>false</default>
+                    <label>MCM</label>
+                </value>
+                <value>
+                    <fullName>MCM Interposer</fullName>
+                    <default>false</default>
+                    <label>MCM Interposer</label>
+                </value>
+                <value>
+                    <fullName>Memory 1</fullName>
+                    <default>false</default>
+                    <label>Memory 1</label>
+                </value>
+                <value>
+                    <fullName>Memory 2</fullName>
+                    <default>false</default>
+                    <label>Memory 2</label>
+                </value>
+                <value>
+                    <fullName>Memory 3</fullName>
+                    <default>false</default>
+                    <label>Memory 3</label>
+                </value>
+                <value>
+                    <fullName>Memory 4</fullName>
+                    <default>false</default>
+                    <label>Memory 4</label>
+                </value>
+                <value>
+                    <fullName>Mems_test1</fullName>
+                    <default>false</default>
+                    <label>Mems_test1</label>
+                </value>
+                <value>
+                    <fullName>Mems_test2</fullName>
+                    <default>false</default>
+                    <label>Mems_test2</label>
+                </value>
+                <value>
+                    <fullName>Mems_test3</fullName>
+                    <default>false</default>
+                    <label>Mems_test3</label>
+                </value>
+                <value>
+                    <fullName>Mems_test4</fullName>
+                    <default>false</default>
+                    <label>Mems_test4</label>
+                </value>
+                <value>
+                    <fullName>Missing</fullName>
+                    <default>false</default>
+                    <label>Missing</label>
+                </value>
+                <value>
+                    <fullName>Mis-wire</fullName>
+                    <default>false</default>
+                    <label>Mis-wire</label>
+                </value>
+                <value>
+                    <fullName>Molex</fullName>
+                    <default>false</default>
+                    <label>Molex</label>
+                </value>
+                <value>
+                    <fullName>Multiple</fullName>
+                    <default>false</default>
+                    <label>Multiple</label>
+                </value>
+                <value>
+                    <fullName>Multiple Diag Failures</fullName>
+                    <default>false</default>
+                    <label>Multiple Diag Failures</label>
+                </value>
+                <value>
+                    <fullName>noise</fullName>
+                    <default>false</default>
+                    <label>noise</label>
+                </value>
+                <value>
+                    <fullName>o-ring</fullName>
+                    <default>false</default>
+                    <label>o-ring</label>
+                </value>
+                <value>
+                    <fullName>OTHER</fullName>
+                    <default>false</default>
+                    <label>OTHER</label>
+                </value>
+                <value>
+                    <fullName>P4</fullName>
+                    <default>false</default>
+                    <label>P4</label>
+                </value>
+                <value>
+                    <fullName>PBO</fullName>
+                    <default>false</default>
+                    <label>PBO</label>
+                </value>
+                <value>
+                    <fullName>PGOOD</fullName>
+                    <default>false</default>
+                    <label>PGOOD</label>
+                </value>
+                <value>
+                    <fullName>Polarity</fullName>
+                    <default>false</default>
+                    <label>Polarity</label>
+                </value>
+                <value>
+                    <fullName>Power</fullName>
+                    <default>false</default>
+                    <label>Power</label>
+                </value>
+                <value>
+                    <fullName>Power Cable</fullName>
+                    <default>false</default>
+                    <label>Power Cable</label>
+                </value>
+                <value>
+                    <fullName>Power Supply</fullName>
+                    <default>false</default>
+                    <label>Power Supply</label>
+                </value>
+                <value>
+                    <fullName>Pressure</fullName>
+                    <default>false</default>
+                    <label>Pressure</label>
+                </value>
+                <value>
+                    <fullName>pressure sensor</fullName>
+                    <default>false</default>
+                    <label>pressure sensor</label>
+                </value>
+                <value>
+                    <fullName>pump</fullName>
+                    <default>false</default>
+                    <label>pump</label>
+                </value>
+                <value>
+                    <fullName>Receptacle</fullName>
+                    <default>false</default>
+                    <label>Receptacle</label>
+                </value>
+                <value>
+                    <fullName>rework wire</fullName>
+                    <default>false</default>
+                    <label>rework wire</label>
+                </value>
+                <value>
+                    <fullName>Ribbon Cable</fullName>
+                    <default>false</default>
+                    <label>Ribbon Cable</label>
+                </value>
+                <value>
+                    <fullName>Serial Cable</fullName>
+                    <default>false</default>
+                    <label>Serial Cable</label>
+                </value>
+                <value>
+                    <fullName>Short</fullName>
+                    <default>false</default>
+                    <label>Short</label>
+                </value>
+                <value>
+                    <fullName>Signal Cable</fullName>
+                    <default>false</default>
+                    <label>Signal Cable</label>
+                </value>
+                <value>
+                    <fullName>Silent Failures</fullName>
+                    <default>false</default>
+                    <label>Silent Failures</label>
+                </value>
+                <value>
+                    <fullName>SSB Link Down</fullName>
+                    <default>false</default>
+                    <label>SSB Link Down</label>
+                </value>
+                <value>
+                    <fullName>Studs/Posts</fullName>
+                    <default>false</default>
+                    <label>Studs/Posts</label>
+                </value>
+                <value>
+                    <fullName>Surge/glitch</fullName>
+                    <default>false</default>
+                    <label>Surge/glitch</label>
+                </value>
+                <value>
+                    <fullName>System</fullName>
+                    <default>false</default>
+                    <label>System</label>
+                </value>
+                <value>
+                    <fullName>Tribotek</fullName>
+                    <default>false</default>
+                    <label>Tribotek</label>
+                </value>
+                <value>
+                    <fullName>UMC</fullName>
+                    <default>false</default>
+                    <label>UMC</label>
+                </value>
+                <value>
+                    <fullName>Undetermined</fullName>
+                    <default>false</default>
+                    <label>Undetermined</label>
+                </value>
+                <value>
+                    <fullName>utility panel</fullName>
+                    <default>false</default>
+                    <label>utility panel</label>
+                </value>
+                <value>
+                    <fullName>Wet</fullName>
+                    <default>false</default>
+                    <label>Wet</label>
+                </value>
+                <value>
+                    <fullName>Wrong spec</fullName>
+                    <default>false</default>
+                    <label>Wrong spec</label>
+                </value>
+                <value>
+                    <fullName>XBI/O</fullName>
+                    <default>false</default>
+                    <label>XBI/O</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>XBI/O</controllingFieldValue>
+                <controllingFieldValue>MBI/O</controllingFieldValue>
+                <valueName>B2B</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>XBI/O</controllingFieldValue>
+                <controllingFieldValue>MBI/O</controllingFieldValue>
+                <valueName>CDP</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>XBI/O</controllingFieldValue>
+                <valueName>CDP Cable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>XBI/O</controllingFieldValue>
+                <controllingFieldValue>MBI/O</controllingFieldValue>
+                <valueName>C-stack</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>XBI/O</controllingFieldValue>
+                <controllingFieldValue>MBI/O</controllingFieldValue>
+                <valueName>LB</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>XBI/O</controllingFieldValue>
+                <controllingFieldValue>MBI/O</controllingFieldValue>
+                <valueName>MCM</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>XBI/O</controllingFieldValue>
+                <controllingFieldValue>MBI/O</controllingFieldValue>
+                <valueName>MCM Interposer</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>XBI/O</controllingFieldValue>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <controllingFieldValue>Chip</controllingFieldValue>
+                <controllingFieldValue>Electrical</controllingFieldValue>
+                <controllingFieldValue>Environmental</controllingFieldValue>
+                <controllingFieldValue>Hardware</controllingFieldValue>
+                <controllingFieldValue>Initialization</controllingFieldValue>
+                <controllingFieldValue>Trace Issue</controllingFieldValue>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <controllingFieldValue>MBI/O</controllingFieldValue>
+                <valueName>OTHER</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>XBI/O</controllingFieldValue>
+                <controllingFieldValue>Trace Issue</controllingFieldValue>
+                <controllingFieldValue>MBI/O</controllingFieldValue>
+                <valueName>Undetermined</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <controllingFieldValue>Utility Panel</controllingFieldValue>
+                <valueName>Alignment</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <controllingFieldValue>Environmental</controllingFieldValue>
+                <valueName>Corrosion</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <controllingFieldValue>Pump</controllingFieldValue>
+                <controllingFieldValue>Hardware</controllingFieldValue>
+                <controllingFieldValue>House Water</controllingFieldValue>
+                <valueName>Damage</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <controllingFieldValue>Pressure Transducer</controllingFieldValue>
+                <valueName>down rev</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>Fittings</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>Hoses</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <valueName>inserts/pems</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <valueName>Leak</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <valueName>Missing</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <controllingFieldValue>Utility Panel</controllingFieldValue>
+                <valueName>Mis-wire</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <valueName>Molex</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Missing</controllingFieldValue>
+                <valueName>Tribotek</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miss Wire</controllingFieldValue>
+                <controllingFieldValue>Damage</controllingFieldValue>
+                <controllingFieldValue>Debug</controllingFieldValue>
+                <controllingFieldValue>Contaminated</controllingFieldValue>
+                <controllingFieldValue>Short</controllingFieldValue>
+                <controllingFieldValue>Jackscrew</controllingFieldValue>
+                <controllingFieldValue>Latch</controllingFieldValue>
+                <controllingFieldValue>UnderCurrent</controllingFieldValue>
+                <controllingFieldValue>undetected</controllingFieldValue>
+                <valueName>Fiber Cable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miss Wire</controllingFieldValue>
+                <controllingFieldValue>Damage</controllingFieldValue>
+                <controllingFieldValue>Debug</controllingFieldValue>
+                <controllingFieldValue>Contaminated</controllingFieldValue>
+                <controllingFieldValue>Short</controllingFieldValue>
+                <controllingFieldValue>Jackscrew</controllingFieldValue>
+                <controllingFieldValue>Latch</controllingFieldValue>
+                <controllingFieldValue>UnderCurrent</controllingFieldValue>
+                <controllingFieldValue>undetected</controllingFieldValue>
+                <valueName>Power Cable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miss Wire</controllingFieldValue>
+                <controllingFieldValue>Damage</controllingFieldValue>
+                <controllingFieldValue>Debug</controllingFieldValue>
+                <controllingFieldValue>Contaminated</controllingFieldValue>
+                <controllingFieldValue>Short</controllingFieldValue>
+                <controllingFieldValue>Jackscrew</controllingFieldValue>
+                <controllingFieldValue>Latch</controllingFieldValue>
+                <controllingFieldValue>UnderCurrent</controllingFieldValue>
+                <controllingFieldValue>undetected</controllingFieldValue>
+                <valueName>Ribbon Cable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miss Wire</controllingFieldValue>
+                <controllingFieldValue>Damage</controllingFieldValue>
+                <controllingFieldValue>Debug</controllingFieldValue>
+                <controllingFieldValue>Contaminated</controllingFieldValue>
+                <controllingFieldValue>Short</controllingFieldValue>
+                <controllingFieldValue>Jackscrew</controllingFieldValue>
+                <controllingFieldValue>Latch</controllingFieldValue>
+                <controllingFieldValue>UnderCurrent</controllingFieldValue>
+                <controllingFieldValue>undetected</controllingFieldValue>
+                <valueName>Serial Cable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Miss Wire</controllingFieldValue>
+                <controllingFieldValue>Damage</controllingFieldValue>
+                <controllingFieldValue>Debug</controllingFieldValue>
+                <controllingFieldValue>Contaminated</controllingFieldValue>
+                <controllingFieldValue>Short</controllingFieldValue>
+                <controllingFieldValue>Jackscrew</controllingFieldValue>
+                <controllingFieldValue>Latch</controllingFieldValue>
+                <controllingFieldValue>UnderCurrent</controllingFieldValue>
+                <controllingFieldValue>undetected</controllingFieldValue>
+                <valueName>Signal Cable</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Customer Power</controllingFieldValue>
+                <valueName>Glitch</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Customer Power</controllingFieldValue>
+                <valueName>Receptacle</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Customer Power</controllingFieldValue>
+                <valueName>Wrong spec</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>DCC_CON1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>DCC_CON2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>DCC_CON3</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>Dcc_con 4</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>DCC_MEM</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>Memory 1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>Memory 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>Memory 3</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>Memory 4</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>Mems_test1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>Mems_test2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>Mems_test3</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>Mems_test4</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Diags</controllingFieldValue>
+                <valueName>Multiple</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chip</controllingFieldValue>
+                <controllingFieldValue>Initialization</controllingFieldValue>
+                <valueName>ABIST</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chip</controllingFieldValue>
+                <controllingFieldValue>Trace Issue</controllingFieldValue>
+                <valueName>DCB</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chip</controllingFieldValue>
+                <controllingFieldValue>Trace Issue</controllingFieldValue>
+                <valueName>Embedded Memory</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chip</controllingFieldValue>
+                <valueName>LBIST</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chip</controllingFieldValue>
+                <controllingFieldValue>Trace Issue</controllingFieldValue>
+                <controllingFieldValue>Interconnect</controllingFieldValue>
+                <valueName>MBI/O</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chip</controllingFieldValue>
+                <valueName>Multiple Diag Failures</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chip</controllingFieldValue>
+                <valueName>P4</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chip</controllingFieldValue>
+                <valueName>Silent Failures</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Chip</controllingFieldValue>
+                <controllingFieldValue>Trace Issue</controllingFieldValue>
+                <controllingFieldValue>Interconnect</controllingFieldValue>
+                <valueName>XBI/O</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pressure Transducer</controllingFieldValue>
+                <controllingFieldValue>Pump</controllingFieldValue>
+                <valueName>Hi/Lo Pressure</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pressure Transducer</controllingFieldValue>
+                <controllingFieldValue>Electrical</controllingFieldValue>
+                <valueName>Short</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Pump</controllingFieldValue>
+                <valueName>noise</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Electrical</controllingFieldValue>
+                <controllingFieldValue>Hardware</controllingFieldValue>
+                <valueName>Burnt</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Electrical</controllingFieldValue>
+                <valueName>HiPot</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Electrical</controllingFieldValue>
+                <valueName>Power</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Electrical</controllingFieldValue>
+                <valueName>Surge/glitch</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Environmental</controllingFieldValue>
+                <valueName>Air Condition</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Environmental</controllingFieldValue>
+                <valueName>Earthquake</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Environmental</controllingFieldValue>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>House Water</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Hardware</controllingFieldValue>
+                <valueName>Polarity</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Hardware</controllingFieldValue>
+                <valueName>Studs/Posts</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Hardware</controllingFieldValue>
+                <valueName>Wet</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Hoses</controllingFieldValue>
+                <valueName>Kink</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>House Water</controllingFieldValue>
+                <valueName>fitting</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>House Water</controllingFieldValue>
+                <controllingFieldValue>Utility Panel</controllingFieldValue>
+                <valueName>o-ring</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>House Water</controllingFieldValue>
+                <valueName>Pressure</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Initialization</controllingFieldValue>
+                <valueName>PGOOD</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Initialization</controllingFieldValue>
+                <valueName>SSB Link Down</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Trace Issue</controllingFieldValue>
+                <valueName>edram</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Trace Issue</controllingFieldValue>
+                <valueName>rework wire</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Interconnect</controllingFieldValue>
+                <controllingFieldValue>MBI/O</controllingFieldValue>
+                <valueName>DCC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Interconnect</controllingFieldValue>
+                <valueName>PBO</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Interconnect</controllingFieldValue>
+                <valueName>UMC</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>Art</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>Chassis</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>filler tank</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>heat exchanger</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>Logic board</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>main manifold</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>Power Supply</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>pressure sensor</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>pump</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>System</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Leak</controllingFieldValue>
+                <valueName>utility panel</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Failure_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Failure Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>12V PSU</fullName>
+                    <default>false</default>
+                    <label>12V PSU</label>
+                </value>
+                <value>
+                    <fullName>24V PSU</fullName>
+                    <default>false</default>
+                    <label>24V PSU</label>
+                </value>
+                <value>
+                    <fullName>27V PSU</fullName>
+                    <default>false</default>
+                    <label>27V PSU</label>
+                </value>
+                <value>
+                    <fullName>ART</fullName>
+                    <default>false</default>
+                    <label>ART</label>
+                </value>
+                <value>
+                    <fullName>B2B Cable</fullName>
+                    <default>false</default>
+                    <label>B2B Cable</label>
+                </value>
+                <value>
+                    <fullName>Back Plane</fullName>
+                    <default>false</default>
+                    <label>Back Plane</label>
+                </value>
+                <value>
+                    <fullName>Buffer Cable</fullName>
+                    <default>false</default>
+                    <label>Buffer Cable</label>
+                </value>
+                <value>
+                    <fullName>Buffer Card</fullName>
+                    <default>false</default>
+                    <label>Buffer Card</label>
+                </value>
+                <value>
+                    <fullName>Cable</fullName>
+                    <default>false</default>
+                    <label>Cable</label>
+                </value>
+                <value>
+                    <fullName>CDP</fullName>
+                    <default>false</default>
+                    <label>CDP</label>
+                </value>
+                <value>
+                    <fullName>Chassis</fullName>
+                    <default>false</default>
+                    <label>Chassis</label>
+                </value>
+                <value>
+                    <fullName>Clock Cable</fullName>
+                    <default>false</default>
+                    <label>Clock Cable</label>
+                </value>
+                <value>
+                    <fullName>Cooling</fullName>
+                    <default>false</default>
+                    <label>Cooling</label>
+                </value>
+                <value>
+                    <fullName>Cover</fullName>
+                    <default>false</default>
+                    <label>Cover</label>
+                </value>
+                <value>
+                    <fullName>DCC</fullName>
+                    <default>false</default>
+                    <label>DCC</label>
+                </value>
+                <value>
+                    <fullName>Down Rev Part</fullName>
+                    <default>false</default>
+                    <label>Down Rev Part</label>
+                </value>
+                <value>
+                    <fullName>Fan</fullName>
+                    <default>false</default>
+                    <label>Fan</label>
+                </value>
+                <value>
+                    <fullName>HDDC</fullName>
+                    <default>false</default>
+                    <label>HDDC</label>
+                </value>
+                <value>
+                    <fullName>Interposer</fullName>
+                    <default>false</default>
+                    <label>Interposer</label>
+                </value>
+                <value>
+                    <fullName>Logic Board</fullName>
+                    <default>false</default>
+                    <label>Logic Board</label>
+                </value>
+                <value>
+                    <fullName>LVPSU</fullName>
+                    <default>false</default>
+                    <label>LVPSU</label>
+                </value>
+                <value>
+                    <fullName>MBS Box</fullName>
+                    <default>false</default>
+                    <label>MBS Box</label>
+                </value>
+                <value>
+                    <fullName>MBS Cable</fullName>
+                    <default>false</default>
+                    <label>MBS Cable</label>
+                </value>
+                <value>
+                    <fullName>MCM</fullName>
+                    <default>false</default>
+                    <label>MCM</label>
+                </value>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+                <value>
+                    <fullName>NCC</fullName>
+                    <default>false</default>
+                    <label>NCC</label>
+                </value>
+                <value>
+                    <fullName>NMP</fullName>
+                    <default>false</default>
+                    <label>NMP</label>
+                </value>
+                <value>
+                    <fullName>OCA</fullName>
+                    <default>false</default>
+                    <label>OCA</label>
+                </value>
+                <value>
+                    <fullName>OTHER</fullName>
+                    <default>false</default>
+                    <label>OTHER</label>
+                </value>
+                <value>
+                    <fullName>PDU</fullName>
+                    <default>false</default>
+                    <label>PDU</label>
+                </value>
+                <value>
+                    <fullName>PSC</fullName>
+                    <default>false</default>
+                    <label>PSC</label>
+                </value>
+                <value>
+                    <fullName>PS Shelf</fullName>
+                    <default>false</default>
+                    <label>PS Shelf</label>
+                </value>
+                <value>
+                    <fullName>PSU</fullName>
+                    <default>false</default>
+                    <label>PSU</label>
+                </value>
+                <value>
+                    <fullName>PXP</fullName>
+                    <default>false</default>
+                    <label>PXP</label>
+                </value>
+                <value>
+                    <fullName>SA Card</fullName>
+                    <default>false</default>
+                    <label>SA Card</label>
+                </value>
+                <value>
+                    <fullName>Ship Kit</fullName>
+                    <default>false</default>
+                    <label>Ship Kit</label>
+                </value>
+                <value>
+                    <fullName>Speedbridge</fullName>
+                    <default>false</default>
+                    <label>Speedbridge</label>
+                </value>
+                <value>
+                    <fullName>System</fullName>
+                    <default>false</default>
+                    <label>System</label>
+                </value>
+                <value>
+                    <fullName>System Level</fullName>
+                    <default>false</default>
+                    <label>System Level</label>
+                </value>
+                <value>
+                    <fullName>TIB</fullName>
+                    <default>false</default>
+                    <label>TIB</label>
+                </value>
+                <value>
+                    <fullName>UMC</fullName>
+                    <default>false</default>
+                    <label>UMC</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Host_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMXC__Serial_Number__r.Host_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Host Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IP_SN_In__c</fullName>
+        <description>Installed Product Serial Number In</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Installed Product Serial Number In</inlineHelpText>
+        <label>SN IN</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IP_SN_Out__c</fullName>
+        <description>Installed Product Serial Number Out</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Installed Product Serial Number Out</inlineHelpText>
+        <label>SN Out</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Installed_Product_SN__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMXC__Serial_Number__r.SVMXC__Serial_Lot_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Installed Product SN</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Master_SN__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( SVMXC__Serial_Number__c&lt;&gt; null &amp;&amp; SVMXC__Serial_Number__r.SVMXC__Top_Level__c&lt;&gt;null, SVMXC__Serial_Number__r.SVMXC__Top_Level__r.SVMXC__Serial_Lot_Number__c,SVMXC__Serial_Number__r.SVMXC__Serial_Lot_Number__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Master SN</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Serial_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>New Serial Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Old_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Old Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Parts Order Lines (Old Product)</relationshipLabel>
+        <relationshipName>Parts_Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Old_Serial_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Old Serial Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other__c</fullName>
+        <externalId>false</externalId>
+        <label>Other</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>P_N_Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMXC__Product__r.Description</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>P/N Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parts_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Parts Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Parts_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Parts Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Serialized Products</fullName>
+                    <default>false</default>
+                    <label>Serialized Products</label>
+                </value>
+                <value>
+                    <fullName>Non Serialized Products</fullName>
+                    <default>false</default>
+                    <label>Non Serialized Products</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Patch_Level__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMXC__Serial_Number__r.Patch_Level__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Patch Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Problem_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Problem Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Product_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMXC__Product__r.ProductCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMXC__Product__r.Description</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMXC__Product__r.Product_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RMA_Failure_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>RMA Failure Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Resolution_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Power cycle</fullName>
+                    <default>false</default>
+                    <label>Power cycle</label>
+                </value>
+                <value>
+                    <fullName>NCC Reboot</fullName>
+                    <default>false</default>
+                    <label>NCC Reboot</label>
+                </value>
+                <value>
+                    <fullName>Configmgr reset</fullName>
+                    <default>false</default>
+                    <label>Configmgr reset</label>
+                </value>
+                <value>
+                    <fullName>FW upgrade</fullName>
+                    <default>false</default>
+                    <label>FW upgrade</label>
+                </value>
+                <value>
+                    <fullName>Patch/Hotfix</fullName>
+                    <default>false</default>
+                    <label>Patch/Hotfix</label>
+                </value>
+                <value>
+                    <fullName>Replaced</fullName>
+                    <default>false</default>
+                    <label>Replaced</label>
+                </value>
+                <value>
+                    <fullName>Reseated</fullName>
+                    <default>false</default>
+                    <label>Reseated</label>
+                </value>
+                <value>
+                    <fullName>Repaired</fullName>
+                    <default>false</default>
+                    <label>Repaired</label>
+                </value>
+                <value>
+                    <fullName>Environment Problem Resolved (cooling / power)</fullName>
+                    <default>false</default>
+                    <label>Environment Problem Resolved (cooling / power)</label>
+                </value>
+                <value>
+                    <fullName>Reinstall</fullName>
+                    <default>false</default>
+                    <label>Reinstall</label>
+                </value>
+                <value>
+                    <fullName>Replace Host</fullName>
+                    <default>false</default>
+                    <label>Replace Host</label>
+                </value>
+                <value>
+                    <fullName>Not reproducible</fullName>
+                    <default>false</default>
+                    <label>Not reproducible</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+                <value>
+                    <fullName>Markout</fullName>
+                    <default>false</default>
+                    <label>Markout</label>
+                </value>
+                <value>
+                    <fullName>FPGA Reload</fullName>
+                    <default>false</default>
+                    <label>FPGA Reload</label>
+                </value>
+                <value>
+                    <fullName>Unresolved</fullName>
+                    <default>false</default>
+                    <label>Unresolved</label>
+                </value>
+                <value>
+                    <fullName>Host Reboot</fullName>
+                    <default>false</default>
+                    <label>Host Reboot</label>
+                </value>
+                <value>
+                    <fullName>Reimaged</fullName>
+                    <default>false</default>
+                    <label>Reimaged</label>
+                </value>
+                <value>
+                    <fullName>Upgraded</fullName>
+                    <default>false</default>
+                    <label>Upgraded</label>
+                </value>
+                <value>
+                    <fullName>Configured</fullName>
+                    <default>false</default>
+                    <label>Configured</label>
+                </value>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+                <value>
+                    <fullName>re-calibrated coolant level sensor</fullName>
+                    <default>false</default>
+                    <label>re-calibrated coolant level sensor</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SMVX_Failure_Analysis_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Is a failure analysis required?</description>
+        <externalId>false</externalId>
+        <label>Failure Analysis Required?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SMVX_Non_Conformence_Catergory__c</fullName>
+        <externalId>false</externalId>
+        <label>Non-Conformence Catergory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cosmetic</fullName>
+                    <default>false</default>
+                    <label>Cosmetic</label>
+                </value>
+                <value>
+                    <fullName>Functional</fullName>
+                    <default>false</default>
+                    <label>Functional</label>
+                </value>
+                <value>
+                    <fullName>Nonfunctional</fullName>
+                    <default>false</default>
+                    <label>Nonfunctional</label>
+                </value>
+                <value>
+                    <fullName>Mechanical</fullName>
+                    <default>false</default>
+                    <label>Mechanical</label>
+                </value>
+                <value>
+                    <fullName>Damage</fullName>
+                    <default>false</default>
+                    <label>Damage</label>
+                </value>
+                <value>
+                    <fullName>Wrong Part</fullName>
+                    <default>false</default>
+                    <label>Wrong Part</label>
+                </value>
+                <value>
+                    <fullName>Labeling</fullName>
+                    <default>false</default>
+                    <label>Labeling</label>
+                </value>
+                <value>
+                    <fullName>Programming</fullName>
+                    <default>false</default>
+                    <label>Programming</label>
+                </value>
+                <value>
+                    <fullName>test2</fullName>
+                    <default>false</default>
+                    <label>test2</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Actual_Quantity2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Actual number of units shipped/received vs. expected quantity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Actual number of units shipped/received vs. expected quantity</inlineHelpText>
+        <label>Actual Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Actual_Receipt_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date on which the product was actually received</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date on which the product was actually received</inlineHelpText>
+        <label>Actual Receipt Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Actual_Ship_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date on which the product was actually shipped</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date on which the product was actually shipped</inlineHelpText>
+        <label>Actual Ship Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Canceled_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>User that canceled this shipment line. This is set automatically when a user cancels the shipment line.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User that canceled this shipment line. This is set automatically when a user cancels the shipment line.</inlineHelpText>
+        <label>Canceled By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>RMA_Shipment_Line_Canceled_By</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Canceled_On__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date/time when this shipment line was canceled. This is set automatically when a user cancels the shipment line.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date/time when this shipment line was canceled. This is set automatically when a user cancels the shipment line.</inlineHelpText>
+        <label>Canceled On</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Case_Line__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Reference to the originating Case Line record</description>
+        <externalId>false</externalId>
+        <label>Case Line</label>
+        <referenceTo>SVMXC__Case_Line__c</referenceTo>
+        <relationshipLabel>Parts Order Lines</relationshipLabel>
+        <relationshipName>Parts_Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Closed_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>User that closed this RMA/shipment order.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>User that closed this RMA/shipment order.</inlineHelpText>
+        <label>Closed By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>RMA_Shipment_Line_Closed_By</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Closed_On__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date/time when this RMA/Shipment line was closed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date/time when this RMA/Shipment line was closed.</inlineHelpText>
+        <label>Closed On</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Delivered_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>User that delivered the product</description>
+        <externalId>false</externalId>
+        <label>Delivered By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Parts_Order_Lines1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Delivered_On__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date/time when the product was delivered</description>
+        <externalId>false</externalId>
+        <label>Delivered On</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Delivered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if the product has been delivered or not</description>
+        <externalId>false</externalId>
+        <label>Delivered?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Delivery_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Delivery Location</label>
+        <referenceTo>SVMXC__Site__c</referenceTo>
+        <relationshipLabel>Parts Order Lines (Delivery Location)</relationshipLabel>
+        <relationshipName>Parts_Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Discount_Percentage__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Percentage discount to be applied on the Parts Order Line Price</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Percentage discount to be applied on the Parts Order Line Price</inlineHelpText>
+        <label>Discount %</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Disposition_Instructions__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Any special handling notes for product disposition</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Any special handling notes for product disposition</inlineHelpText>
+        <label>Disposition Instructions</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Disposition__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Type of action to be taken by receiving department when the product arrives</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of action to be taken by receiving department when the product arrives</inlineHelpText>
+        <label>Disposition</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>HFE</fullName>
+                    <default>false</default>
+                    <label>HFE</label>
+                </value>
+                <value>
+                    <fullName>Retest &amp; Restock</fullName>
+                    <default>false</default>
+                    <label>Retest &amp; Restock</label>
+                </value>
+                <value>
+                    <fullName>Part Remains Onsite as Spare</fullName>
+                    <default>false</default>
+                    <label>Part Remains Onsite as Spare</label>
+                </value>
+                <value>
+                    <fullName>Part Swap</fullName>
+                    <default>false</default>
+                    <label>Part Swap</label>
+                </value>
+                <value>
+                    <fullName>Scrap</fullName>
+                    <default>false</default>
+                    <label>Scrap</label>
+                </value>
+                <value>
+                    <fullName>Repair</fullName>
+                    <default>false</default>
+                    <label>Repair</label>
+                </value>
+                <value>
+                    <fullName>Salvage</fullName>
+                    <default>false</default>
+                    <label>Salvage</label>
+                </value>
+                <value>
+                    <fullName>Restock</fullName>
+                    <default>false</default>
+                    <label>Restock</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Entitled_Exchange_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Entitled Exchange Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Advance Exchange</fullName>
+                    <default>false</default>
+                    <label>Advance Exchange</label>
+                </value>
+                <value>
+                    <fullName>Return Exchange</fullName>
+                    <default>false</default>
+                    <label>Return Exchange</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Entitlement_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Entitlement Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Entitled To Warranty</fullName>
+                    <default>false</default>
+                    <label>Entitled To Warranty</label>
+                </value>
+                <value>
+                    <fullName>Not Entitled</fullName>
+                    <default>false</default>
+                    <label>Not Entitled</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Expected_Condition__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Condition of the product returned</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Condition of the product returned</inlineHelpText>
+        <label>Expected Condition</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Good/Working</fullName>
+                    <default>false</default>
+                    <label>Good/Working</label>
+                </value>
+                <value>
+                    <fullName>Defective</fullName>
+                    <default>false</default>
+                    <label>Defective</label>
+                </value>
+                <value>
+                    <fullName>Shipping Damage</fullName>
+                    <default>false</default>
+                    <label>Shipping Damage</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Expected_Quantity2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Number of products returned. Usually 1 for serialized products</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of products returned. Usually 1 for serialized products</inlineHelpText>
+        <label>Expected Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Expected_Receipt_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date on which the product is expected to be received at the depot/factory/warehouse</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date on which the product is expected to be received at the depot/factory/warehouse</inlineHelpText>
+        <label>Expected Receipt Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Expected_Ship_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date on which the product is expected to be shipped to the customer/field location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date on which the product is expected to be shipped to the customer/field location</inlineHelpText>
+        <label>Expected Ship Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Fulfillment_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Fulfillment Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Line_Price2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Price for Line Item.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Price for Line Item.</inlineHelpText>
+        <label>Line Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Line_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Current status of the RMA/Shipment line.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current status of the RMA/Shipment line.</inlineHelpText>
+        <label>Line Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>true</default>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Processing</fullName>
+                    <default>false</default>
+                    <label>Processing</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Canceled</fullName>
+                    <default>false</default>
+                    <label>Canceled</label>
+                </value>
+                <value>
+                    <fullName>Picked</fullName>
+                    <default>false</default>
+                    <label>Picked</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Line_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Internal line type of the RMA/Shipment line. Not displayed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Internal line type of the RMA/Shipment line. Not displayed.</inlineHelpText>
+        <label>Line Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Inbound (RMA)</fullName>
+                    <default>false</default>
+                    <label>Inbound (RMA)</label>
+                </value>
+                <value>
+                    <fullName>Outbound (Shipment)</fullName>
+                    <default>false</default>
+                    <label>Outbound (Shipment)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Master_Order_Line__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Master Order Line</label>
+        <referenceTo>SVMXC__RMA_Shipment_Line__c</referenceTo>
+        <relationshipLabel>Parts Order Lines</relationshipLabel>
+        <relationshipName>Parts_Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Packing_Instructions__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Any special handling notes for shipping department</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Any special handling notes for shipping department</inlineHelpText>
+        <label>Packing Instructions</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Parts_Request_Line__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The ServiceMax parts request line for which this shipment line was created.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The ServiceMax parts request line for which this shipment line was created.</inlineHelpText>
+        <label>Parts Request Line</label>
+        <referenceTo>SVMXC__Parts_Request_Line__c</referenceTo>
+        <relationshipName>RMA_Shipment_Line</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Picked_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>User that picked the product for shipment</description>
+        <externalId>false</externalId>
+        <label>Picked By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Parts_Order_Lines2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Picked_On__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date/time when the product was picked for shipment</description>
+        <externalId>false</externalId>
+        <label>Picked On</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Picked_Qty__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Quantity picked for shipment</description>
+        <externalId>false</externalId>
+        <label>Picked Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Picked__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if the product has been picked for shipment or not</description>
+        <externalId>false</externalId>
+        <label>Picked?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Posted_To_Inventory__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Flag Indicates if this RMA/Shipment line has been posted to inventory or not.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Flag Indicates if this RMA/Shipment line has been posted to inventory or not.</inlineHelpText>
+        <label>Posted To Inventory</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Name of the product to be shipped/received. Is a lookup to an existing salesforce product record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the product to be shipped/received. Is a lookup to an existing salesforce product record</inlineHelpText>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipName>RMA_Shipment_Line</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__RMA_Shipment_Order__c</fullName>
+        <deprecated>false</deprecated>
+        <description>RMA/Shipment number. Is a lookup to an existing RMA/Shipment record in ServiceMax</description>
+        <externalId>false</externalId>
+        <inlineHelpText>RMA/Shipment number. Is a lookup to an existing RMA/Shipment record in ServiceMax</inlineHelpText>
+        <label>Parts Order</label>
+        <referenceTo>SVMXC__RMA_Shipment_Order__c</referenceTo>
+        <relationshipName>RMA_Shipment_Line</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Received_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>User that received the product</description>
+        <externalId>false</externalId>
+        <label>Received By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Parts_Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Received_On__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date/time when the product was received</description>
+        <externalId>false</externalId>
+        <label>Received On</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if the product has been received or not</description>
+        <externalId>false</externalId>
+        <label>Received?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Reconciliation_Action__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Action performed by the user to reconcile an unexpected product or serial number</description>
+        <externalId>false</externalId>
+        <label>Reconciliation Action</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Add</fullName>
+                    <default>false</default>
+                    <label>Add</label>
+                </value>
+                <value>
+                    <fullName>Remove</fullName>
+                    <default>false</default>
+                    <label>Remove</label>
+                </value>
+                <value>
+                    <fullName>Hold</fullName>
+                    <default>false</default>
+                    <label>Hold</label>
+                </value>
+                <value>
+                    <fullName>Replace</fullName>
+                    <default>false</default>
+                    <label>Replace</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Returned_Condition__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Condition of the product when received (As expected or otherwise)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Condition of the product when received (As expected or otherwise)</inlineHelpText>
+        <label>Returned Condition</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>As Expected</fullName>
+                    <default>false</default>
+                    <label>As Expected</label>
+                </value>
+                <value>
+                    <fullName>Shipping Damage</fullName>
+                    <default>false</default>
+                    <label>Shipping Damage</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Route_Card__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Route Card</label>
+        <referenceTo>SVMXC__Route_Card__c</referenceTo>
+        <relationshipLabel>Parts Order Lines</relationshipLabel>
+        <relationshipName>Route_Card</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Route_Stop__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Route Stop</label>
+        <referenceTo>SVMXC__Route_Stop__c</referenceTo>
+        <relationshipLabel>Parts Order Lines</relationshipLabel>
+        <relationshipName>Parts_Order_Lines</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Sales_Order_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Sales order number for this shipment if available.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sales order number for this shipment if available.</inlineHelpText>
+        <label>Sales Order Number</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Select__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Field to bind checkbox in List of Parts Order Line records on Visualforce page with controller.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field to bind checkbox in List of Parts Order Line records on Visualforce page with controller.</inlineHelpText>
+        <label>Select</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Serial_Number_List__c</fullName>
+        <deprecated>false</deprecated>
+        <description>List of serial numbers expected/received/shipped separated by a configurable delimiter</description>
+        <externalId>false</externalId>
+        <label>Serial Number</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Serial_Number__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>ID of the installed product returned/shipped. Is a lookup to an existing installed product record in ServiceMax</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of the installed product returned/shipped. Is a lookup to an existing installed product record in ServiceMax</inlineHelpText>
+        <label>IB Serial Number</label>
+        <referenceTo>SVMXC__Installed_Product__c</referenceTo>
+        <relationshipLabel>Parts Order Lines</relationshipLabel>
+        <relationshipName>RMA_Shipment_Line</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Service_Contract_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>SVMXC__Serial_Number__r.SVMXC__Service_Contract_End_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Contract End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Service_Contract_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>SVMXC__Serial_Number__r.SVMXC__Service_Contract_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Contract Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Service_Engineer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Name of the service engineer associated with this RMA/shipment order. Is a lookup to an existing salesforce user record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of the service engineer associated with this RMA/shipment order. Is a lookup to an existing salesforce user record</inlineHelpText>
+        <label>Service Engineer</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>RMA_Shipment_Line</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Service_Order_Line__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The ServiceMax service order parts request line for which this shipment line was created.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The ServiceMax service order parts request line for which this shipment line was created.</inlineHelpText>
+        <label>Work Details</label>
+        <referenceTo>SVMXC__Service_Order_Line__c</referenceTo>
+        <relationshipName>RMA_Shipment_Line</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Service_Order__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Work Order</label>
+        <referenceTo>SVMXC__Service_Order__c</referenceTo>
+        <relationshipLabel>Parts Order Lines</relationshipLabel>
+        <relationshipName>RMA_Shipment_Line</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Ship_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The actual site/location where the product was shipped/received. Is a lookup to an existing site record</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The actual site/location where the product was shipped/received. Is a lookup to an existing site record</inlineHelpText>
+        <label>Return/Ship Location</label>
+        <referenceTo>SVMXC__Site__c</referenceTo>
+        <relationshipName>RMA_Shipment_Line</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Shipped_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>User that shipped the product</description>
+        <externalId>false</externalId>
+        <label>Shipped By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Parts_Order_Lines3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Shipped_On__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Date/time when the product was shipped</description>
+        <externalId>false</externalId>
+        <label>Shipped On</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Shipped__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if the product has been shipped or not</description>
+        <externalId>false</externalId>
+        <label>Shipped?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Total_Line_Price2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Total Line Price</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL( SVMXC__Line_Status__c ,&apos;Completed&apos;), (SVMXC__Actual_Quantity2__c * SVMXC__Line_Price2__c) - ( SVMXC__Discount_Percentage__c * (SVMXC__Actual_Quantity2__c * SVMXC__Line_Price2__c)), IF(ISPICKVAL( SVMXC__Line_Status__c ,&apos;Canceled&apos;), 0,(SVMXC__Expected_Quantity2__c * SVMXC__Line_Price2__c) - ( SVMXC__Discount_Percentage__c * (SVMXC__Expected_Quantity2__c * SVMXC__Line_Price2__c))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total Line Price</inlineHelpText>
+        <label>Total Line Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Transaction_Results__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Success or error message as a result of a transaction. This message is derived from executing a defined process in SFM API Configuration.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Success or error message as a result of a transaction. This message is derived from executing a defined process in SFM API Configuration.</inlineHelpText>
+        <label>Transaction Results</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Use_Price_From_Pricebook__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Leave this box checked if you want the price to be filled automatically from the default price book. If you like to enter a price manually for this part, simply uncheck this box.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Leave this box checked if you want the price to be filled automatically from the default price book. If you like to enter a price manually for this part, simply uncheck this box.</inlineHelpText>
+        <label>Use Price From Pricebook</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Warehouse__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name/number of the warehouse from which the products will be shipped</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name/number of the warehouse from which the products will be shipped</inlineHelpText>
+        <label>Warehouse</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Warranty_End_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>SVMXC__Serial_Number__r.SVMXC__Warranty_End_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Warranty End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Warranty_Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>SVMXC__Serial_Number__r.SVMXC__Warranty_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Warranty Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SVMXC__Work_Order_Created__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates if a work order was created upon receipt/delivery</description>
+        <externalId>false</externalId>
+        <label>Work Order Created?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SVMX_Failed_Date__c</fullName>
+        <description>Date that the part failed</description>
+        <externalId>false</externalId>
+        <label>Failed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SVMX_MRB_Disposition_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>MRB Disposition Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SVMX_MRB_Disposition__c</fullName>
+        <externalId>false</externalId>
+        <label>MRB Disposition</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>RTV</fullName>
+                    <default>false</default>
+                    <label>RTV</label>
+                </value>
+                <value>
+                    <fullName>Use As Is</fullName>
+                    <default>false</default>
+                    <label>Use As Is</label>
+                </value>
+                <value>
+                    <fullName>On-hold</fullName>
+                    <default>false</default>
+                    <label>On-hold</label>
+                </value>
+                <value>
+                    <fullName>Rework</fullName>
+                    <default>false</default>
+                    <label>Rework</label>
+                </value>
+                <value>
+                    <fullName>Scrap</fullName>
+                    <default>false</default>
+                    <label>Scrap</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SVMX_Material_Source__c</fullName>
+        <description>Source that materials were obtained</description>
+        <externalId>false</externalId>
+        <label>Material Source</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Customer Return</fullName>
+                    <default>false</default>
+                    <label>Customer Return</label>
+                </value>
+                <value>
+                    <fullName>Supplier Issue</fullName>
+                    <default>false</default>
+                    <label>Supplier Issue</label>
+                </value>
+                <value>
+                    <fullName>Consignment Return</fullName>
+                    <default>false</default>
+                    <label>Consignment Return</label>
+                </value>
+                <value>
+                    <fullName>Cadence MFG</fullName>
+                    <default>false</default>
+                    <label>Cadence MFG</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Serial_Lot_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMXC__Serial_Number__r.SVMXC__Serial_Lot_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Serial/Lot Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Shipping_Notes__c</fullName>
+        <externalId>false</externalId>
+        <formula>SVMXC__RMA_Shipment_Order__r.Shipping_Notes__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Shipping Notes</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>System_Level__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(SVMXC__Serial_Number__r.System_Level__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>System Level</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>non_IP_SN_In__c</fullName>
+        <description>Non-Installed Product Serial Number In</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Non-Installed Product Serial Number In</inlineHelpText>
+        <label>non IP SN In</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>non_IP_SN_Out__c</fullName>
+        <description>non-Installed Product Serial Number Out</description>
+        <externalId>false</externalId>
+        <inlineHelpText>non-Installed Product Serial Number Out</inlineHelpText>
+        <label>non IP SN Out</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Parts Order Line</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>LN-{00000000}</displayFormat>
+        <label>Line Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Parts Order Lines</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>SVMXC__RMA</fullName>
+        <active>true</active>
+        <label>RMA</label>
+        <picklistValues>
+            <picklist>Configuration_File_Sent__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Failure_Code_Second_Level__c</picklist>
+            <values>
+                <fullName>Board Level</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Parts_Type__c</picklist>
+            <values>
+                <fullName>Non Serialized Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serialized Products</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Disposition__c</picklist>
+            <values>
+                <fullName>HFE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Part Remains Onsite as Spare</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Part Swap</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retest %26 Restock</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Entitled_Exchange_Type__c</picklist>
+            <values>
+                <fullName>Advance Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return Exchange</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Entitlement_Status__c</picklist>
+            <values>
+                <fullName>Entitled To Warranty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Entitled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Expected_Condition__c</picklist>
+            <values>
+                <fullName>Defective</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Good%2FWorking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping Damage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Line_Status__c</picklist>
+            <values>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Picked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Processing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Line_Type__c</picklist>
+            <values>
+                <fullName>Inbound %28RMA%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound %28Shipment%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Reconciliation_Action__c</picklist>
+            <values>
+                <fullName>Add</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Remove</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replace</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Returned_Condition__c</picklist>
+            <values>
+                <fullName>As Expected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping Damage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>SVMXC__Shipment</fullName>
+        <active>true</active>
+        <label>Shipment</label>
+        <picklistValues>
+            <picklist>Configuration_File_Sent__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Parts_Type__c</picklist>
+            <values>
+                <fullName>Non Serialized Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Serialized Products</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Disposition__c</picklist>
+            <values>
+                <fullName>HFE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retest %26 Restock</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Entitled_Exchange_Type__c</picklist>
+            <values>
+                <fullName>Advance Exchange</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Return Exchange</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Entitlement_Status__c</picklist>
+            <values>
+                <fullName>Entitled To Warranty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Entitled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Expected_Condition__c</picklist>
+            <values>
+                <fullName>Defective</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Good%2FWorking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping Damage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Line_Status__c</picklist>
+            <values>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Picked</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Processing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Line_Type__c</picklist>
+            <values>
+                <fullName>Inbound %28RMA%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Outbound %28Shipment%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Reconciliation_Action__c</picklist>
+            <values>
+                <fullName>Add</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hold</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Remove</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Replace</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>SVMXC__Returned_Condition__c</picklist>
+            <values>
+                <fullName>As Expected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping Damage</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

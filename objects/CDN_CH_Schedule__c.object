@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>AUC_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>AUC Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Conflicting_Agreements_of_Consultant__c</fullName>
+        <description>Identify all conflicting or potentially conflicting agreements or obligations of Consultant and the nature of the conflict involved: (write NONE if not applicable)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identify all conflicting or potentially conflicting agreements or obligations of Consultant and the nature of the conflict involved: (write NONE if not applicable)</inlineHelpText>
+        <label>Conflicting Agreements of Consultant</label>
+        <length>131072</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Consultant_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Consultant Cost</label>
+        <summarizedField>CDN_CH_Consultant__c.Cost__c</summarizedField>
+        <summaryForeignKey>CDN_CH_Consultant__c.Schedule__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Consulting_Fees_and_Payment_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Consulting Fees and Payment Terms</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Cost_Center__c</fullName>
+        <externalId>false</externalId>
+        <label>Cost Center</label>
+        <picklist>
+            <picklistValues>
+                <fullName>40143</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>41478</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>41490</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>41880</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>41955</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>true</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Duration__c</fullName>
+        <description>Duration of this schedule in days</description>
+        <externalId>false</externalId>
+        <formula>End_Date__c - Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Duration of this schedule in days</inlineHelpText>
+        <label>Duration</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Duties_of_Consultant__c</fullName>
+        <description>Duties and/or Deliverables of Consultant (Provide attachments as necessary)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Duties and/or Deliverables of Consultant (Provide attachments as necessary)</inlineHelpText>
+        <label>Duties of Consultant</label>
+        <length>131072</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Echosign_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Echosign Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Sent</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Signed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ready to Sign</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Out For Signatures</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Expected_days_of_consulting_month__c</fullName>
+        <defaultValue>20</defaultValue>
+        <description>Expected days of consulting to be performed per month</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Expected days of consulting to be performed per month</inlineHelpText>
+        <label>Expected days of consulting/month</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IT_Approver_Level_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>IT Approver Level 1</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Schedules</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IT_Approver_Level_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>IT Approver Level 2</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Schedules1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IT_Approver_Level_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>IT Approver Level 3</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Schedules2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MCCA_Number__c</fullName>
+        <externalId>true</externalId>
+        <label>MCCA Number</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Dollar_Value_of_Schedule__c</fullName>
+        <description>The dollar value of this Consulting Schedule is not to exceed this</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The dollar value of this Consulting Schedule is not to exceed this</inlineHelpText>
+        <label>Max Dollar Value of Schedule</label>
+        <precision>11</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>On_Behalf_Of__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Select the user on whose behalf this Schedule is being filed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the user on whose behalf this Schedule is being filed</inlineHelpText>
+        <label>On Behalf Of</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Schedules4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PO_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>PO Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Previous_Schedule_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Previous_Schedule__r.Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Previous Schedule Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Schedule__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>If this is a renewal, select the previous schedule</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this is a renewal, select the previous schedule</inlineHelpText>
+        <label>Previous Schedule</label>
+        <referenceTo>CDN_CH_Schedule__c</referenceTo>
+        <relationshipLabel>Schedules</relationshipLabel>
+        <relationshipName>Schedules</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Consultant_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Vendor Contact Address</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Primary_Consultant_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Vendor Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Consultant_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Vendor Contact Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Project_Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Project Manager to whom Consultant reports</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Project Manager to whom Consultant reports</inlineHelpText>
+        <label>Project Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Schedules3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Renewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Renewal</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SOW_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>SOW Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sent_to_HR_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Sent to HR Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Sent_to_HR__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sent to HR</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sent_to_Infosec_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Sent to Infosec Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Sent_to_Infosec__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sent to Infosec</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sent_to_Vendor_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Sent to Vendor Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Sent_to_Vendor__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Sent to Vendor</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Signer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Signer</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Schedules5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <description>Consulting Start Date for this Schedule</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Consulting Start Date for this Schedule</inlineHelpText>
+        <label>Start Date</label>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>01 - Request</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>02 - Pending IT Manager Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>03 - Approved by IT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>04 - Out For GD Signature</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>05 - Signed by GD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>06 - Pending Vendor Signature</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>07 - Signed By Vendor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>08 - Sent to HR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>09 - Sent to Infosec</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - In Effect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11 - Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12 - Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13 - Expired</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Vendor_Name__c</fullName>
+        <description>Company Name</description>
+        <externalId>false</externalId>
+        <label>Vendor Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Schedule</label>
+    <nameField>
+        <displayFormat>SCH-{0000}</displayFormat>
+        <label>Schedule Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Schedules</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>End_Date_cannot_be_earlier_than_Start_Da</fullName>
+        <active>true</active>
+        <description>End Date cannot be earlier than Start Date</description>
+        <errorConditionFormula>End_Date__c  &lt;  Start_Date__c</errorConditionFormula>
+        <errorDisplayField>End_Date__c</errorDisplayField>
+        <errorMessage>End Date cannot be earlier than Start Date</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Generate_PDF_2</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate PDF</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var po = &quot;{!CDN_CH_Schedule__c.PO_Number__c}&quot;;
+var status = &quot;{!CDN_CH_Schedule__c.Status__c}&quot;;
+ 
+
+if (status==&quot;03 - Approved by IT&quot;)
+{ 
+window.location.replace(&apos;/apex/SchedulePrintableVersion?id={!CDN_CH_Schedule__c.Id}&apos;);
+} 
+else 
+{ 
+alert(&quot;Before generating the PDF, the Schedule status must be 03 - Approved by IT&quot;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>In_Effect</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>In Effect</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)}
+window.location.replace(&apos;/apex/ScheduleInEffect?id={!CDN_CH_Schedule__c.Id}&apos;);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Renew_Schedule</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Renew Schedule</masterLabel>
+        <openType>sidebar</openType>
+        <page>RenewSchedulePage</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_For_Signatures</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send For Signatures</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)} 
+
+var po = &quot;{!CDN_CH_Schedule__c.PO_Number__c}&quot;; 
+
+if (po.length &gt; 0) 
+{ 
+window.location.replace(&apos;/apex/SendScheduleToVendor?id={!CDN_CH_Schedule__c.Id}&apos;); 
+} 
+else 
+{ 
+alert(&quot;The PO Number and the AUC number must be set&quot;); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_HR_Email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send HR Email</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/ScheduleEmailer?id={!CDN_CH_Schedule__c.Id}&amp;to=HR</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_Infosec_Email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send Infosec Email</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/ScheduleEmailer?id={!CDN_CH_Schedule__c.Id}&amp;to=Infosec</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>BP_Account__c</fullName>
+        <externalId>false</externalId>
+        <label>BP Account</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BP_Keyprefix__c</fullName>
+        <externalId>false</externalId>
+        <label>BP Keyprefix</label>
+        <length>3</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BP_Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>BP Opportunity</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCR_CS_Engineer__c</fullName>
+        <externalId>false</externalId>
+        <label>CCR CS Engineer</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCR_Case_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>CCR Case Id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCR_Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>CCR Contact Name</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCR_Contact_Site__c</fullName>
+        <externalId>false</externalId>
+        <label>CCR Contact Site</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCR_Keyprefix__c</fullName>
+        <externalId>false</externalId>
+        <label>CCR Keyprefix</label>
+        <length>3</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCR_Parent_Account__c</fullName>
+        <externalId>false</externalId>
+        <label>CCR Parent Account</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Field Id Hierarchy CS</label>
+    <visibility>Protected</visibility>
+</CustomObject>

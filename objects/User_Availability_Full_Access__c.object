@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Determines if user can edit availability of agents with the User Availability page.</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Edit_All_Users__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Determines if user can edit availability of agents with the User Availability page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines if user can edit availability of agents with the User Availability page.</inlineHelpText>
+        <label>Edit All Users</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>User Availability Full Access</label>
+    <visibility>Protected</visibility>
+</CustomObject>

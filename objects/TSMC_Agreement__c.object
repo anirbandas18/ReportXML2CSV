@@ -1,0 +1,1340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>object which will store all TSMC approval agreements.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Approved_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approved By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>TSMC_Agreements2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approved_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Approved On</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Completed_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Completed By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>TSMC_Agreements4</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Completed_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Completed On</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Detailed_Job_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Detailed Job Description</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EDA_Tool_IP_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>EDA Tool/IP Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employee_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employee_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(NOT(ISBLANK(User__c)) , User__r.IsActive), 
+&quot;Active&quot;,
+IF(AND(NOT(ISBLANK(User__c)) , NOT(User__r.IsActive)),
+     &quot;Inactive&quot;, &quot;&quot;)
+)</formula>
+        <label>Employee Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employee_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Employee Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Employee</fullName>
+                    <default>false</default>
+                    <label>Employee</label>
+                </value>
+                <value>
+                    <fullName>Contractor</fullName>
+                    <default>false</default>
+                    <label>Contractor</label>
+                </value>
+                <value>
+                    <fullName>Intern</fullName>
+                    <default>false</default>
+                    <label>Intern</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Field_Sales_AE__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>For EDA Purpose Request at 7nm, N7+, 12nm, 5nm only.</inlineHelpText>
+        <label>Field(Sales/AE)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>IT_Policy__c</fullName>
+        <externalId>false</externalId>
+        <label>IT Policy</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Job_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Job Title</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>TSMC_Agreements6</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Office_Site__c</fullName>
+        <externalId>false</externalId>
+        <label>Physical Location</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Brazil</fullName>
+                    <default>false</default>
+                    <label>Brazil</label>
+                </value>
+                <value>
+                    <fullName>Canada</fullName>
+                    <default>false</default>
+                    <label>Canada</label>
+                </value>
+                <value>
+                    <fullName>China</fullName>
+                    <default>false</default>
+                    <label>China</label>
+                </value>
+                <value>
+                    <fullName>France</fullName>
+                    <default>false</default>
+                    <label>France</label>
+                </value>
+                <value>
+                    <fullName>Germany</fullName>
+                    <default>false</default>
+                    <label>Germany</label>
+                </value>
+                <value>
+                    <fullName>India</fullName>
+                    <default>false</default>
+                    <label>India</label>
+                </value>
+                <value>
+                    <fullName>Ireland</fullName>
+                    <default>false</default>
+                    <label>Ireland</label>
+                </value>
+                <value>
+                    <fullName>Israel</fullName>
+                    <default>false</default>
+                    <label>Israel</label>
+                </value>
+                <value>
+                    <fullName>Italy</fullName>
+                    <default>false</default>
+                    <label>Italy</label>
+                </value>
+                <value>
+                    <fullName>Japan</fullName>
+                    <default>false</default>
+                    <label>Japan</label>
+                </value>
+                <value>
+                    <fullName>Korea</fullName>
+                    <default>false</default>
+                    <label>Korea</label>
+                </value>
+                <value>
+                    <fullName>Netherlands</fullName>
+                    <default>false</default>
+                    <label>Netherlands</label>
+                </value>
+                <value>
+                    <fullName>Poland</fullName>
+                    <default>false</default>
+                    <label>Poland</label>
+                </value>
+                <value>
+                    <fullName>Russia</fullName>
+                    <default>false</default>
+                    <label>Russia</label>
+                </value>
+                <value>
+                    <fullName>Singapore</fullName>
+                    <default>false</default>
+                    <label>Singapore</label>
+                </value>
+                <value>
+                    <fullName>Sweden</fullName>
+                    <default>false</default>
+                    <label>Sweden</label>
+                </value>
+                <value>
+                    <fullName>Taiwan</fullName>
+                    <default>false</default>
+                    <label>Taiwan</label>
+                </value>
+                <value>
+                    <fullName>UK</fullName>
+                    <default>false</default>
+                    <label>UK</label>
+                </value>
+                <value>
+                    <fullName>US</fullName>
+                    <default>false</default>
+                    <label>US</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Permitted_Purpose__c</fullName>
+        <externalId>false</externalId>
+        <label>Permitted Purpose</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Process_Node__c</fullName>
+        <externalId>false</externalId>
+        <label>Process Node</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Purpose__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>7nm</fullName>
+                    <default>false</default>
+                    <label>7nm</label>
+                </value>
+                <value>
+                    <fullName>10nm</fullName>
+                    <default>false</default>
+                    <label>10nm</label>
+                </value>
+                <value>
+                    <fullName>12nm</fullName>
+                    <default>false</default>
+                    <label>12nm</label>
+                </value>
+                <value>
+                    <fullName>16nm</fullName>
+                    <default>false</default>
+                    <label>16nm</label>
+                </value>
+                <value>
+                    <fullName>N7+</fullName>
+                    <default>false</default>
+                    <label>N7+</label>
+                </value>
+                <value>
+                    <fullName>5nm</fullName>
+                    <default>false</default>
+                    <label>5nm</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>EDA</controllingFieldValue>
+                <controllingFieldValue>IP</controllingFieldValue>
+                <valueName>7nm</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>EDA</controllingFieldValue>
+                <controllingFieldValue>IP</controllingFieldValue>
+                <valueName>10nm</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>EDA</controllingFieldValue>
+                <valueName>12nm</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>EDA</controllingFieldValue>
+                <controllingFieldValue>IP</controllingFieldValue>
+                <valueName>16nm</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>EDA</controllingFieldValue>
+                <controllingFieldValue>IP</controllingFieldValue>
+                <valueName>N7+</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>EDA</controllingFieldValue>
+                <controllingFieldValue>IP</controllingFieldValue>
+                <valueName>5nm</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Purpose__c</fullName>
+        <externalId>false</externalId>
+        <label>Purpose</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>EDA</fullName>
+                    <default>false</default>
+                    <label>EDA</label>
+                </value>
+                <value>
+                    <fullName>IP</fullName>
+                    <default>false</default>
+                    <label>IP</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Reject_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Reject Comment</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Rejected_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Rejected By</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>TSMC_Agreements3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Rejected_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Rejected On</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Remark__c</fullName>
+        <externalId>false</externalId>
+        <label>Remark</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requestor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Requestor</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>TSMC_Agreements1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Signed_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Signed On</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Not Submitted</fullName>
+                    <default>true</default>
+                    <label>Not Submitted</label>
+                </value>
+                <value>
+                    <fullName>Pending For Approval</fullName>
+                    <default>false</default>
+                    <label>Pending For Approval</label>
+                </value>
+                <value>
+                    <fullName>Out For Signature</fullName>
+                    <default>false</default>
+                    <label>Out For Signature</label>
+                </value>
+                <value>
+                    <fullName>Fully Signed</fullName>
+                    <default>false</default>
+                    <label>Fully Signed</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Approved</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Submitted_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitted On</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Support_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Support Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Product development</fullName>
+                    <default>false</default>
+                    <label>Product development</label>
+                </value>
+                <value>
+                    <fullName>Customer support</fullName>
+                    <default>false</default>
+                    <label>Customer support</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 AND 2 AND 3</booleanFilter>
+            <filterItems>
+                <field>User.Employee_Type__c</field>
+                <operation>equals</operation>
+                <value>Employee</value>
+            </filterItems>
+            <filterItems>
+                <field>User.Employment_Status__c</field>
+                <operation>equals</operation>
+                <value>Available</value>
+            </filterItems>
+            <filterItems>
+                <field>User.IsActive</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>TSMC_Agreements</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>TSMC Request</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>User__c</columns>
+        <columns>Purpose__c</columns>
+        <columns>Process_Node__c</columns>
+        <columns>Employee_Status__c</columns>
+        <columns>Status__c</columns>
+        <columns>Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TSMC_Agreement__c.Detail</value>
+        </filters>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_TSMC_EDA_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>User__c</columns>
+        <columns>Purpose__c</columns>
+        <columns>Process_Node__c</columns>
+        <columns>Employee_Status__c</columns>
+        <columns>Status__c</columns>
+        <columns>Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Purpose__c</field>
+            <operation>equals</operation>
+            <value>EDA</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TSMC_Agreement__c.Detail</value>
+        </filters>
+        <label>All TSMC EDA Requests</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>TSMC_Admin</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>All_TSMC_IP_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>User__c</columns>
+        <columns>Purpose__c</columns>
+        <columns>Process_Node__c</columns>
+        <columns>Employee_Status__c</columns>
+        <columns>Status__c</columns>
+        <columns>Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TSMC_Agreement__c.Detail</value>
+        </filters>
+        <filters>
+            <field>Purpose__c</field>
+            <operation>equals</operation>
+            <value>IP</value>
+        </filters>
+        <label>All TSMC IP Requests</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>TSMC_Admin</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Completed</fullName>
+        <booleanFilter>1 AND 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>User__c</columns>
+        <columns>Purpose__c</columns>
+        <columns>Process_Node__c</columns>
+        <columns>Employee_Status__c</columns>
+        <columns>Status__c</columns>
+        <columns>Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TSMC_Agreement__c.Detail</value>
+        </filters>
+        <label>TSMC Requests Completed</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>TSMC_Admin</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TSMC_Request</fullName>
+        <columns>NAME</columns>
+        <columns>User__c</columns>
+        <columns>Purpose__c</columns>
+        <columns>Process_Node__c</columns>
+        <columns>Employee_Status__c</columns>
+        <columns>Status__c</columns>
+        <columns>Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TSMC_Agreement__c.Detail</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Pending For Approval</value>
+        </filters>
+        <label>TSMC Requests Pending For Approval</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>TSMC_Admin</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TSMC_Request_Out_For_Signatures</fullName>
+        <columns>NAME</columns>
+        <columns>User__c</columns>
+        <columns>Purpose__c</columns>
+        <columns>Process_Node__c</columns>
+        <columns>Employee_Status__c</columns>
+        <columns>Status__c</columns>
+        <columns>Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TSMC_Agreement__c.Detail</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Out For Signature</value>
+        </filters>
+        <label>TSMC Requests Out For Signature</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>TSMC_Admin</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TSMC_Requests</fullName>
+        <columns>NAME</columns>
+        <columns>User__c</columns>
+        <columns>Purpose__c</columns>
+        <columns>Process_Node__c</columns>
+        <columns>Employee_Status__c</columns>
+        <columns>Status__c</columns>
+        <columns>Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TSMC_Agreement__c.Detail</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Rejected</value>
+        </filters>
+        <label>TSMC Requests Rejected</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>TSMC_Admin</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TSMC_Requests_By_Employee_Email</fullName>
+        <columns>NAME</columns>
+        <columns>User__c</columns>
+        <columns>Purpose__c</columns>
+        <columns>Process_Node__c</columns>
+        <columns>Employee_Status__c</columns>
+        <columns>Status__c</columns>
+        <columns>Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TSMC_Agreement__c.Detail</value>
+        </filters>
+        <filters>
+            <field>Email__c</field>
+            <operation>equals</operation>
+            <value>xyz@cadence.com</value>
+        </filters>
+        <label>TSMC Requests By Employee Email</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>TSMC_Admin</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TSMC_Requests_Fully_Signed</fullName>
+        <columns>NAME</columns>
+        <columns>User__c</columns>
+        <columns>Purpose__c</columns>
+        <columns>Process_Node__c</columns>
+        <columns>Employee_Status__c</columns>
+        <columns>Status__c</columns>
+        <columns>Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TSMC_Agreement__c.Detail</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Fully Signed</value>
+        </filters>
+        <label>TSMC Requests Fully Signed</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>TSMC_Admin</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>TSMC_Requests_Not_Submitted</fullName>
+        <columns>NAME</columns>
+        <columns>User__c</columns>
+        <columns>Purpose__c</columns>
+        <columns>Process_Node__c</columns>
+        <columns>Employee_Status__c</columns>
+        <columns>Status__c</columns>
+        <columns>Comments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>TSMC_Agreement__c.Detail</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Not Submitted</value>
+        </filters>
+        <label>TSMC Requests Not Submitted</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>TSMC_Admin</group>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>TSMC-{00000000}</displayFormat>
+        <label>Acknowledgement Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>TSMC Request</pluralLabel>
+    <recordTypes>
+        <fullName>Detail</fullName>
+        <active>true</active>
+        <label>Detail</label>
+        <picklistValues>
+            <picklist>Employee_Type__c</picklist>
+            <values>
+                <fullName>Contractor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Employee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intern</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Field_Sales_AE__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Office_Site__c</picklist>
+            <values>
+                <fullName>Brazil</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>France</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ireland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Israel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Korea</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Netherlands</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Poland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Russia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sweden</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Taiwan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>US</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Process_Node__c</picklist>
+            <values>
+                <fullName>10nm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12nm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16nm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5nm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7nm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N7%2B</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Purpose__c</picklist>
+            <values>
+                <fullName>EDA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IP</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fully Signed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Submitted</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Out For Signature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pending For Approval</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Support_Type__c</picklist>
+            <values>
+                <fullName>Customer support</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product development</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>User__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Purpose__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Process_Node__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Employee_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Comments__c</customTabListAdditionalFields>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>Approve</listViewButtons>
+        <listViewButtons>Complete</listViewButtons>
+        <searchResultsAdditionalFields>Field_Sales_AE__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Process_Node__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Purpose__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>Approve</searchResultsCustomButtons>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Sales_AE_Field_EDA</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(($Profile.Name &lt;&gt; &apos;Integration&apos;), NOT(ISPICKVAL(Field_Sales_AE__c , &apos;Yes&apos;)),NOT(ISPICKVAL(Field_Sales_AE__c , &apos;No&apos;)) , (TEXT(Purpose__c) == &apos;EDA&apos;) , OR(ISPICKVAL(Process_Node__c , &apos;7nm&apos;),ISPICKVAL( Process_Node__c , &apos;5nm&apos;),ISPICKVAL(Process_Node__c , &apos;N7+&apos;), ISPICKVAL(Process_Node__c , &apos;12nm&apos;)))</errorConditionFormula>
+        <errorMessage>Field (Sales/AE) is required</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Sales_AE_Field_IP</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(OR(ISPICKVAL(Field_Sales_AE__c , &apos;Yes&apos;),ISPICKVAL(Field_Sales_AE__c , &apos;No&apos;)) , (TEXT(Purpose__c) == &apos;IP&apos;), $Profile.Name &lt;&gt; &apos;Integration&apos;)</errorConditionFormula>
+        <errorMessage>Field (Sales/AE) is not applicable for IP Purpose</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Approve</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Approve</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS($ObjectType.TSMC_Agreement__c)};
+for (var i = 0; i &lt; records.length; i++) { 
+    records[i] = &quot;&apos;&quot;+records[i]+&quot;&apos;&quot;;
+}
+
+var user = sforce.connection.getUserInfo();
+var group = sforce.connection.query(&quot;SELECT Id FROM GroupMember WHERE UserOrGroupId = &apos;&quot;+user.userId+&quot;&apos; AND Group.Type = &apos;Queue&apos; AND Group.Name = &apos;TSMC Admin&apos;&quot;);
+    
+if(group.getArray(&quot;records&quot;).length &gt; 0)
+{
+
+var maxsize = sforce.connection.query(&quot;select Value__c from TSMC_Helper__c where name = &apos;maxapprove&apos;&quot;);
+if(records.length &gt; maxsize.getArray(&quot;records&quot;)[0].Value__c)
+{
+   alert(&apos;You can select maximum &apos;+maxsize.getArray(&quot;records&quot;)[0].Value__c+&apos; records for bulk approval&apos;);
+}
+else
+{
+if(records.length &lt; 1)
+{
+   alert(&apos;Invalid Operation. Please select 1 or more row(s).&apos;);
+}
+else
+{
+   var result = sforce.connection.query(&quot;SELECT Id, Status__c, Comments__c FROM TSMC_Agreement__c where Status__c = &apos;Pending For Approval&apos; and Id in (&quot;+records+&quot;)&quot;); 
+
+   if(result.getArray(&quot;records&quot;).length != records.length)
+   {  
+     alert(&quot;Please select pending approval request only for bulk approval&quot;);
+   }
+   else
+   {
+     var myMap = new Map();
+     var records1 = result.getArray(&quot;records&quot;);
+     for (var i=0; i&lt;records1.length; i++) {
+       myMap.put(records1[i].Id, records1[i].Comments__c);   
+     }  
+
+        var result = sforce.connection.query(&quot;SELECT Id, Status, TargetObjectId FROM  ProcessInstance where Status=&apos;Pending&apos; and TargetObjectId in (&quot;+records+&quot;)&quot;, {
+       onSuccess : success,
+       onFailure : failure
+       }); 
+
+       function success(result) 
+       {
+          var records = result.getArray(&quot;records&quot;);
+          for (var i=0; i&lt;records.length; i++) {
+             var record = records[i];
+             findid(record.Id, record.TargetObjectId);   
+          }
+          alert(&quot;All TSMC Request(s) are approved successfully.&quot;);
+       }
+
+       function failure(error) {
+          alert(&quot;An error has occurred &quot; + error);
+       }
+
+       function findid(record, TargetObjectId)
+       {
+          var result = sforce.connection.query(&quot;SELECT Id, ProcessInstanceId FROM ProcessInstanceWorkitem WHERE ProcessInstanceId = &apos;&quot;+record+&quot;&apos;&quot;);
+          var records = result.getArray(&quot;records&quot;);
+          for (var i=0; i&lt;records.length; i++) {
+             var record = records[i];
+             var request = new sforce.ProcessWorkitemRequest();
+             request.action = &quot;Approve&quot;;
+             request.workitemId = record.Id;
+             if(myMap.get(TargetObjectId) != undefined)
+             {
+                request.comments = myMap.get(TargetObjectId);
+             }
+             var processRes = sforce.connection.process([request]);
+             if(!processRes[0].getBoolean(&apos;success&apos;)){
+                 alert(&quot;The first process request failed and it should not have&quot;+processRes[0].errors);
+             }
+         }
+       }
+
+   }
+}
+}
+}
+else
+{
+   alert(&quot;You are not authorised to do this operation&quot;);
+}
+
+    setTimeout(function(){window.location.replace(&apos;/aEl&apos;);}, 3000);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Complete</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Complete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/apex.js&quot;)}
+
+var records = {!GETRECORDIDS($ObjectType.TSMC_Agreement__c)};
+var commarecords = [];
+for (var i = 0; i &lt; records.length; i++) { 
+commarecords.push(&quot;&apos;&quot;+records[i]+&quot;&apos;&quot;); 
+} 
+
+var user = sforce.connection.getUserInfo();
+var group = sforce.connection.query(&quot;SELECT Id FROM GroupMember WHERE UserOrGroupId = &apos;&quot;+user.userId+&quot;&apos; AND Group.Type = &apos;Queue&apos; AND Group.Name = &apos;TSMC Admin&apos;&quot;);
+    
+if(group.getArray(&quot;records&quot;).length &gt; 0)
+{
+
+var maxsize = sforce.connection.query(&quot;select Value__c from TSMC_Helper__c where name = &apos;maxcomplete&apos;&quot;);
+if(records.length &gt; maxsize.getArray(&quot;records&quot;)[0].Value__c)
+{
+   alert(&apos;You can select maximum &apos;+maxsize.getArray(&quot;records&quot;)[0].Value__c+&apos; records for bulk completion&apos;);
+}
+else
+{
+if(records.length &lt; 1)
+{
+   alert(&apos;Invalid Operation. Please select 1 or more row(s).&apos;);
+}
+else
+{
+var result = sforce.connection.query(&quot;SELECT Id, Status__c FROM TSMC_Agreement__c where Status__c=&apos;Fully Signed&apos; and Id in (&quot;+commarecords+&quot;)&quot;); 
+
+if(result.getArray(&quot;records&quot;).length != records.length)
+{
+  alert(&quot;Please select fully signed requests only for bulk completion&quot;);
+}
+else
+{
+    var newrecords = [];
+    for (var n=0; n&lt;records.length; n++) { 
+    var c = new sforce.SObject(&quot;TSMC_Agreement__c&quot;); 
+    c.id = records[n]; 
+    c.Status__c = &quot;Completed&quot;; 
+    newrecords.push(c); 
+    } 
+    result = sforce.connection.update(newrecords);
+    alert(&quot;All TSMC Request(s) are completed successfully.&quot;);
+}
+
+}
+
+}
+}
+else
+{
+    alert(&quot;You are not authorised to do this operation&quot;);
+}
+window.location.replace(&apos;/aEl&apos;);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Complete_Single</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Complete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/apex.js&quot;)}
+
+var agrm = new sforce.SObject(&quot;TSMC_Agreement__c&quot;); 
+agrm.Id = &quot;{!TSMC_Agreement__c.Id}&quot;;
+var status = &quot;{!TSMC_Agreement__c.Status__c}&quot; ;
+
+var user = sforce.connection.getUserInfo();
+var result = sforce.connection.query(&quot;SELECT Id FROM GroupMember WHERE UserOrGroupId = &apos;&quot;+user.userId+&quot;&apos; AND Group.Type = &apos;Queue&apos; AND Group.Name = &apos;TSMC Admin&apos;&quot;);
+    
+if(result.getArray(&quot;records&quot;).length &gt; 0)
+{
+  if(status != &apos;Fully Signed&apos;)
+  {
+    alert(&quot;Only fully signed requests can be marked completed&quot;);
+  }
+  else
+  {
+    agrm.Status__c = &quot;Completed&quot;; 
+    result = sforce.connection.update([agrm]);
+    alert(&quot;TSMC Request is completed successfully&quot;);
+  }
+}
+else
+{
+  alert(&quot;You are not authorised to do this operation&quot;);
+}
+
+window.location.reload();</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Edit_custom</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Edit</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/apex.js&quot;)}
+
+var agrm = new sforce.SObject(&quot;TSMC_Agreement__c&quot;); 
+agrm.Id = &quot;{!TSMC_Agreement__c.Id}&quot;;
+var status = &quot;{!TSMC_Agreement__c.Status__c}&quot; ;
+
+if(status != &apos;Pending Approval&apos;)
+{
+var result = sforce.connection.query(&quot;SELECT Id, Name from RecordType WHERE SobjectType = &apos;TSMC_Agreement__c&apos; and Name = &apos;Edit&apos;&quot;).getArray(&quot;records&quot;);
+agrm.RecordTypeId = result[0].Id;
+result = sforce.connection.update([agrm]);
+}
+parent.frames.location.replace(&quot;/&quot;+agrm.Id+&quot;/e?retURL=%2F&quot;+agrm.Id+&quot;&quot;);</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <content>CosFeedbackDetailPage</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Read</externalSharingModel>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <description>Parent Account</description>
+        <externalId>false</externalId>
+        <formula>Submitter__r.Parent_Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Article__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Article</label>
+        <referenceTo>Article__c</referenceTo>
+        <relationshipName>Article_Feedback</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Associated_CCR__c</fullName>
+        <externalId>false</externalId>
+        <label>Associated CCR</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Associated_Case__c</fullName>
+        <externalId>false</externalId>
+        <label>Associated Case</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Associated_JIRA__c</fullName>
+        <externalId>false</externalId>
+        <label>Associated JIRA</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>COS_Session_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>COS Session ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <picklist>
+            <controllingField>Feedback_Type__c</controllingField>
+            <picklistValues>
+                <fullName>Content</fullName>
+                <default>false</default>
+                <controllingFieldValues>Enhancement</controllingFieldValues>
+                <controllingFieldValues>Negative</controllingFieldValues>
+                <controllingFieldValues>Neutral</controllingFieldValues>
+                <controllingFieldValues>Positive</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Infrastructure</fullName>
+                <default>false</default>
+                <controllingFieldValues>Enhancement</controllingFieldValues>
+                <controllingFieldValues>Negative</controllingFieldValues>
+                <controllingFieldValues>Neutral</controllingFieldValues>
+                <controllingFieldValues>Positive</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product</fullName>
+                <default>false</default>
+                <controllingFieldValues>Enhancement</controllingFieldValues>
+                <controllingFieldValues>Negative</controllingFieldValues>
+                <controllingFieldValues>Neutral</controllingFieldValues>
+                <controllingFieldValues>Positive</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invalid</fullName>
+                <default>false</default>
+                <controllingFieldValues>Enhancement</controllingFieldValues>
+                <controllingFieldValues>Negative</controllingFieldValues>
+                <controllingFieldValues>Neutral</controllingFieldValues>
+                <controllingFieldValues>Positive</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Closed_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Closed Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>CommentCreatedDate_Min__c</fullName>
+        <externalId>false</externalId>
+        <label>CommentCreatedDate_Min</label>
+        <summarizedField>Article_Feedback_Comment__c.CreatedDate</summarizedField>
+        <summaryForeignKey>Article_Feedback_Comment__c.Article_Feedback__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Comment</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Dislike__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Dislike</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Document_type__c</fullName>
+        <externalId>false</externalId>
+        <label>Document type</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Feed_Back_Response_List__c</fullName>
+        <externalId>false</externalId>
+        <label>Feed Back Response List</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>30</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Feed_Back_Response__c</fullName>
+        <externalId>false</externalId>
+        <label>Feed Back Response</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Feedback_Categories__c</fullName>
+        <externalId>false</externalId>
+        <label>Feedback Categories</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Search</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Content</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Look and Feel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Feedback_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Feedback ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Feedback_Submission_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Feedback Submission Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Feedback_Type__c</fullName>
+        <description>Feedback Type</description>
+        <externalId>false</externalId>
+        <label>Feedback Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Positive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Negative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Neutral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Fire_validation_on_close__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Fire validation on close</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Feedback_Answered_within_a_day__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( CommentCreatedDate_Min__c -  CreatedDate &lt;=1.00, true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is_Feedback_Answered_within_a_day</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Like__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Like</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Note__c</fullName>
+        <externalId>false</externalId>
+        <label>Note</label>
+        <length>131072</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>11</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Order__c</fullName>
+        <externalId>false</externalId>
+        <label>Order</label>
+        <picklist>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Page_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Page URL</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Prevented_Case__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Exactly what I am looking for</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ProductFamilytechpub__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Family</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ProductFeature__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product Feature</label>
+        <referenceTo>Product_Feature__c</referenceTo>
+        <relationshipName>Article_Feedback</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProductVersion_techpub__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Version - Tech Pub</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Class__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product_Class__c</referenceTo>
+        <relationshipName>Article_Feedback</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Feature_Version__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product Version</label>
+        <referenceTo>Product_Feature_Version__c</referenceTo>
+        <relationshipName>Article_Feedback</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product_Feature__c</fullName>
+        <externalId>false</externalId>
+        <formula>Article__r.Product_Feature__r.Name</formula>
+        <label>Product Feature</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Product_techPub__c==null, Product_Class__r.Name, Product_techPub__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Version__c</fullName>
+        <externalId>false</externalId>
+        <formula>Article__r.Product_Feature_Version__r.Name</formula>
+        <label>Product Version</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <formula>Article__r.Product__r.Name</formula>
+        <label>Product</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_techPub__c</fullName>
+        <externalId>false</externalId>
+        <label>Product - Tech Pub</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Publisher__c</fullName>
+        <externalId>false</externalId>
+        <formula>Article__r.Document_Author_Name__r.FirstName  &amp; &apos; &apos; &amp;  Article__r.Document_Author_Name__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Publisher</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Remainder_Mail_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>NOW() - CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Remainder Mail Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Selected_Feedback_Types__c</fullName>
+        <externalId>false</externalId>
+        <label>Selected Feedback Types</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Selected_Feedback_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Selected Feedback Type Value</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Helpful</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Exactly what I am looking for</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Needs to be reviewed or corrected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Send_Email_Notification__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Send Email Notification</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Site_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Submitter__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Site Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wait/Cust</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wait/Expert</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wait/Release</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wait/Critical CCR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wait/CCR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wait/JIRA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub-Category</label>
+        <picklist>
+            <controllingField>Category__c</controllingField>
+            <picklistValues>
+                <fullName>Broken Links</fullName>
+                <default>false</default>
+                <controllingFieldValues>Content</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Browser Specific</fullName>
+                <default>false</default>
+                <controllingFieldValues>Infrastructure</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Comprehension</fullName>
+                <default>false</default>
+                <controllingFieldValues>Content</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Document Viewer</fullName>
+                <default>false</default>
+                <controllingFieldValues>Infrastructure</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Formatting</fullName>
+                <default>false</default>
+                <controllingFieldValues>Content</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+                <controllingFieldValues>Content</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Incorrect</fullName>
+                <default>false</default>
+                <controllingFieldValues>Content</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invalid</fullName>
+                <default>false</default>
+                <controllingFieldValues>Invalid</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Machine Specific</fullName>
+                <default>false</default>
+                <controllingFieldValues>Infrastructure</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outdated</fullName>
+                <default>false</default>
+                <controllingFieldValues>Content</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <controllingFieldValues>Infrastructure</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Permission Issue</fullName>
+                <default>false</default>
+                <controllingFieldValues>Infrastructure</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Permissions</fullName>
+                <default>false</default>
+                <controllingFieldValues>Content</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Search</fullName>
+                <default>false</default>
+                <controllingFieldValues>Infrastructure</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Support Case</fullName>
+                <default>false</default>
+                <controllingFieldValues>Product</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Usability</fullName>
+                <default>false</default>
+                <controllingFieldValues>Infrastructure</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Video Viewer</fullName>
+                <default>false</default>
+                <controllingFieldValues>Infrastructure</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <controllingFieldValues>Infrastructure</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <controllingFieldValues>Content</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Submitter_COS_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitter COS ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitter_Email_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitter Email Value</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitter_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Submitter__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>User Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitter_External_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Submitter External ID</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Submitter__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>COS Feedback</relationshipLabel>
+        <relationshipName>Article_Feedback</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Technology_Platform__c</fullName>
+        <externalId>false</externalId>
+        <formula>Product_Class__r.Cadence_Platform__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Technology Platform</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>To_Be_Reviewed_or_Modified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Needs to be reviewed or corrected</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>User_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Submitter__r.FirstName+&quot; &quot;+Submitter__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>User Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>User Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Was_Document_Helpful__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Helpful</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>COS Feedback</label>
+    <listViews>
+        <fullName>All1</fullName>
+        <columns>NAME</columns>
+        <columns>Feedback_Submission_Date__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Status__c</columns>
+        <columns>Comment__c</columns>
+        <columns>Document_type__c</columns>
+        <columns>Feedback_ID__c</columns>
+        <columns>Feedback_Type__c</columns>
+        <columns>Was_Document_Helpful__c</columns>
+        <columns>To_Be_Reviewed_or_Modified__c</columns>
+        <columns>Page_URL__c</columns>
+        <columns>Feedback_Categories__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Closed</value>
+        </filters>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>COS_Feedback_Queue</fullName>
+        <columns>NAME</columns>
+        <columns>Article__c</columns>
+        <columns>Submitter__c</columns>
+        <columns>Submitter_Email__c</columns>
+        <columns>Account_Name__c</columns>
+        <columns>Page_URL__c</columns>
+        <columns>Document_type__c</columns>
+        <columns>Product_Class__c</columns>
+        <columns>Comment__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>COS Feedback Queue</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Feed_Back_Queue_Article_Feedback</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Feedback Queue</label>
+        <queue>Feed_Back_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <displayFormat>Feedback-{00000000}</displayFormat>
+        <label>Feedback Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>COS Feedback</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>COS_Feedback_Owner_Validation_Rule</fullName>
+        <active>true</active>
+        <description>Owner should  a User while changing the feedback status to Closed</description>
+        <errorConditionFormula>AND 
+( 
+ISCHANGED(Status__c), 
+ISPICKVAL(Status__c, &apos;Closed&apos;),
+NOT(BEGINS(OwnerId, &apos;005&apos;))
+)</errorConditionFormula>
+        <errorDisplayField>OwnerId</errorDisplayField>
+        <errorMessage>Owner should not be a Queue while changing the feedback status to Closed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>COS_Feedback_Validation_Rule</fullName>
+        <active>true</active>
+        <description>MakeFeedback Type check before status is changed to Closed</description>
+        <errorConditionFormula>AND( 
+OR(
+ISCHANGED(Status__c), 
+ISCHANGED(Feedback_Type__c), 
+ISCHANGED(Category__c), 
+ISCHANGED(Sub_Category__c)
+), 
+ISPICKVAL( Status__c , &apos;Closed&apos;), 
+OR(
+ISPICKVAL( Feedback_Type__c , &apos;&apos;) || 
+ISPICKVAL( Category__c , &apos;&apos;) || 
+ISPICKVAL( Sub_Category__c , &apos;&apos;)
+)
+)</errorConditionFormula>
+        <errorMessage>Please review and select a value(s) for Closure Categories to CLOSE Feedback !</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>DocType_onclose_not_null</fullName>
+        <active>true</active>
+        <description>Document type of feedback should not be null on close status  of feedback</description>
+        <errorConditionFormula>AND( 
+OR(ISCHANGED(Status__c), ISCHANGED(Document_type__c)), 
+AND( 
+ISPICKVAL(Status__c, &apos;Closed&apos;), 
+OR( 
+ISNULL(Document_type__c ), 
+ISBLANK(Document_type__c) 
+) 
+) 
+)</errorConditionFormula>
+        <errorMessage>Please enter Document Type to close Feedback.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Close_Feedback</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Close Feedback</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/32.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/32.0/apex.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/support/console/32.0/integration.js&quot;)} 
+sforce.connection.sessionId = &quot;{!$Api.Session_ID}&quot;; 
+var status = &quot;{!Article_Feedback__c.Status__c}&quot;; 
+var FeedbackType = &quot;{!Article_Feedback__c.Feedback_Type__c}&quot;; 
+var Cat = &quot;{!Article_Feedback__c.Category__c}&quot;; 
+var SubCat =&quot;{!Article_Feedback__c.Sub_Category__c}&quot;; 
+if(status == &quot;Closed&quot;) 
+{ 
+alert(&quot;Feedback is already in Closed Status&quot;); 
+} 
+else if ( FeedbackType == &quot;&quot; || Cat == &quot;&quot; || SubCat==&quot;&quot; ) 
+{ 
+
+alert(&quot;Please Enter the Closure Category Values to Close Feedback&quot;); 
+
+} 
+else if(!{!BEGINS( Article_Feedback__c.OwnerId , &quot;005&quot;)}){
+alert(&quot;Feedback can not be closed if Owner is not a User&quot;);
+}
+else
+{
+  var feedBackObj = new sforce.SObject(&quot;Article_Feedback__c&quot;);
+  feedBackObj.Id = &apos;{!Article_Feedback__c.Id}&apos;;
+  feedBackObj.Status__c =&quot;Closed&quot;;
+  var result = sforce.connection.update([feedBackObj]);
+if(result[0].getBoolean(&quot;success&quot;))
+  {
+   alert(&apos;Feedback status is now CLOSED &apos;);
+   window.location.reload();
+  } 
+else
+{
+   alert(result[0].errors.message);
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Article_Feedback</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Feedback</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/32.0/connection.js&quot;)}   
+var artid = &quot;{!Article_Feedback__c.Id}&quot;; 
+alert(artid); 
+window.open(&apos;/apex/FeedBackComments?id={!Article_Feedback__c.Id}&apos;);</url>
+    </webLinks>
+</CustomObject>

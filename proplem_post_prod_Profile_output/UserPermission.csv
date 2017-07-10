@@ -1,0 +1,5 @@
+	, www Profile.xml
+EnableNotifications,name=EnableNotifications
+PasswordNeverExpires,name=PasswordNeverExpires
+SelectFilesFromSalesforce,name=SelectFilesFromSalesforce
+ShowCompanyNameAsUserBadge,name=ShowCompanyNameAsUserBadge
