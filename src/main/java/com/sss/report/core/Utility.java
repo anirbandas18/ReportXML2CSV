@@ -7,6 +7,7 @@ import java.nio.ByteBuffer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -26,19 +27,31 @@ public class Utility {
 	}
 
 	public static String milisecondsToSeconds(Long ms) {
-		ms = System.currentTimeMillis();
 		Float sec = ms / 1000.0f;
 		return String.format("%.3f", sec);
 	}
 
-	public static String humanReadableByteCount(long bytes) {
-		boolean si = true;
-		int unit = si ? 1000 : 1024;
-		if (bytes < unit)
-			return bytes + " B";
-		int exp = (int) (Math.log(bytes) / Math.log(unit));
-		String pre = (si ? "kMGTPE" : "KMGTPE").charAt(exp - 1) + (true ? "" : "i");
-		return String.format("%.1f %sB", bytes / Math.pow(unit, exp), pre);
+
+	public static String humanReadableByteCount(long size) {
+		String hrSize = null;
+		double b = size;
+		double k = size / 1024.0;
+		double m = ((size / 1024.0) / 1024.0);
+		double g = (((size / 1024.0) / 1024.0) / 1024.0);
+		double t = ((((size / 1024.0) / 1024.0) / 1024.0) / 1024.0);
+		DecimalFormat dec = new DecimalFormat("0.00");
+		if (t > 1) {
+			hrSize = dec.format(t).concat(" TB");
+		} else if (g > 1) {
+			hrSize = dec.format(g).concat(" GB");
+		} else if (m > 1) {
+			hrSize = dec.format(m).concat(" MB");
+		} else if (k > 1) {
+			hrSize = dec.format(k).concat(" KB");
+		} else {
+			hrSize = dec.format(b).concat(" Bytes");
+		}
+		return hrSize;
 	}
 
 	public static String getEquivalentCSVFileName(String fileName) {

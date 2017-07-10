@@ -39,7 +39,7 @@ public class ReportGenerator {
 			FutureTask<Long> csvTask = new FutureTask<>(profileService);
 			csvExecutor.submit(csvTask);
 			Long duration = csvTask.get();
-			System.out.println("CSV Report generation took " + Utility.milisecondsToSeconds(duration) + " miliseconds");
+			System.out.println("CSV Report generation took " + Utility.milisecondsToSeconds(duration) + " seconds");
 			csvExecutor.shutdown();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

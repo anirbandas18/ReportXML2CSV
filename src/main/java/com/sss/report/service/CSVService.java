@@ -38,7 +38,7 @@ public class CSVService implements Callable<Long>{
 			FutureTask<Long> dirTask = new FutureTask<>(dirDAO);
 			executor.submit(dirTask);
 			Long duration = dirTask.get();
-			System.out.println(childDirPath + " with " + propertyValues.size() + " files processing took " + Utility.milisecondsToSeconds(duration) + " miliseconds");
+			System.out.println(childDirPath + " with " + propertyValues.size() + " files processing took " + Utility.milisecondsToSeconds(duration) + " seconds");
 		}
 		executor.shutdown();
 		long end = System.currentTimeMillis();
