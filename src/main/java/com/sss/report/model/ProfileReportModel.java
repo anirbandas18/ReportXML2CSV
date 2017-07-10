@@ -5,9 +5,9 @@ import java.util.Set;
 
 import com.sss.report.entity.Profile;
 
-public class ReportModel {
+public class ProfileReportModel {
 	
-private String mode;
+	private String mode;
 	
 	private String csvRepository;
 	

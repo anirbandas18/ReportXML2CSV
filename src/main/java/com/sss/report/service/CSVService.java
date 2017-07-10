@@ -13,13 +13,13 @@ import com.sss.report.core.Utility;
 import com.sss.report.dao.DIRDAO;
 import com.sss.report.model.ProfileMetadataModel;
 import com.sss.report.model.Properties;
-import com.sss.report.model.ReportModel;
+import com.sss.report.model.ProfileReportModel;
 
 public class CSVService implements Callable<Long>{
 	
-	private ReportModel reportModel;
+	private ProfileReportModel reportModel;
 	
-	public CSVService(ReportModel reportModel) {
+	public CSVService(ProfileReportModel reportModel) {
 		this.reportModel = reportModel;
 	}
 

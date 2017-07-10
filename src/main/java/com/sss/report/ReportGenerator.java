@@ -8,7 +8,7 @@ import java.util.concurrent.FutureTask;
 import com.sss.report.entity.Profile;
 import com.sss.report.model.Pair;
 import com.sss.report.model.ProfileMetadataModel;
-import com.sss.report.model.ReportModel;
+import com.sss.report.model.ProfileReportModel;
 import com.sss.report.service.CSVService;
 import com.sss.report.service.XMLService;
 
@@ -29,7 +29,7 @@ public class ReportGenerator {
 			System.out.println(pair.getA().size());
 			System.out.println(pair.getB().getPropertiesWithValues().size());
 			ExecutorService csvExecutor = Executors.newSingleThreadExecutor();
-			ReportModel reportModel = new ReportModel();
+			ProfileReportModel reportModel = new ProfileReportModel();
 			reportModel.setCsvRepository(csvRepositoryPath);
 			reportModel.setMetadata(pair.getB());
 			reportModel.setProfiles(pair.getA());
