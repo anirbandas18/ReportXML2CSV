@@ -28,9 +28,9 @@ public class ReportGenerator {
 			xmlExecutor.submit(xmlTask);
 			Pair<List<Profile>,ProfileMetadataModel> pair = xmlTask.get();
 			xmlExecutor.shutdown();
-			for(Profile p : pair.getA()) {
+			/*for(Profile p : pair.getA()) {
 				System.out.println(p);
-			}
+			}*/
 			System.out.println("PERSISTING by " + mode + " : ");
 			ExecutorService csvExecutor = Executors.newSingleThreadExecutor();
 			CSVModel reportModel = new CSVModel();
