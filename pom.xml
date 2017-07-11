@@ -4,27 +4,7 @@
 	<groupId>com.sss.report</groupId>
 	<artifactId>ReportXML2CSV</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<dependencies>
-		<!-- https://mvnrepository.com/artifact/com.opencsv/opencsv -->
-		<dependency>
-			<groupId>com.opencsv</groupId>
-			<artifactId>opencsv</artifactId>
-			<version>3.9</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-csv</artifactId>
-			<version>1.4</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
-		<dependency>
-			<groupId>commons-beanutils</groupId>
-			<artifactId>commons-beanutils</artifactId>
-			<version>1.9.3</version>
-		</dependency>
-
-	</dependencies>
+	<packaging>jar</packaging>
 	<build>
 		<plugins>
 			<plugin>
@@ -33,6 +13,34 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<!-- DO NOT include log4j.properties file in your Jar -->
+					<excludes>
+						<exclude>**/log4j.properties</exclude>
+					</excludes>
+					<archive>
+						<manifest>
+							<!-- Jar file entry point -->
+							<mainClass>com.mkyong.core.utils.App</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<!-- Jar file entry point -->
+							<mainClass>com.sss.report.ReportGenerator</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
 		</plugins>
