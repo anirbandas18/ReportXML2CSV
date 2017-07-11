@@ -50,8 +50,4 @@ public class LayoutAssignment {
 	public String toString() {
 		return recordType == null ? "" : "recordType=" + recordType;
 	}
-	public LayoutAssignment() {
-		this.recordType = "";
-	}
-
 }
