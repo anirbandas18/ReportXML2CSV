@@ -1,5 +1,6 @@
 package com.sss.report.model;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -11,7 +12,7 @@ public class ReportModel {
 	
 	private List<? extends Object> content;
 	
-	private Set<? extends Object> properties;
+	private Collection<? extends Object> properties;
 
 	public String getPropertyKey() {
 		return propertyKey;
@@ -37,11 +38,11 @@ public class ReportModel {
 		this.content = content;
 	}
 
-	public Set<? extends Object> getProperties() {
+	public Collection<? extends Object> getProperties() {
 		return properties;
 	}
 
-	public void setProperties(Set<? extends Object> properties) {
+	public void setProperties(Collection<? extends Object> properties) {
 		this.properties = properties;
 	}
 	

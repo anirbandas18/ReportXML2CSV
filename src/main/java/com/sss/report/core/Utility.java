@@ -42,8 +42,8 @@ public class Utility {
 	}
 
 	public static String getEquivalentCSVFileName(String fileName) {
-		String tokens[] = fileName.split("\\.");
-		String csvFileName = tokens[0];
+		int lastPos = fileName.lastIndexOf('.');
+		String csvFileName = lastPos != -1 ? fileName.substring(0, lastPos) : fileName;
 		csvFileName = csvFileName + Utility.CSV_EXTENSION;
 		return csvFileName;
 	}

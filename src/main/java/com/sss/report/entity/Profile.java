@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlTransient;
 
 @XmlRootElement(name="Profile"/*, namespace = "http://soap.sforce.com/2006/04/metadata"*/)
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Profile {
+public class Profile implements Comparable<Profile>{
 	
 	@XmlTransient
 	private String fileName;
@@ -113,6 +113,11 @@ public class Profile {
 	}
 	public void setName(List<UserPermission> name) {
 		this.name = name;
+	}
+	@Override
+	public int compareTo(Profile o) {
+		this.fileName.compareTo(o.getFileName());
+		return 0;
 	}
 	
 	

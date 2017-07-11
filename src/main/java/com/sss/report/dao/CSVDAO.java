@@ -40,15 +40,17 @@ public class CSVDAO implements Callable<PersistenceReport>{
 					List<Object> content = Utility.getComplexFieldByName(property, reportModel.getPropertyKey());
 					for(Object y : content) {
 						if(Utility.isFieldPresent(y, reportModel.getPropertyKey(), z.toString())) {
-							item = z;
+							item = y;
 							flag = 2;// property
 							break;
 						}
 					}
 					if(flag == 2) {
 						token = Utility.getSimpleFieldByName(property, Utility.FILE_NAME);
+						break;
 					} else if (flag == 1) {
 						token = z;
+						break;
 					}
 				}
 			}

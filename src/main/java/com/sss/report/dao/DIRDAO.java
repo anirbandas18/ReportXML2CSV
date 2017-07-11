@@ -5,6 +5,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 import java.util.TreeSet;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -37,14 +38,18 @@ public class DIRDAO implements Callable<Long>{
 			String propertyKey = Utility.getChildDirName(csvFileNameWithoutExt.getParent().toString());
 			ReportModel reportModel = new ReportModel();
 			reportModel.setContent(new ArrayList<>(directoryModel.getPropertyValues()));//
-			reportModel.setReportNameWithoutExt(csvFileNameWithoutExt.toString());
-			reportModel.setProperties(new TreeSet<>(directoryModel.getProfiles()));//
+			String reportNameWithoutExt = csvFileNameWithoutExt.toString();
+			reportNameWithoutExt = reportNameWithoutExt.replaceAll("\\.", "#");
+			reportModel.setReportNameWithoutExt(reportNameWithoutExt);
+			/*List<Profile> profiles = directoryModel.getProfiles();
+			Set<? extends Object> properties = new TreeSet<>(profiles);*/
+			reportModel.setProperties(directoryModel.getProfiles());//
 			reportModel.setPropertyKey(propertyKey);
 			CSVDAO csvDAO = new CSVDAO(reportModel);
 			FutureTask<PersistenceReport> csvTask = new FutureTask<>(csvDAO);
 			executor.submit(csvTask);
 			PersistenceReport pr = csvTask.get();
-			String resultantFileName = Utility.getEquivalentCSVFileName(csvFileNameWithoutExt.toString());
+			String resultantFileName = Utility.getEquivalentCSVFileName(reportNameWithoutExt);
 			System.out.println(resultantFileName + " of size " + Utility.humanReadableByteCount(pr.getSize()) + " took " + Utility.milisecondsToSeconds(pr.getDuration()) + " seconds to process");
 		}
 		executor.shutdown();
