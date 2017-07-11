@@ -54,10 +54,10 @@ public class Profile implements Comparable<Profile>{
 		StringWriter sw = new StringWriter();
 		try {
 			BufferedWriter bw = new BufferedWriter(sw);
-			bw.write("Profile [custom=" + custom + ", fileName=" + fileName + ", fieldPermissions=");
+			bw.write("Profile [custom=" + custom + ", fileName=" + fileName + ", layout=");
 			bw.newLine();
-			for(FieldPermission fp : field) {
-				bw.write(fp.toString());
+			for(LayoutAssignment la : layout) {
+				bw.write(la.toString());
 				bw.newLine();
 			}
 			bw.write("]");

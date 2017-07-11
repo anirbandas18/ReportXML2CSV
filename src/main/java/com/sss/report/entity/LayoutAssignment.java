@@ -48,8 +48,10 @@ public class LayoutAssignment {
 	}
 	@Override
 	public String toString() {
-		return "recordType=" + recordType;
+		return recordType == null ? "" : "recordType=" + recordType;
 	}
-	
+	public LayoutAssignment() {
+		this.recordType = "";
+	}
 
 }
