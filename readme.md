@@ -9,5 +9,5 @@
 7. Open command prompt.
 8. Type `java -version` at the command prompt and hit Enter. It Should show the Java version and build number. This is to verify Java installation on windows. 
 	
-1. Download maven[http://www-us.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.zip]
-2. 
+## Maven Installation
+1. Download [Apache Maven](http://www-us.apache.org/dist/maven/maven-3/3.5.0/binaries/apache-maven-3.5.0-bin.zip)
