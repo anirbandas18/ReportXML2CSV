@@ -11,7 +11,7 @@ import com.sss.report.model.Pair;
 import com.sss.report.model.ProfileMetadataModel;
 import com.sss.report.model.CSVModel;
 import com.sss.report.service.CSVService;
-import com.sss.report.service.XMLService;
+import com.sss.report.service.XMLServices;
 
 public class ReportGenerator {
 
@@ -22,7 +22,7 @@ public class ReportGenerator {
 		String csvRepositoryPath = args[2];// output directory 
 		try {
 			System.out.println("PARSING : ");
-			XMLService xmlService = new XMLService(xmlRepositoryPath);
+			XMLServices xmlService = new XMLServices(xmlRepositoryPath);
 			ExecutorService xmlExecutor = Executors.newSingleThreadExecutor();
 			FutureTask<Pair<List<Profile>,ProfileMetadataModel>> xmlTask = new FutureTask<Pair<List<Profile>,ProfileMetadataModel>>(xmlService);
 			xmlExecutor.submit(xmlTask);

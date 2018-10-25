@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+        <!-- <property name="hibernate.connection.url">jdbc:derby:;shutdown=true</property> -->
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.username">app</property>
+        <property name="hibernate.connection.url">jdbc:derby:reportdb;create=true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.DerbyTenSevenDialect</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.hbm2ddl.import_files">create_table.sql</property>
+        <property name="hibernate.show_sql">true</property>
+		<property name="show_sql">true</property>
+        <mapping class="com.sss.report.entity.ProfileEntity"/>
+        <mapping class="com.sss.report.entity.FieldPermissionsEntity"/>
+    </session-factory>
+</hibernate-configuration>

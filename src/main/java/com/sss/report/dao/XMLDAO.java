@@ -68,7 +68,8 @@ public class XMLDAO implements Callable<Profile>{
 		SAXSource xmlSource = new SAXSource(inFilter, is);
 		JAXBContext context = JAXBContext.newInstance(Profile.class);
 		Unmarshaller unmarshaller = context.createUnmarshaller();
-		profile = (Profile) unmarshaller.unmarshal(xmlSource);
+		//profile = (Profile) unmarshaller.unmarshal(xmlSource);
+		profile = (Profile) unmarshaller.unmarshal(xmlFile);
 		metadata.setPropertyValues(Properties.field, profile.getField().stream().map(FieldPermission::getField).collect(Collectors.toSet()));
 		metadata.setPropertyValues(Properties.layout, profile.getLayout().stream().map(LayoutAssignment::getLayout).collect(Collectors.toSet()));
 		metadata.setPropertyValues(Properties.object, profile.getObject().stream().map(ObjectPermission::getObject).collect(Collectors.toSet()));

@@ -3,3 +3,9 @@
 /output/
 /profile_output/
 /properties_output/
+/single_input/
+/single_output/
+/10_STDERR.txt
+/10_STDOUT.txt
+/derby.log
+/h.data

@@ -38,6 +38,7 @@ public class NamespaceFilter extends XMLFilterImpl {
             Attributes arg3) throws SAXException {
 
         super.startElement(this.usedNamespaceUri, arg1, arg2, arg3);
+        System.out.println(arg0 + " " + arg1 + " ");
     }
 
     @Override
@@ -45,8 +46,17 @@ public class NamespaceFilter extends XMLFilterImpl {
             throws SAXException {
 
         super.endElement(this.usedNamespaceUri, arg1, arg2);
+        System.out.println(arg0 + " " + arg1 + " " + arg2);
     }
 
+    @Override
+    public void characters(char[] ch, int start, int length) throws SAXException {
+    	// TODO Auto-generated method stub
+    	super.characters(ch, start, length);
+    	//System.out.println(new String(ch));
+    }
+    
+    
     @Override
     public void startPrefixMapping(String prefix, String url)
             throws SAXException {
